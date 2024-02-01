@@ -1,0 +1,90 @@
+{
+    "categories":"Categories",
+    "home":"Home",
+    "homePage":"Home Page",
+    "search":"Enter value to search for",
+    "allCategories":"All Categories",
+    "myProfile":"My Profile",
+    "logout":"Logout",
+    "bookName":"Book Name",
+    "author":"Author",
+    "summary":"Summary",
+    "apiNotFound":"Api Not Found",
+    "errorStatusNotFound":"We encountered an unknown error. Please contact with admin",
+    "apiNotAvailable":"Api Not Available",
+    "paymentIsSuccessful":"Payment is successfull",
+    "addBookInShoopingCartIsSuccessful":"Adding books to the shopping cart was successful.",
+    "shoppingCartPage":"My Shopping Cart",
+    "noBooksInShoppingCart":"No book in shopping cart!",
+    "howWeCanUseThisWebSite":"Aould you like to discover",
+    "wouldYouLikeToDiscover":"How we can use this web site?",
+    "bookQuantityIsNotEnough":"Book quantity is not enough!",
+    "discover":"Discovery",
+    "notShowAgain":"Not show again",
+    "remove":{
+        "doYouWantToDeleted":"Do you want to deleted?",
+        "cancelBtn":"Cancel",
+        "confirmBtn":"Remove"
+    },
+    "payment":{
+        "title":"Payment Page",
+        "completeBtn":"Complete Payment",
+        "pay":"Pay",
+        "buyer":{
+            "title":"Buyer Information Bilgileri",
+            "name":"Buyer Name",
+            "surname":"Buyer Lastname",
+            "identityNumber":"Identity Number",
+            "email":"Email",
+            "gsmNumber":"Phone Number"
+        },
+        "address":{
+            "title":"Address Information",
+            "isSameAddress":"Shipping and billing address is the same",
+            "shippingAddress":{
+                "title":"Shipping Address",
+                "country":"Country",
+                "city":"City",
+                "zipCode":"Zip Code",
+                "contactName":"Contact Name",
+                "description":"Full Address"
+            },
+            "billingAddress":{
+                "title":"Billing Address",
+                "country":"Country",
+                "city":"City",
+                "zipCode":"Zip Code",
+                "contactName":"Contact Name",
+                "description":"Full Address"
+            }
+           
+        },
+        "creditCart":{
+            "title":"Credit Card Information",
+            "cardHolderName":"Card Holder Name",
+            "cardNumber":"Card Number",
+            "expireMonthAndYear":"Expire month and Year",
+            "cvc":"CVC"
+        }
+    },
+    "signin":{
+        "title":"Sign In",
+        "fillYourInformation":"Please fill your information to sign in",
+        "usernameOrEmail":"User name or Email",
+        "password":"Password",
+        "signInBtn":"Sign In",
+        "gotoRegisterBtn":"If you don't have an account. You can register"
+    },
+    "signup":{
+        "title":"Sign Up",
+        "fillYourInformation":"If you want to sign up. Please your information",
+        "Name":"Name",
+        "lastname":"LastName",
+        "username":"Username",
+        "email":"Email",
+        "password":"Password",
+        "signInBtn":"Sign Up",
+        "gotoRegisterBtn":"If you have a account. You can login here"
+    }
+    
+}

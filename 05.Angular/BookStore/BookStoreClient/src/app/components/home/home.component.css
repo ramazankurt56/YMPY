@@ -1,0 +1,52 @@
+.categories{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.categories li{
+    padding: 15px;
+    padding-left: 10px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+        border-radius: 10px;
+}
+.categories li:hover{
+    background-color: rgb(44, 54, 58);
+    color: white;
+}
+.card-img-top{
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+}
+.active{
+    background-color: rgb(44, 54, 58);
+    color: white;
+}
+.category {
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category:hover {
+    border: solid black 1px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Hafif bir gölge efekti */
+    transform: translateX(10px); /* X ekseninde 10 piksel kayma */
+}
+.btn-outline-secondary:hover{
+    background-color: #198754 !important;
+}
+.loader-category{
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+}
+.loading{
+    background-color: #f1f1f1;
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 2px;
+}

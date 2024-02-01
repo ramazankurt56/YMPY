@@ -1,0 +1,20 @@
+ul{
+    margin-top:5px ;
+}
+li{
+    cursor: pointer;
+}
+li:hover{
+    color:blue;
+}
+.card-image{
+    max-height: 100px;
+}
+.trash{
+    position: absolute; right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+.trash:hover{
+    color: rgb(215, 65, 65);
+}

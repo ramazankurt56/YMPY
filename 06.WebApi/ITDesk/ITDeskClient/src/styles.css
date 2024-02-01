@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+html {
+    font-size: 14px;
+}
+
+body {
+    background-color: rgb(255, 255, 255) !important;
+    font-family: var(--font-family);
+    font-weight: normal;
+    background: var(--surface-ground);
+    color: var(--text-color);
+    padding: 1rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+    background-color: rgb(218, 214, 214) !important;
+    background: var(--surface-card);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.flex{
+    display: flex;
+}
+.justify-content-center{
+    justify-content: center;
+}
+.align-items-center{
+    align-items:center;
+}
+.h100{
+    height: 90vh;
+}
+.w100{
+    width: 100%;
+}
+.mt-10{
+    margin-top: 10px;
+}

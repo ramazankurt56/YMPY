@@ -1,0 +1,40 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/">Book Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a  class="nav-link active" aria-current="page" href="#">
+              <i class="fa-solid fa-question fa-beat"></i>
+            </a>
+          </li>
+        </ul>
+        <select style="width:15%;" id="language" [(ngModel)]="language" (change)="switchLanguage($event)" class="form-control me-2">
+        <option value="en">English</option>
+        <option value="tr">Türkçe</option>
+        </select>
+        <button routerLink="/shopping-cart" class="btn btn-outline-success position-relative" ><i class="fa-solid fa-cart-shopping" 
+          [ngClass]="shopping.shoppingCarts.length> 0 ? 'fa-bounce':''"></i>
+          <span *ngIf="shopping.shoppingCarts.length>0" class="position-absolute top-100 start-100  translate-middle badge rounded-pill bg-danger">
+            {{shopping.shoppingCarts.length}}
+            <span class="visually-hidden">unread messages</span>
+          </span></button>
+          <button *ngIf="!auth.isAuthentication()" class="btn btn-outline-success ms-2" routerLink="/login">
+            <i class="fa-solid fa-user-lock"></i>
+          </button>
+          <div class="dropdown ms-4" *ngIf="auth.isAuthentication()" >
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{auth.userName}}
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" >{{'myProfile'|translate}}</a></li>
+              <li><a class="dropdown-item" (click)="logout()">{{'logout'|translate}}</a></li>
+            </ul>
+          </div>
+         
+      </div>
+    </div>
+  </nav>

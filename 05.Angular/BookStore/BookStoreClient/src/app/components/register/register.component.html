@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="col-lg-4 col-md-5 col-sm-12 col-12">
+        <div class="card">
+            <div class="card-header">
+                <h1>{{'signup.title'|translate}}</h1>
+                <p>{{'signup.fillYourInformation'|translate}}</p>
+            </div>
+            <div class="card-body">
+                <form #registerForm="ngForm" autocomplete="off" (ngSubmit)="signUp(registerForm)">
+                    <div class="form-group">
+                        <label for="name">{{'signup.Name'|translate}}</label>
+                        <input type="text" ngModel name="name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">{{'signup.lastname'|translate}}</label>
+                        <input type="text" ngModel name="lastname" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">{{'signup.username'|translate}}</label>
+                        <input type="text" ngModel name="username" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">{{'signup.email'|translate}}</label>
+                        <input type="text" ngModel name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">{{'signup.password'|translate}}</label>
+                        <input type="text" ngModel name="password" class="form-control">
+                    </div>
+                    <div class="form-group mt-1">
+                        <button class="btn btn-danger w-100">{{'signup.signInBtn'|translate}}</button>
+                    </div>
+                </form>
+                <div class="form-group">
+                    <a routerLink="/login">
+                        {{'signup.gotoRegisterBtn'|translate}}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

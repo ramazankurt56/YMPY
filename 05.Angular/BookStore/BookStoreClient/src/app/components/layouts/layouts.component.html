@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+<div class="popup" *ngIf="popup.isPopupShow && !popup.notShowThisPopup">
+    <p>{{'howWeCanUseThisWebSite'|translate}}</p>
+        <p>{{'wouldYouLikeToDiscover'|translate}}</p> 
+    <button (click)="showDriver()" class="btn btn-success">{{'discover'|translate}}</button>
+    <div class="mt-2">
+        <div class="form-check">
+            <input (click)="popup.notShowAgain()" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                {{'notShowAgain'|translate}}
+            </label>
+          </div>
+    </div>
+</div>

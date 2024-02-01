@@ -1,0 +1,89 @@
+{
+    "categories":"Kategoriler",
+    "home":"Ana Sayfa",
+    "homePage":"Ana Sayfa",
+    "search":"Aranacak Değer Giriniz",
+    "allCategories":"Tüm Kategoriler",
+    "myProfile":"Profilim",
+    "logout":"Çıkış Yap",
+    "bookName":"Kitap Adı",
+    "author":"Yazar",
+    "summary":"Özet",
+    "apiNotAvailable":"Api şuanda meşgül",
+    "apiNotFound":"Api bulunamadı",
+    "errorStatusNotFound":"Bilinmeyen bir hata ile karşılaştık. Lütfen yönetici ile iletişime geçiniz",
+    "paymentIsSuccessful":"Ödeme işlemi başarıyla tamamlandı",
+    "addBookInShoopingCartIsSuccessful":"Kitap başarıyla sepete eklendi",
+    "shoppingCartPage":"Sepetim",
+    "noBooksInShoppingCart":"Sepette ürününüz bulunmuyor!",
+    "howWeCanUseThisWebSite":"Siteyi nasıl kullanacağınızı",
+    "wouldYouLikeToDiscover":"keşfetmek ister misiniz?",
+    "bookQuantityIsNotEnough":"Kitap Stokta Kalmadı!",
+    "discover":"Keşfet",
+    "notShowAgain":"Tekrar Gösterme",
+    "remove":{
+        "doYouWantToDeleted":"Silmek istiyor musunuz?",
+        "cancelBtn":"Vazgeç",
+        "confirmBtn":"Sil"
+    },
+    "payment":{
+        "title":"Ödeme Sayfası",
+        "completeBtn":"Ödemeyi Tamamla",
+        "pay":"Ödeme Yap",
+        "buyer":{
+            "title":"Alıcı Bilgileri",
+            "name":"Alıcı Adı",
+            "surname":"Alıcı Soyadı",
+            "identityNumber":"T.C. Numarası",
+            "email":"Mail Adresi",
+            "gsmNumber":"Telefon Numarası"
+        },
+        "address":{
+            "title":"Adres Bilgileri",
+            "isSameAddress":"Teslim ve Fatura Adresi Aynı",
+            "shippingAddress":{
+                "title":"Adres Bilgileri",
+                "country":"Ülke",
+                "city":"Şehir",
+                "zipCode":"Posta Kodu",
+                "contactName":"Teslim Alacak Kişi",
+                "description":"Açık Adres"
+            },
+            "billingAddress":{
+                "title":"Fatura Bilgileri",
+                "country":"Ülke",
+                "city":"Şehir",
+                "zipCode":"Posta Kodu",
+                "contactName":"Teslim Alacak Kişi",
+                "description":"Açık Adres"
+            }
+           
+        },
+        "creditCart":{
+            "title":"Kart Bilgileri",
+            "cardHolderName":"Kart Sahibinin Adı",
+            "cardNumber":"Kart Numarası",
+            "expireMonthAndYear":"Son Kullanma Tarihi",
+            "cvc":"cvc"
+        }
+    },
+    "signin":{
+        "title":"Giriş Yap",
+        "fillYourInformation":"Lütfen oturum açmak için bilgilerinizi girin",
+        "usernameOrEmail":"Kullanıcı adı veya Email",
+        "password":"Parola",
+        "signInBtn":"Giriş Yap",
+        "gotoRegisterBtn":"Hesabınız yoksa. Kaydolabilirsin"
+    },
+    "signup":{
+        "title":"Kayıt Ol",
+        "fillYourInformation":"Kayıt olmak istiyorsanız. Lütfen bilgilerinizi giriniz.",
+        "Name":"Adı",
+        "lastname":"Soyadı",
+        "username":"Kullanıcı Adı",
+        "email":"Email",
+        "password":"Parola",
+        "signInBtn":"Kayıt Ol",
+        "gotoRegisterBtn":"Bir hesabınız varsa. Giriş yapabilirsiniz"
+    }
+}

@@ -1,0 +1,6 @@
+@EntityFrameworkCore.Auth.WebApi_HostAddress = http://localhost:5041
+
+GET {{EntityFrameworkCore.Auth.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

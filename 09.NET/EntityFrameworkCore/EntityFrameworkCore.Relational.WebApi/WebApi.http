@@ -1,0 +1,6 @@
+@EntityFrameworkCore.Relational.WebApi_HostAddress = https://localhost:7068
+
+GET https://localhost:7068/api/Values/Add
+Accept: application/json
+
+###

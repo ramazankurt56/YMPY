@@ -1,0 +1,167 @@
+<div class="card mt-3">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5>{{'homePage'|translate}}</h5>
+    </div>
+</div>
+<!-- Loading -->
+<div class="row mt-4" *ngIf="isLoading">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+        <div class="card">
+            <div class="card-header">
+                <!-- category -->
+                <h1>{{'categories'|translate}}</h1>
+            </div>
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <!-- Search -->
+                    <input [(ngModel)]="searchCategory" type="text" class="form-control"
+                        placeholder="{{'search'|translate}}">
+                </div>
+                <!-- List -->
+                <ul class="categories placeholder-glow">
+                    
+                    <li class="category loader-category placeholder" *ngFor="let l of loaderDatas">
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9 col-md-8 col-sm-6 col-12">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <!-- Search -->
+            <input type="text" [(ngModel)]="request.search" (keydown.enter)="getAll()" (search)="getAll()"
+                class="form-control" placeholder="{{'search'|translate}}">
+        </div>
+        <div class="row">
+            <!-- Books -->
+            <div class="col-xl-4 col-md-6 col-12 mb-2 placeholder-glow" *ngFor="let l of loaderDatas">
+                <div class="card text-center ">
+                    <div class="card-body">
+                        <img class="placeholder card-img-top loading loading-img" >
+                    </div>
+                    <div class="card-header">
+                        <h5 class="placeholder card-title"></h5>
+                        <p> </p>
+                    </div>
+                    <div class="card-body">
+                        <p class="placeholder card-text"></p>
+                        <button iconControl disabled
+                            class="placeholder btn btn-outline-secondary loading d-flex justify-content-between w-100 align-items-center">
+                            <span></span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content------------------------------------------------------------------------------------------------------------------- -->
+<div class="row mt-4" *ngIf="!isLoading">
+    <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+        <div class="card" >
+            <div class="card-header" id="categories" >
+                <!-- category -->
+                <h1>{{'categories'|translate}}</h1>
+            </div>
+            <div class="card-body">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <!-- Search -->
+                    <input [(ngModel)]="searchCategory" type="text" class="form-control"
+                        placeholder="{{'search'|translate}}">
+                </div>
+                <!-- List -->
+                <ul class="categories">
+                    <li class="category" (click)="changeCategory(null)"
+                        [ngClass]="request.categoryId===null ? 'active':''">{{'allCategories'|translate}}</li>
+                    <li class="category" (click)="changeCategory(c.id)"
+                        [ngClass]="request.categoryId===c.id ? 'active':''"
+                        *ngFor="let c of categories | category:searchCategory">{{c.name}}</li>
+                    <!-- YUKARIDA pipe kullandık:category:searchCategory -->
+                    <!-- <li>{{'software'|translate}}</li>
+                    <li>{{'love'|translate}}</li>
+                    <li>{{'detective'|translate}}</li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9 col-md-8 col-sm-6 col-12">
+        <div class="input-group mb-3" id="bookSearch">
+            <span class="input-group-text" id="basic-addon1">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <!-- Search -->
+            <input type="text" [(ngModel)]="request.search" (keydown.enter)="getAll()" (search)="getAll()"
+                class="form-control" placeholder="{{'search'|translate}}">
+        </div>
+        <div class="row">
+            <!-- Books -->
+            <div class="col-xl-4 col-md-6 col-12 mb-2" id="book{{i}}" *ngFor="let b of books let i=index">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img [src]="b.coverImageUrl" class="card-img-top rounded-4" alt="...">
+                    </div>
+                    <div class="card-header">
+                        <h5 class="card-title">{{b.title}}</h5>
+                        <ul><li style="list-style: none;"  *ngFor="let categories of b.categories">
+                            {{categories}}
+                        </li></ul>
+                        <p> {{b.author}}</p>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{b.summary}}</p>
+                        <button *ngIf="b.quantity<=0" class="btn btn-danger text-center" disabled type="button">
+                            <i class="fa-solid fa-hourglass me-1"></i>
+                            <span>{{'bookQuantityIsNotEnough'|translate}}</span>
+                        </button>
+                        <button iconControl *ngIf="b.quantity>0"
+                        id="addShoppingCardBtn{{i}}"
+                            class="btn btn-outline-secondary d-flex justify-content-between w-100 align-items-center"
+                            (click)="addShoppingCart(b)">
+                            <span>{{b.price.value | currency:'':'':'1.2-2'}} {{b.price.currency}}</span>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
+                (scrolled)="feedData()"></div>
+
+        </div>
+
+
+
+        <!-- Eski Pagination -->
+        <!-- <nav aria-label="Page navigation example" style="float: right;">
+            <ul class="pagination">
+              <li class="page-item" *ngIf="!response?.isFirstPage">
+                <a class="page-link" (click)="getAll(response?.pageNumber-1)" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"  
+              [ngClass]="response?.pageNumber===p?'active':''"
+              *ngFor="let p of pageNumbers">
+                <a class="page-link" (click)="getAll(p)">{{p}}</a>
+            </li>
+              <li class="page-item" *ngIf="!response?.isLastPage">
+                <a class="page-link"(click)="getAll(response?.pageNumber+1)" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav> -->
+    </div>
+</div>
