@@ -22,6 +22,21 @@ namespace BookStoreServer.WebApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("BookCategory", b =>
+                {
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.HasKey("BookId", "CategoryId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("BookCategory");
+                });
+
             modelBuilder.Entity("BookStoreServer.WebApi.Models.Book", b =>
                 {
                     b.Property<int>("Id")
@@ -365,6 +380,21 @@ namespace BookStoreServer.WebApi.Migrations
                         .IsUnique();
 
                     b.ToTable("OrderStatuses");
+                });
+
+            modelBuilder.Entity("BookCategory", b =>
+                {
+                    b.HasOne("BookStoreServer.WebApi.Models.Book", null)
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BookStoreServer.WebApi.Models.Category", null)
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("BookStoreServer.WebApi.Models.Book", b =>

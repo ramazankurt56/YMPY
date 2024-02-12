@@ -21,6 +21,8 @@ namespace BookStoreServer.WebApi.Controllers
             this.context = context;
         }
         [HttpPost]
+       
+        [HttpPost]
         public IActionResult GetAll(RequestDto request)
         {
             #region EskiGetall

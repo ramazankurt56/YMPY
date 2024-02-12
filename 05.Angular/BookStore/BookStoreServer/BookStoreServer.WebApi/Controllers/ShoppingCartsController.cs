@@ -233,6 +233,7 @@ namespace BookStoreServer.WebApi.Controllers
                 item.Name = book.Title;
                 item.ItemType = BasketItemType.PHYSICAL.ToString();
                 item.Price = book.Price.Value.ToString();
+
                 basketItems.Add(item);
             }
 
