@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using NTierArchitecture.Business;
 using NTierArchitecture.Entities.DTOs;
 
 namespace NTierArchitecture.WebAPI.Controllers;
 [Route("api/[controller]/[action]")]
 [ApiController]
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] //attribute
 public sealed class StudentsController    
     (IStudentService studentService): ControllerBase
 {

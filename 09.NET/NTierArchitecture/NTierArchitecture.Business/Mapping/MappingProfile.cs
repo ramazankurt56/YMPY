@@ -11,9 +11,6 @@ public sealed class MappingProfile : Profile
         CreateMap<UpdateStudentDto, Student>();
         CreateMap<CreateClassRoomDto, ClassRoom>();
         CreateMap<UpdateClassRoomDto, ClassRoom>();
-        CreateMap<CreateAppUserDto, AppUser>();
-        CreateMap<UpdateAppUserDto, AppUser>();
-        CreateMap<LoginDto, AppUser>();
 
     }
 }

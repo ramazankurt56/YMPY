@@ -13,8 +13,6 @@ namespace NTierArchitecture.Business.Constants
         public static string UpdateIsSuccessfully = "Güncelleme başarıyla tamamlandı";
         public static string DeleteIsSuccessfully = "Silme işlemi başarıyla tamamlandı";
         public static string NameAlreadyExists = "Yazdığınzı isim daha önce kullanılmış";
-        public static string EmailAlreadyExists = "Yazdığınzı email daha önce kullanılmış";
-        public static string UserNamelAlreadyExists = "Yazdığınzı kullanıcı adı daha önce kullanılmış";
         public static string IdentityNumberAlreadyExists = "Yazdığınzı TC numarası daha önce kullanılmış";
     }
 }

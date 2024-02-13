@@ -1,0 +1,26 @@
+
+<div class="card flex justify-content-center">
+    <input pInputText placeholder="Konu" [(ngModel)]="subject" style="width: 100%;" />
+</div>
+
+<div class="card" style="margin-top: 30px;">
+    <span class="p-float-label">
+        <textarea [(ngModel)]="summary" id="float-input" rows="5" cols="30" pInputTextarea style="width: 100%;"></textarea>
+        <label for="float-input">Summary</label>
+    </span>
+</div>
+
+<div class="card" style="margin-top: 20px;">
+    <p-toast></p-toast>
+    <p-fileUpload name="demo[]" url="https://www.primefaces.org/cdn/api/upload.php" (onUpload)="onUpload($event)" [multiple]="true" accept="image/*" [maxFileSize]="100000000">
+        <ng-template pTemplate="content">
+            <ul *ngIf="uploadedFiles.length">
+                <li *ngFor="let file of uploadedFiles">{{ file.name }} - {{ file.size }} bytes</li>
+            </ul>
+        </ng-template>
+    </p-fileUpload>
+</div>
+
+<div class="card">
+    <p-button (click)="create()" label="Oluştur" [style]="{width: '100%'}" icon="pi pi-plus" [raised]="true" severity="success"></p-button>
+</div>

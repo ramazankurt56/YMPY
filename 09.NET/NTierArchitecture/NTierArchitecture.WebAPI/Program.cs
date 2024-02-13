@@ -33,11 +33,9 @@ builder.Services.AddIdentity<AppUser, AppRole>(opt =>
 //Dependency Injection
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<IClassRoomRepository, ClassRoomRepository>();
-builder.Services.AddScoped<IAppUserRepository, AppUserRepository>();
 
 builder.Services.AddScoped<IStudentService, StudentManager>();
 builder.Services.AddScoped<IClassRoomService, ClassRoomManager>();
-builder.Services.AddScoped<IAppUserService, AppUserManager>();
 
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
@@ -50,8 +48,8 @@ builder.Services.AddAuthentication().AddJwtBearer(options =>
         ValidateAudience = true, //tokený kullanacak site ya da kiþi bilgisi
         ValidateIssuerSigningKey = true, //tokenýn güvenlik anahtarý üretmesini saðlayan güvenlik sözcüðü
         ValidateLifetime = true, //tokenun yaþam süresini kontrol etmek istiyor musunuz
-        ValidIssuer = "Taner Saydam",
-        ValidAudience = "IT Desk Angular App",
+        ValidIssuer = "Issuer",
+        ValidAudience = "Audience",
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("My secret key my secret key aþlsdkaskdlþaskþldþklasd"))
     };
 });

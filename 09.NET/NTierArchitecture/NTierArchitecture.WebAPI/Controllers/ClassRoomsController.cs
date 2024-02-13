@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using NTierArchitecture.Business;
 using NTierArchitecture.Business.Services;
 using NTierArchitecture.Entities.DTOs;
 
@@ -8,6 +8,8 @@ namespace NTierArchitecture.WebAPI.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
+
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] //attribute
     public class ClassRoomsController(IClassRoomService classRoomService) : ControllerBase
     {
         [HttpPost]

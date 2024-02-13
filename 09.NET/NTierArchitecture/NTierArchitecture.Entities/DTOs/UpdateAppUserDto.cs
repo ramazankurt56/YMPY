@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 namespace NTierArchitecture.Entities.DTOs
 {
     public sealed record UpdateAppUserDto(
-        Guid Id,
+        string Id,
+        string OldPassword,
+        string NewPassword,
         string FirstName,
         string LastName,
         string UserName,
-        string Email,
-        string Password
+        string Email
+        
         );
 }
