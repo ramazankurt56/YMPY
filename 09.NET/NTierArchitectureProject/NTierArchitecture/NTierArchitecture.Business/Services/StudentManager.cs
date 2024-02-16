@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Azure.Core;
 using FluentValidation;
 using FluentValidation.Results;
 using NTierArchitecture.Business.Constants;
@@ -57,7 +58,22 @@ public sealed class StudentManager(IStudentRepository studentRepository,IMapper 
 
         return students;
     }
+    public List<Student> GetAllByClassRoomId(RequestDto request)
+    {
+        int take = request.PageSize- request.PageNumber;
+        List<Student> students = studentRepository
+                                                .GetAll()
+                                                .Where(p => p.ClassRoomId == request.ClassRoomId)
+                                                .Where(p => p.IsDeleted == false)
+                                                .Where(p => p.FirstName.ToLower().Contains(request.Search.ToLower()) || p.IdentityNumber.ToLower().Contains(request.Search.ToLower()))
+                                                .OrderBy(p => p.FirstName)
+                                                .Skip(request.PageNumber)
+                                                .Take(take)
+                                                .ToList();
 
+     
+        return students;
+    }
     public string Update(UpdateStudentDto request)
     {
         UpdateStudentDtoValidator validator = new();

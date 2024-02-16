@@ -47,8 +47,8 @@ C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NT
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net8.0\NTierArchitecture.Business.AssemblyInfo.cs
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net8.0\NTierArchitecture.Business.csproj.CoreCompileInputs.cache
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net8.0\NTierArchitecture.Business.sourcelink.json
-C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net8.0\NTierArchitecture.Business.csproj.CopyComplete
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net8.0\NTierArchitecture.Business.dll
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net8.0\refint\NTierArchitecture.Business.dll
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net8.0\NTierArchitecture.Business.pdb
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net8.0\ref\NTierArchitecture.Business.dll
+C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.Business\obj\Debug\net8.0\NTierArc.1080D041.Up2Date

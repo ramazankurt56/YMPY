@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 using NTierArchitecture.Business;
 using NTierArchitecture.Business.Mapping;
 using NTierArchitecture.Business.Services;
@@ -23,7 +23,7 @@ builder.Services.AddCors(cfr =>
 builder.Services.AddDbContext<ApplicationDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer"));
-    //opt.LogTo(Console.WriteLine, LogLevel.Information);
+    opt.LogTo(Console.WriteLine, LogLevel.Information);
 });
 
 
@@ -103,6 +103,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseCors();
+app.Use(async (context, next) =>
+{
+    try
+    {
+        await next(context);
+    }
+    catch (Exception ex)
+    {
+        context.Response.StatusCode = 500;
+        context.Response.ContentType = "application/json";
+        await context.Response.WriteAsync(JsonConvert.SerializeObject(new { Message = ex.Message }));
+    }
+});
 app.UseHttpsRedirection();
 app.MapControllers();
 ExtensionsMiddleware.CreateFirstUser(app);

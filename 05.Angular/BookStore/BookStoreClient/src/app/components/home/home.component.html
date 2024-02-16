@@ -17,7 +17,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </span>
                     <!-- Search -->
-                    <input [(ngModel)]="searchCategory" type="text" class="form-control"
+                    <input [(ngModel)]="searchCategory"  type="text" class="form-control"
                         placeholder="{{'search'|translate}}">
                 </div>
                 <!-- List -->
@@ -138,7 +138,6 @@
 
             <div class="search-results" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50"
                 (scrolled)="feedData()"></div>
-
         </div>
 
 

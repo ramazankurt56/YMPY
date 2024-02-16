@@ -39,19 +39,12 @@ public sealed class StudentRepository(ApplicationDbContext context): IStudentRep
 
     public int GetNewStudentNumber()
     {
-        int lastStudentNumber = 0; // Başlangıç değeri isteğe bağlı olarak atanabilir
-        var lastStudent = context.Students.OrderByDescending(p => p.StudentNumber).FirstOrDefault();
-        if (lastStudent != null)
-        {
-            lastStudentNumber = lastStudent.StudentNumber;
-            if (lastStudentNumber <= 100) lastStudentNumber = 100;
-        }
-
+        int lastStudentNumber = context.Students.Max(p => p.StudentNumber);
+        if (lastStudentNumber <= 100) lastStudentNumber = 100;
         lastStudentNumber++;
 
         return lastStudentNumber;
     }
-
     public bool Any(Expression<Func<Student, bool>> predicate)
     {
         return context.Students.AsNoTracking().Any(predicate);

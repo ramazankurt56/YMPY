@@ -46,9 +46,9 @@ C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NT
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.DataAccess\obj\Debug\net8.0\NTierArchitecture.DataAccess.AssemblyInfo.cs
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.DataAccess\obj\Debug\net8.0\NTierArchitecture.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.DataAccess\obj\Debug\net8.0\NTierArchitecture.DataAccess.sourcelink.json
-C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.DataAccess\obj\Debug\net8.0\NTierArchitecture.DataAccess.csproj.CopyComplete
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.DataAccess\obj\Debug\net8.0\NTierArchitecture.DataAccess.dll
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.DataAccess\obj\Debug\net8.0\refint\NTierArchitecture.DataAccess.dll
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.DataAccess\obj\Debug\net8.0\NTierArchitecture.DataAccess.pdb
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.DataAccess\obj\Debug\net8.0\NTierArchitecture.DataAccess.genruntimeconfig.cache
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.DataAccess\obj\Debug\net8.0\ref\NTierArchitecture.DataAccess.dll
+C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.DataAccess\obj\Debug\net8.0\NTierArc.05F439AD.Up2Date

@@ -38,4 +38,10 @@ public sealed class StudentsController
         var response = studentService.GetAll();
         return Ok(response);
     }
+    [HttpPost]
+    public IActionResult GetAllByClassRoomId(RequestDto request)
+   {
+        var response = studentService.GetAllByClassRoomId(request);
+        return Ok(response);
+    }
 }

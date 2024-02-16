@@ -8,7 +8,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { addShoppingCartModel } from '../../models/add-shopping-cart.model';
 import { AuthService } from '../../services/auth.service';
 import { ErrorService } from '../../services/error.service';
-import { driver } from "driver.js";
 import { PopupService } from '../../services/popup.service';
 
 
