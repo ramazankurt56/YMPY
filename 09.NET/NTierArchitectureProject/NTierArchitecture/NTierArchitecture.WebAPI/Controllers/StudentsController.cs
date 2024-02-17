@@ -39,9 +39,10 @@ public sealed class StudentsController
         return Ok(response);
     }
     [HttpPost]
-    public IActionResult GetAllByClassRoomId(RequestDto request)
-   {
-        var response = studentService.GetAllByClassRoomId(request);
+    public async Task<IActionResult> GetAllByClassRoomId(PaginationRequestDto request)
+    {
+        var response = await studentService.GetAllByClassRoomIdAsync(request);
+
         return Ok(response);
     }
 }

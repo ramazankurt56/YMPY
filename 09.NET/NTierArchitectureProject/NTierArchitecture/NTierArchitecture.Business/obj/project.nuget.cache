@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "tia+dL0wP/1hijzHGhi76GROJh/UPkQzAvLlVYyPhn/ivvxm+o7YSYHvw2U52onLp7DwTC6Me0/iYS6dI3F2Vg==",
+  "dgSpecHash": "8cblr0B741N7h6IH67VqeWnWKTCRpAAvIUjxj7LajNpeLTEU1GBJNBzeo22453VDNkU9eRbkVre2SEQpy6IbtA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.Business\\NTierArchitecture.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ramaz\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\ramaz\\.nuget\\packages\\entityframeworkcore.pagination\\8.0.0\\entityframeworkcore.pagination.8.0.0.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.1\\microsoft.aspnetcore.cryptography.internal.8.0.1.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.1\\microsoft.aspnetcore.cryptography.keyderivation.8.0.1.nupkg.sha512",

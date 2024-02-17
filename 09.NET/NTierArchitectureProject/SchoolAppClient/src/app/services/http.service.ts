@@ -24,6 +24,7 @@ export class HttpService {
         callBack(res);
       },
       error: (err: HttpErrorResponse) => {
+        this.swal.callToast(err.message, "error");
         console.log(err);
       }
     })

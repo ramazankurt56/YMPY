@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IIZyco9B7r6piQsm/RfsdFd59Tfk1tdCFLYBVQqK/OR7dZK5QX6gqpWDRCt8JRB9iR9hk28oqRepixHq+Svyuw==",
+  "dgSpecHash": "Bq0Gyn50yiJfV2dSSbHNFyWkS696SDjWAYzhpqBG6bfRVojTmWRCqkxJjAaw7lfSDeC1mleSdhZb0a+JvtsqSQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.WebAPI\\NTierArchitecture.WebAPI.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\ramaz\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\bogus\\35.4.0\\bogus.35.4.0.nupkg.sha512",
+    "C:\\Users\\ramaz\\.nuget\\packages\\entityframeworkcore.pagination\\8.0.0\\entityframeworkcore.pagination.8.0.0.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.1\\microsoft.aspnetcore.authentication.jwtbearer.8.0.1.nupkg.sha512",

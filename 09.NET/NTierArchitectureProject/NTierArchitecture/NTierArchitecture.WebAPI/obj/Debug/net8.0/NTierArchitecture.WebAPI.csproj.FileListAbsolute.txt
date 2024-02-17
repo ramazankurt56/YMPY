@@ -448,3 +448,4 @@ C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NT
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.WebAPI\bin\Debug\net8.0\Bogus.dll
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.WebAPI\obj\Debug\net8.0\NTierArc.23AAEAD5.Up2Date
 C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.WebAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\ramaz\Desktop\YMPY\09.NET\NTierArchitectureProject\NTierArchitecture\NTierArchitecture.WebAPI\bin\Debug\net8.0\EntityFrameworkCorePagination.Nuget.dll

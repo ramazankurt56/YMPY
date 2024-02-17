@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Azure.Core;
+using EntityFrameworkCorePagination.Nuget.Pagination;
 using FluentValidation;
 using FluentValidation.Results;
 using NTierArchitecture.Business.Constants;
@@ -58,22 +59,26 @@ public sealed class StudentManager(IStudentRepository studentRepository,IMapper 
 
         return students;
     }
-    public List<Student> GetAllByClassRoomId(RequestDto request)
+    public async Task<PaginationResult<Student>> GetAllByClassRoomIdAsync(PaginationRequestDto request)
     {
-        int take = request.PageSize- request.PageNumber;
-        List<Student> students = studentRepository
+        PaginationResult<Student> students = await studentRepository
                                                 .GetAll()
-                                                .Where(p => p.ClassRoomId == request.ClassRoomId)
-                                                .Where(p => p.IsDeleted == false)
-                                                .Where(p => p.FirstName.ToLower().Contains(request.Search.ToLower()) || p.IdentityNumber.ToLower().Contains(request.Search.ToLower()))
+                                                .Where(p => p.ClassRoomId == request.Id)
+                                                .Where(search =>
+                                                        search.FirstName
+                                                                .ToLower()
+                                                                .Contains(request.Search.ToLower()) ||
+                                                        search.LastName
+                                                                .ToLower()
+                                                                .Contains(request.Search.ToLower()) ||
+                                                        search.IdentityNumber
+                                                                .Contains(request.Search))
                                                 .OrderBy(p => p.FirstName)
-                                                .Skip(request.PageNumber)
-                                                .Take(take)
-                                                .ToList();
+                                                .ToPagedListAsync(request.PageNumber, request.PageSize);
 
-     
         return students;
     }
+
     public string Update(UpdateStudentDto request)
     {
         UpdateStudentDtoValidator validator = new();

@@ -119,7 +119,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "NTierArchitecture.Entities.DTOs.RequestDto",
+        "Type": "NTierArchitecture.Entities.DTOs.PaginationRequestDto",
         "IsRequired": true
       }
     ],
