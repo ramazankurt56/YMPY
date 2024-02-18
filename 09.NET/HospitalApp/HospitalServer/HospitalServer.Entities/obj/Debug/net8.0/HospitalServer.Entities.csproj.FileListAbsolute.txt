@@ -1,0 +1,13 @@
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\bin\Debug\net8.0\HospitalServer.Entities.deps.json
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\bin\Debug\net8.0\HospitalServer.Entities.dll
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\bin\Debug\net8.0\HospitalServer.Entities.pdb
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\obj\Debug\net8.0\HospitalServer.Entities.csproj.AssemblyReference.cache
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\obj\Debug\net8.0\HospitalServer.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\obj\Debug\net8.0\HospitalServer.Entities.AssemblyInfoInputs.cache
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\obj\Debug\net8.0\HospitalServer.Entities.AssemblyInfo.cs
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\obj\Debug\net8.0\HospitalServer.Entities.csproj.CoreCompileInputs.cache
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\obj\Debug\net8.0\HospitalServer.Entities.sourcelink.json
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\obj\Debug\net8.0\HospitalServer.Entities.dll
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\obj\Debug\net8.0\refint\HospitalServer.Entities.dll
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\obj\Debug\net8.0\HospitalServer.Entities.pdb
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Entities\obj\Debug\net8.0\ref\HospitalServer.Entities.dll

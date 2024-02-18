@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Uiz4wv/bbtZ0Meo2+o0fsGD75zNnlhLvRiqLXtpuGDE=",
+  "Source": "HospitalServer.WebAPI",
+  "BasePath": "_content/HospitalServer.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

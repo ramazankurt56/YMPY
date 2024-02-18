@@ -105,7 +105,7 @@ export class HomeComponent implements AfterContentInit {
           this.isLoading=2
           this.getAllStudentsByClassRoomId(this.classRooms[0].id);
         }
-      }, 3000);
+      }, 1000);
      
     });
     setTimeout(() => {
