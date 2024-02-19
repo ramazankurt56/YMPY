@@ -1,0 +1,154 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Doktor Tablosu</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+                        <li class="breadcrumb-item active">DoktorListesi</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <!-- Add Doctor Btn -->
+                        <div class="row" style="margin-bottom: 20px;">
+                            <div class="col-9">
+                                <button class="btn btn-primary btn-md " data-toggle="modal"
+                                    data-target="#addDoctorModal">Doktor Ekle</button>
+                            </div>
+                            <div class="col-3">
+                                <i class="fa-solid fa-magnifying-glass text-secondary"
+                                    style="position: absolute; bottom: 0.3px; left:10px; padding: 10px;"></i>
+                                <input type="search" [(ngModel)]="request.search" (keydown.enter)="keyupSearch()"
+                                    class="form-control" placeholder="Search something..." style="padding-left: 40px;">
+                            </div>
+                        </div>
+
+                        <table id="example2" class="table table-bordered  table-striped projects">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Adı</th>
+                                    <th>Soyadı</th>
+                                    <th>Uzmanlık Alanı</th>
+                                    <th>Telefon Numarası</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for(doctor of response.datas!; track doctor){
+                                <tr>
+                                    <td>{{(($index + ((request.pageNumber -1) * request.pageSize)) + 1)}}</td>
+                                    <td>{{doctor.firstName}}</td>
+                                    <td>{{doctor.lastName}}</td>
+                                    <td>{{doctor.specialization}}</td>
+                                    <td>{{doctor.phoneNumber}}</td>
+                                    <td>
+                                        <button class="btn btn-outline-info btn-sm mr-1" (click)="getDoctorById(doctor.id)">Detay Görüntüle</button>
+                                        <button class="btn btn-outline-danger btn-sm" (click)="removeDoctor(doctor.id)">Sil</button>
+                                      </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="mt-1 d-flex justify-content-center">
+                            <nav aria-label="Page navigation example ">
+                                <ul class="pagination">
+                                    <li class="page-item" [ngClass]="request.pageNumber === 1 ? 'disabled' : ''"><a
+                                            (click)="changePage(1)" class="page-link">First</a></li>
+                                    <li class="page-item" [ngClass]="request.pageNumber === 1 ? 'disabled' : ''"><a
+                                            (click)="changePage(request.pageNumber -1)" class="page-link">Previous</a>
+                                    </li>
+                                    @for(number of visiblePage.visiblePageNumbers; track number;){
+                                    <li class="page-item" [ngClass]="number == request.pageNumber ? 'active' : ''">
+                                        <a (click)="changePage(number)" class="page-link">
+                                            {{number}}
+                                        </a>
+                                    </li>
+                                    }
+                                    <li class="page-item" [ngClass]="request.pageNumber === response.totalPages ? 'disabled' : ''"><a
+                                        (click)="changePage(request.pageNumber + 1)" class="page-link">Next</a></li>
+                                <li class="page-item" [ngClass]="request.pageNumber === response.totalPages ? 'disabled' : ''"><a
+                                        (click)="changePage(response.totalPages)" class="page-link">Last</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!-- Add Doctor Modal -->
+<div class="modal fade" id="addDoctorModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Doktor Ekle</h1>
+                <button type="button" class="btn" (click)="clearAddDoctorModel()" #addDoctorModalCloseBtn
+                    data-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+            </div>
+            <form formValidate #addDoctorForm="ngForm" (ngSubmit)="createDoctor(addDoctorForm)" autocomplete="off">
+                <div class="modal-body">
+                    <!-- First Name -->
+                    <div class="form-group mt-1">
+                        <label for="createDoctorFirstName">Adı</label>
+                        <input class="form-control" type="text" id="createDoctorFirstName" name="createDoctorFirstName"
+                            [(ngModel)]="addDoctorModel.firstName" required minlength="1">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <!-- Last Name -->
+                    <div class="form-group mt-1">
+                        <label for="createDoctorLastName">Soyadı</label>
+                        <input class="form-control" type="text" id="createDoctoLlastName" name="createDoctorLastName"
+                            [(ngModel)]="addDoctorModel.lastName" required minlength="3">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <!-- specialization -->
+                    <div class="form-group mt-1">
+                        <label for="createDoctorSpecialization">Uzmanlık alanı</label>
+                        <input class="form-control" type="text" id="createDoctorSpecialization" name="createDoctorSpecialization"
+                            [(ngModel)]="addDoctorModel.specialization" required minlength="3" >
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <!-- phoneNumber -->
+                    <div class="form-group mt-1">
+                        <label for="createDoctorphoneNumber  ">Telefon Numarası</label>
+                        <input class="form-control" type="text" id="createDoctorphoneNumber" name="createDoctorphoneNumber"
+                            [(ngModel)]="addDoctorModel.phoneNumber" required minlength="11" maxlength="11">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                    <!-- emaile -->
+                    <div class="form-group mt-1">
+                        <label for="createDoctorEmail">Email</label>
+                        <input class="form-control" type="text" id="createDoctorEmail" name="createDoctorEmail"
+                            [(ngModel)]="addDoctorModel.email" required minlength="3">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                    <div class="invalid-feedback"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

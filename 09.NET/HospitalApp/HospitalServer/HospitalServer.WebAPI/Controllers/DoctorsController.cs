@@ -1,4 +1,6 @@
-﻿using HospitalServer.Business.Services.Abstract;
+﻿using Azure.Core;
+using HospitalServer.Business.Services.Abstract;
+using HospitalServer.Entities.Dtos;
 using HospitalServer.Entities.Dtos.Create;
 using HospitalServer.Entities.Dtos.Update;
 using Microsoft.AspNetCore.Http;
@@ -16,9 +18,9 @@ public class DoctorsController(IDoctorService doctorService) : ControllerBase
         var result = doctorService.Create(request);
         if (result.Success)
         {
-            return Ok(result.Message);
+            return Ok(new { result.Message });
         }
-        return BadRequest(result.Message);
+        return BadRequest(new { result.Message });
     }
     [HttpPost]
     public IActionResult Update(UpdateDoctorDto request)
@@ -26,30 +28,36 @@ public class DoctorsController(IDoctorService doctorService) : ControllerBase
         var result = doctorService.Update(request);
         if (result.Success)
         {
-            return Ok(result.Message);
+            return Ok(new { result.Message });
         }
-        return BadRequest(result.Message);
+        return BadRequest(new { result.Message });
+    }
+    [HttpGet("{id}")]
+    public IActionResult GetDoctorById(Guid id)
+    {
+        var response = doctorService.GetDoctorById(id);
+        if (response.Success)
+        {
+            return Ok(response.Data );
+        }
+        return BadRequest(new { response.Message });
     }
 
     [HttpGet("{id}")]
-    public IActionResult DeleteById(Guid id) //?id=asdasd => query Params || /asdasdasd => routing params
+    public IActionResult DeleteById(Guid id)
     {
         var result = doctorService.DeleteById(id);
         if (result.Success)
         {
-            return Ok(result.Message);
+            return Ok(new { result.Message });
         }
-        return BadRequest(result.Message);
+        return BadRequest(new { result.Message });
     }
 
-    [HttpGet]
-    public IActionResult GetAll()
+    [HttpPost]
+    public async Task<IActionResult> GetAll(PaginationRequestDto request)
     {
-        var result = doctorService.GetAll();
-        if (result.Success)
-        {
-            return Ok(result.Data);
-        }
-        return BadRequest(result.Message);
+        var response = await doctorService.GetAll(request);
+        return Ok(response);
     }
 }

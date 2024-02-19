@@ -1,4 +1,6 @@
-﻿using HospitalServer.Business.Result;
+﻿using EntityFrameworkCorePagination.Nuget.Pagination;
+using HospitalServer.Business.Result;
+using HospitalServer.Entities.Dtos;
 using HospitalServer.Entities.Dtos.Create;
 using HospitalServer.Entities.Dtos.Update;
 using HospitalServer.Entities.Models;
@@ -9,5 +11,5 @@ public interface IMedicationService
     IResult Create(CreateMedicationDto request);
     IResult Update(UpdateMedicationDto request);
     IResult DeleteById(Guid id);
-    IDataResult<IQueryable<Medication>> GetAll();
+    Task<PaginationResult<Medication>> GetAll(PaginationRequestDto request);
 }

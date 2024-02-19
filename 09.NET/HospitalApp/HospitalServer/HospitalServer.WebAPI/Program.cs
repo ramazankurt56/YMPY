@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(cfr =>
 {
     cfr.AddDefaultPolicy(p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+    
 });
 //DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(opt =>
@@ -39,7 +40,13 @@ builder.Services.AddScoped<IExaminationRepository, ExaminationRepository>();
 builder.Services.AddScoped<IMedicationRepository, MedicationRepository>();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<IPrescriptionRepository, PrescriptionRepository>();
+
+builder.Services.AddScoped<IAppointmentService, AppointmentManager>();
 builder.Services.AddScoped<IDoctorService, DoctorManager>();
+builder.Services.AddScoped<IExaminationService, ExaminationManager>();
+builder.Services.AddScoped<IMedicationService, MedicationManager>();
+builder.Services.AddScoped<IPatientService, PatientManager>();
+builder.Services.AddScoped<IPrescriptionService, PrescriptionManager>();
 builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 
 
@@ -54,7 +61,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

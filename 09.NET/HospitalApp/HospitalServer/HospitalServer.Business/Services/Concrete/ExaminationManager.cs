@@ -1,5 +1,6 @@
 ﻿
 using AutoMapper;
+using EntityFrameworkCorePagination.Nuget.Pagination;
 using FluentValidation.Results;
 using HospitalServer.Business.Constants;
 using HospitalServer.Business.Result;
@@ -7,6 +8,8 @@ using HospitalServer.Business.Services.Abstract;
 using HospitalServer.Business.Validator.Create;
 using HospitalServer.Business.Validator.Update;
 using HospitalServer.DataAccess.Repository.Abstract;
+using HospitalServer.DataAccess.Repository.Concrete;
+using HospitalServer.Entities.Dtos;
 using HospitalServer.Entities.Dtos.Create;
 using HospitalServer.Entities.Dtos.Update;
 using HospitalServer.Entities.Models;
@@ -37,9 +40,16 @@ public class ExaminationManager(IExaminationRepository examinationRepository, IM
         return new SuccessResult(MessageConstants.DeleteIsSuccessfully);
     }
 
-    public IDataResult<IQueryable<Examination>> GetAll()
+    public async Task<PaginationResult<Examination>> GetAll(PaginationRequestDto request)
     {
-        SuccessDataResult<IQueryable<Examination>> examination = new(examinationRepository.GetAll().OrderBy(p => p.CreatedDate).AsQueryable());
+
+        PaginationResult<Examination> examination = await examinationRepository
+                                                .GetAll()
+                                                .Where(p => p.IsDeleted == false)
+                                                .Where(search =>
+                                                        search.Appointment.Patient.FirstName.ToLower().Contains(request.Search.ToLower()))
+                                                .OrderBy(p => p.Appointment.Patient.FirstName)
+                                                .ToPagedListAsync(request.PageNumber, request.PageSize);
         return examination;
     }
 

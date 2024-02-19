@@ -63,6 +63,17 @@
           }
         }
       },
+      "EntityFrameworkCore.Pagination/8.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.2"
+        },
+        "runtime": {
+          "lib/net8.0/EntityFrameworkCorePagination.Nuget.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.0.0"
+          }
+        }
+      },
       "FluentValidation/11.9.0": {
         "runtime": {
           "lib/net8.0/FluentValidation.dll": {
@@ -985,6 +996,7 @@
       "HospitalServer.Business/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
+          "EntityFrameworkCore.Pagination": "8.0.0",
           "FluentValidation": "11.9.0",
           "HospitalServer.DataAccess": "1.0.0",
           "HospitalServer.Entities": "1.0.0"
@@ -1039,6 +1051,13 @@
       "sha512": "sha512-l1Xm2MWOF2Mzcwuarlw8kWQXLZk3UeB55aQXVyjj23aBfDwOZ3gu5GP2kJ6KlmZeZv2TCzw7x4L3V36iNr3gww==",
       "path": "azure.identity/1.10.3",
       "hashPath": "azure.identity.1.10.3.nupkg.sha512"
+    },
+    "EntityFrameworkCore.Pagination/8.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oYKNuwJQa43G+vAPW/pAjf7mO+91q0VmTZrif++zlPYMK+AQGSAkmTc1dtijvVwAoaAjLqsj7KJ0/Pb0RJ7PGw==",
+      "path": "entityframeworkcore.pagination/8.0.0",
+      "hashPath": "entityframeworkcore.pagination.8.0.0.nupkg.sha512"
     },
     "FluentValidation/11.9.0": {
       "type": "package",

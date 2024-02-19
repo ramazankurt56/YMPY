@@ -14,15 +14,19 @@ public class ApplicationDbContext : IdentityDbContext<AppUser,AppRole,Guid>
     public DbSet<Medication> Medication { get; set; }
     public DbSet<Patient> Patients { get; set; }
     public DbSet<Prescription> Prescriptions { get; set; }
+    public DbSet<DoctorPatient> DoctorPatients { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<DoctorPatient>().HasKey(p => new { p.DoctorId, p.PatientId });
+
         modelBuilder.Entity<Appointment>().HasQueryFilter(filter => !filter.IsDeleted);
-        modelBuilder.Entity<Doctor>().HasQueryFilter(filter => !filter.IsDeleted);
+       // modelBuilder.Entity<Doctor>().HasQueryFilter(filter => !filter.IsDeleted);
         modelBuilder.Entity<Examination>().HasQueryFilter(filter => !filter.IsDeleted);
         modelBuilder.Entity<Medication>().HasQueryFilter(filter => !filter.IsDeleted);
-        modelBuilder.Entity<Patient>().HasQueryFilter(filter => !filter.IsDeleted);
+      //  modelBuilder.Entity<Patient>().HasQueryFilter(filter => !filter.IsDeleted);
         modelBuilder.Entity<Prescription>().HasQueryFilter(filter => !filter.IsDeleted);
+
         modelBuilder.Ignore<IdentityUserRole<Guid>>();
         modelBuilder.Ignore<IdentityRoleClaim<Guid>>();
         modelBuilder.Ignore<IdentityUserClaim<Guid>>();

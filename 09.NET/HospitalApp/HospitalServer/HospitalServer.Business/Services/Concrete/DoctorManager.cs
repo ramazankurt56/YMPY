@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Azure.Core;
+using EntityFrameworkCorePagination.Nuget.Pagination;
 using FluentValidation.Results;
 using HospitalServer.Business.Constants;
 using HospitalServer.Business.Result;
@@ -6,6 +8,7 @@ using HospitalServer.Business.Services.Abstract;
 using HospitalServer.Business.Validator.Create;
 using HospitalServer.Business.Validator.Update;
 using HospitalServer.DataAccess.Repository.Abstract;
+using HospitalServer.Entities.Dtos;
 using HospitalServer.Entities.Dtos.Create;
 using HospitalServer.Entities.Dtos.Update;
 using HospitalServer.Entities.Models;
@@ -37,10 +40,34 @@ public class DoctorManager(IDoctorRepository doctorRepository, IMapper mapper) :
         return new SuccessResult(MessageConstants.DeleteIsSuccessfully);
     }
 
-    public IDataResult<IQueryable<Doctor>> GetAll()
+    public async Task<PaginationResult<Doctor>> GetAll(PaginationRequestDto request)
     {
-        SuccessDataResult <IQueryable<Doctor>> doctors = new(doctorRepository.GetAll().OrderBy(p => p.FirstName).AsQueryable());
-        return doctors;
+
+        PaginationResult<Doctor>doctor = await doctorRepository
+                                                .GetAll()
+                                                .Where(p=>p.IsDeleted==false)
+                                                .Where(search =>
+                                                        search.FirstName
+                                                .ToLower()
+                                                                .Contains(request.Search.ToLower()) ||
+                                                        search.LastName
+                                                .ToLower()
+                                                                .Contains(request.Search.ToLower()) ||
+                                                        search.PhoneNumber
+                                                                .Contains(request.Search))
+                                                .OrderBy(p => p.FirstName)
+                                                .ToPagedListAsync(request.PageNumber, request.PageSize);
+        return doctor;
+    }
+
+    public IDataResult<Doctor> GetDoctorById(Guid id)
+    {
+        Doctor? doctor=doctorRepository.GetDoctorById(id);
+        if (doctor is not null)
+        {
+            return new SuccessDataResult<Doctor>(doctor);
+        }
+        return new ErrorDataResult<Doctor>(doctor!,MessageConstants.DataNotFound);
     }
 
     public IResult Update(UpdateDoctorDto request)

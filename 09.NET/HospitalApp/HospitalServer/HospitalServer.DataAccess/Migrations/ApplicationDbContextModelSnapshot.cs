@@ -140,6 +140,10 @@ namespace HospitalServer.DataAccess.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("DoctorId");
+
+                    b.HasIndex("PatientId");
+
                     b.ToTable("Appointments");
                 });
 
@@ -190,6 +194,21 @@ namespace HospitalServer.DataAccess.Migrations
                     b.ToTable("Doctors");
                 });
 
+            modelBuilder.Entity("HospitalServer.Entities.Models.DoctorPatient", b =>
+                {
+                    b.Property<Guid>("DoctorId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("PatientId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("DoctorId", "PatientId");
+
+                    b.HasIndex("PatientId");
+
+                    b.ToTable("DoctorPatients");
+                });
+
             modelBuilder.Entity("HospitalServer.Entities.Models.Examination", b =>
                 {
                     b.Property<Guid>("Id")
@@ -228,6 +247,8 @@ namespace HospitalServer.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AppointmentId");
 
                     b.ToTable("Examination");
                 });
@@ -356,7 +377,79 @@ namespace HospitalServer.DataAccess.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ExaminationId");
+
+                    b.HasIndex("MedicationId");
+
                     b.ToTable("Prescriptions");
+                });
+
+            modelBuilder.Entity("HospitalServer.Entities.Models.Appointment", b =>
+                {
+                    b.HasOne("HospitalServer.Entities.Models.Doctor", "Doctor")
+                        .WithMany()
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HospitalServer.Entities.Models.Patient", "Patient")
+                        .WithMany()
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("Patient");
+                });
+
+            modelBuilder.Entity("HospitalServer.Entities.Models.DoctorPatient", b =>
+                {
+                    b.HasOne("HospitalServer.Entities.Models.Doctor", "Doctor")
+                        .WithMany()
+                        .HasForeignKey("DoctorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HospitalServer.Entities.Models.Patient", "Patient")
+                        .WithMany()
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Doctor");
+
+                    b.Navigation("Patient");
+                });
+
+            modelBuilder.Entity("HospitalServer.Entities.Models.Examination", b =>
+                {
+                    b.HasOne("HospitalServer.Entities.Models.Appointment", "Appointment")
+                        .WithMany()
+                        .HasForeignKey("AppointmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Appointment");
+                });
+
+            modelBuilder.Entity("HospitalServer.Entities.Models.Prescription", b =>
+                {
+                    b.HasOne("HospitalServer.Entities.Models.Examination", "Examination")
+                        .WithMany()
+                        .HasForeignKey("ExaminationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("HospitalServer.Entities.Models.Medication", "Medication")
+                        .WithMany()
+                        .HasForeignKey("MedicationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Examination");
+
+                    b.Navigation("Medication");
                 });
 #pragma warning restore 612, 618
         }

@@ -149,3 +149,4 @@ C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.Web
 C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.WebAPI\bin\Debug\net8.0\HospitalServer.Business.dll
 C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.WebAPI\bin\Debug\net8.0\HospitalServer.Business.pdb
 C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.WebAPI\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\ramaz\Desktop\YMPY\09.NET\HospitalApp\HospitalServer\HospitalServer.WebAPI\bin\Debug\net8.0\EntityFrameworkCorePagination.Nuget.dll

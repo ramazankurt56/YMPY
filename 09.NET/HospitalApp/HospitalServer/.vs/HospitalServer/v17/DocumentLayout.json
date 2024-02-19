@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{966A7C8A-E839-4AAF-9C88-3BCBDAEDE89C}|HospitalServer.WebAPI\\HospitalServer.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\hospitalapp\\hospitalserver\\hospitalserver.webapi\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{966A7C8A-E839-4AAF-9C88-3BCBDAEDE89C}|HospitalServer.WebAPI\\HospitalServer.WebAPI.csproj|solutionrelative:hospitalserver.webapi\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{966A7C8A-E839-4AAF-9C88-3BCBDAEDE89C}|HospitalServer.WebAPI\\HospitalServer.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\hospitalapp\\hospitalserver\\hospitalserver.webapi\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{966A7C8A-E839-4AAF-9C88-3BCBDAEDE89C}|HospitalServer.WebAPI\\HospitalServer.WebAPI.csproj|solutionrelative:hospitalserver.webapi\\controllers\\doctorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\hospitalapp\\hospitalserver\\hospitalserver.business\\services\\concrete\\doctormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|solutionrelative:hospitalserver.business\\services\\concrete\\doctormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\hospitalapp\\hospitalserver\\hospitalserver.business\\services\\concrete\\prescriptionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|solutionrelative:hospitalserver.business\\services\\concrete\\prescriptionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\hospitalapp\\hospitalserver\\hospitalserver.business\\services\\concrete\\patientmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|solutionrelative:hospitalserver.business\\services\\concrete\\patientmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\hospitalapp\\hospitalserver\\hospitalserver.business\\services\\concrete\\medicationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|solutionrelative:hospitalserver.business\\services\\concrete\\medicationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\hospitalapp\\hospitalserver\\hospitalserver.business\\services\\concrete\\appointmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|solutionrelative:hospitalserver.business\\services\\concrete\\appointmentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\hospitalapp\\hospitalserver\\hospitalserver.business\\services\\concrete\\examinationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|solutionrelative:hospitalserver.business\\services\\concrete\\examinationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\hospitalapp\\hospitalserver\\hospitalserver.business\\services\\concrete\\doctormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{43163A67-8FC5-4DAC-9094-DAF40AE3165A}|HospitalServer.Business\\HospitalServer.Business.csproj|solutionrelative:hospitalserver.business\\services\\concrete\\doctormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +26,58 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DoctorsController.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.WebAPI\\Controllers\\DoctorsController.cs",
-              "RelativeDocumentMoniker": "HospitalServer.WebAPI\\Controllers\\DoctorsController.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.WebAPI\\Controllers\\DoctorsController.cs",
-              "RelativeToolTip": "HospitalServer.WebAPI\\Controllers\\DoctorsController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAYwDIAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T18:46:00.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PrescriptionManager.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\PrescriptionManager.cs",
-              "RelativeDocumentMoniker": "HospitalServer.Business\\Services\\Concrete\\PrescriptionManager.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\PrescriptionManager.cs",
-              "RelativeToolTip": "HospitalServer.Business\\Services\\Concrete\\PrescriptionManager.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAkwAcAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T18:45:33.786Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "PatientManager.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\PatientManager.cs",
               "RelativeDocumentMoniker": "HospitalServer.Business\\Services\\Concrete\\PatientManager.cs",
               "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\PatientManager.cs",
               "RelativeToolTip": "HospitalServer.Business\\Services\\Concrete\\PatientManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA0AAAA",
+              "ViewState": "AQIAAEcAAAAAAAAAAADwv0MAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T18:45:26.035Z",
+              "WhenOpened": "2024-02-19T18:30:43.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MedicationManager.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\MedicationManager.cs",
-              "RelativeDocumentMoniker": "HospitalServer.Business\\Services\\Concrete\\MedicationManager.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\MedicationManager.cs",
-              "RelativeToolTip": "HospitalServer.Business\\Services\\Concrete\\MedicationManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T18:45:19.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ExaminationManager.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\ExaminationManager.cs",
-              "RelativeDocumentMoniker": "HospitalServer.Business\\Services\\Concrete\\ExaminationManager.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\ExaminationManager.cs",
-              "RelativeToolTip": "HospitalServer.Business\\Services\\Concrete\\ExaminationManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T18:45:10.827Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "DoctorManager.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\DoctorManager.cs",
               "RelativeDocumentMoniker": "HospitalServer.Business\\Services\\Concrete\\DoctorManager.cs",
               "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\DoctorManager.cs",
               "RelativeToolTip": "HospitalServer.Business\\Services\\Concrete\\DoctorManager.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAA1wCkAAAAZAAAA",
+              "ViewState": "AQIAADgAAAAAAAAAAAAgwD4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T18:45:02.397Z",
+              "WhenOpened": "2024-02-19T18:30:42.416Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppointmentManager.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\AppointmentManager.cs",
-              "RelativeDocumentMoniker": "HospitalServer.Business\\Services\\Concrete\\AppointmentManager.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.Business\\Services\\Concrete\\AppointmentManager.cs",
-              "RelativeToolTip": "HospitalServer.Business\\Services\\Concrete\\AppointmentManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA0AAAA",
+              "DocumentIndex": 0,
+              "Title": "PatientsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.WebAPI\\Controllers\\PatientsController.cs",
+              "RelativeDocumentMoniker": "HospitalServer.WebAPI\\Controllers\\PatientsController.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.WebAPI\\Controllers\\PatientsController.cs",
+              "RelativeToolTip": "HospitalServer.WebAPI\\Controllers\\PatientsController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-18T18:44:48.827Z",
+              "WhenOpened": "2024-02-19T18:29:57.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DoctorsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.WebAPI\\Controllers\\DoctorsController.cs",
+              "RelativeDocumentMoniker": "HospitalServer.WebAPI\\Controllers\\DoctorsController.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\HospitalApp\\HospitalServer\\HospitalServer.WebAPI\\Controllers\\DoctorsController.cs",
+              "RelativeToolTip": "HospitalServer.WebAPI\\Controllers\\DoctorsController.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwCIAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T18:29:56.506Z",
               "EditorCaption": ""
             }
           ]

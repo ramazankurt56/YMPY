@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EntityFrameworkCorePagination.Nuget.Pagination;
 using FluentValidation.Results;
 using HospitalServer.Business.Constants;
 using HospitalServer.Business.Result;
@@ -6,6 +7,8 @@ using HospitalServer.Business.Services.Abstract;
 using HospitalServer.Business.Validator.Create;
 using HospitalServer.Business.Validator.Update;
 using HospitalServer.DataAccess.Repository.Abstract;
+using HospitalServer.DataAccess.Repository.Concrete;
+using HospitalServer.Entities.Dtos;
 using HospitalServer.Entities.Dtos.Create;
 using HospitalServer.Entities.Dtos.Update;
 using HospitalServer.Entities.Models;
@@ -36,9 +39,17 @@ public class PrescriptionManager(IPrescriptionRepository prescriptionRepository,
         return new SuccessResult(MessageConstants.DeleteIsSuccessfully);
     }
 
-    public IDataResult<IQueryable<Prescription>> GetAll()
+
+    public async Task<PaginationResult<Prescription>> GetAll(PaginationRequestDto request)
     {
-        SuccessDataResult<IQueryable<Prescription>> prescription = new(prescriptionRepository.GetAll().OrderBy(p => p.CreatedDate).AsQueryable());
+
+        PaginationResult<Prescription> prescription = await prescriptionRepository
+                                                .GetAll()
+                                                .Where(p => p.IsDeleted == false)
+                                                .Where(search =>
+                                                        search.Examination.Appointment.Patient.FirstName.ToLower().Contains(request.Search.ToLower()))
+                                                .OrderBy(p => p.CreatedDate)
+                                                .ToPagedListAsync(request.PageNumber, request.PageSize);
         return prescription;
     }
 
