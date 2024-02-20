@@ -51,6 +51,16 @@ public class MedicationManager(IMedicationRepository medicationRepository, IMapp
         return medication;
     }
 
+    public IDataResult<Medication> GetMedicationById(Guid id)
+    {
+        Medication? medication = medicationRepository.GetMedicationById(id);
+        if (medication is not null)
+        {
+            return new SuccessDataResult<Medication>(medication);
+        }
+        return new ErrorDataResult<Medication>(medication!, MessageConstants.DataNotFound);
+    }
+
     public IResult Update(UpdateMedicationDto request)
     {
         UpdateMedicationDtoValidator validator = new();

@@ -12,4 +12,5 @@ public interface IMedicationService
     IResult Update(UpdateMedicationDto request);
     IResult DeleteById(Guid id);
     Task<PaginationResult<Medication>> GetAll(PaginationRequestDto request);
+    IDataResult<Medication> GetMedicationById(Guid id);
 }

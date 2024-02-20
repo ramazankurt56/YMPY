@@ -47,6 +47,7 @@ getAllDoctors() {
 }
 getPatientById() {
   this.http.get(`Patients/GetPatientById/${this.patientId}`, (res) => {
+    this.updatePatientModel.identificationNumber=res.identificationNumber
     this.updatePatientModel.firstName=res.firstName
     this.updatePatientModel.lastName=res.lastName
     this.updatePatientModel.gender=res.gender

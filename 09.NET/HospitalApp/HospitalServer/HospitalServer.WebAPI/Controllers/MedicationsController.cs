@@ -42,6 +42,16 @@ public class MedicationsController(IMedicationService medicationService) : Contr
         }
         return BadRequest(new { result.Message });
     }
+    [HttpGet("{id}")]
+    public IActionResult GetMedicationById(Guid id)
+    {
+        var response = medicationService.GetMedicationById(id);
+        if (response.Success)
+        {
+            return Ok(response.Data);
+        }
+        return BadRequest(new { response.Message });
+    }
 
     [HttpPost]
     public async Task<IActionResult> GetAll(PaginationRequestDto request)

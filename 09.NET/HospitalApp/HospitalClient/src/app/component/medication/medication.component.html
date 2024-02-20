@@ -1,1 +1,183 @@
-<p>medication works!</p>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>İlaç Tablosu</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+                        <li class="breadcrumb-item active">İlaçListesi</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        
+                        <div class="row" style="margin-bottom: 20px;">
+                            <div class="col-9">
+                                <button class="btn btn-primary btn-md " data-toggle="modal"
+                                    data-target="#addMedicationModal">İlaç Ekle</button>
+                            </div>
+                            <div class="col-3">
+                                <i class="fa-solid fa-magnifying-glass text-secondary"
+                                    style="position: absolute; bottom: 0.3px; left:10px; padding: 10px;"></i>
+                                <input type="search" [(ngModel)]="request.search" (keydown.enter)="keyupSearch()"
+                                    class="form-control" placeholder="Search something..." style="padding-left: 40px;">
+                            </div>
+                        </div>
+
+                        <table id="example2" class="table table-bordered  table-striped projects">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>İlaç Adı</th>
+                                    <th>Mikar</th>
+                                    <th>Son Kullanma tarihi</th>
+                                    <th>Operations</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @for(medication of response.datas!; track medication){
+                                <tr>
+                                    <td>{{(($index + ((request.pageNumber -1) * request.pageSize)) + 1)}}</td>
+                                    <td>{{medication.medicationName}}</td>
+                                    <td>{{medication.quantity}}</td>
+                                    <td>{{ medication.expiryDate | date: 'dd-MM-yyyy' }}</td>
+                                    <td>
+                                        <button class="btn btn-outline-info btn-sm mr-1"  data-toggle="modal"
+                                        data-target="#updateMedicationModal" (click)="getMedicationById(medication.id)">Güncelle</button>
+                                        <button class="btn btn-outline-danger btn-sm" (click)="removeMedication(medication.id)">Sil</button>
+                                      </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="mt-1 d-flex justify-content-center">
+                            <nav aria-label="Page navigation example ">
+                                <ul class="pagination">
+                                    <li class="page-item" [ngClass]="request.pageNumber === 1 ? 'disabled' : ''"><a
+                                            (click)="changePage(1)" class="page-link">First</a></li>
+                                    <li class="page-item" [ngClass]="request.pageNumber === 1 ? 'disabled' : ''"><a
+                                            (click)="changePage(request.pageNumber -1)" class="page-link">Previous</a>
+                                    </li>
+                                    @for(number of visiblePage.visiblePageNumbers; track number;){
+                                    <li class="page-item" [ngClass]="number == request.pageNumber ? 'active' : ''">
+                                        <a (click)="changePage(number)" class="page-link">
+                                            {{number}}
+                                        </a>
+                                    </li>
+                                    }
+                                    <li class="page-item" [ngClass]="request.pageNumber === response.totalPages ? 'disabled' : ''"><a
+                                        (click)="changePage(request.pageNumber + 1)" class="page-link">Next</a></li>
+                                <li class="page-item" [ngClass]="request.pageNumber === response.totalPages ? 'disabled' : ''"><a
+                                        (click)="changePage(response.totalPages)" class="page-link">Last</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!-- Add Medication Modal -->
+<div class="modal fade" id="addMedicationModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">İlaç Ekle</h1>
+                <button type="button" class="btn" (click)="clearAddMedicationModel()" #addMedicationModalCloseBtn
+                    data-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+            </div>
+            <form formValidate #addMedicationForm="ngForm" (ngSubmit)="createMedication(addMedicationForm)" autocomplete="off">
+                <div class="modal-body">
+                    <!-- Medication Name -->
+                    <div class="form-group mt-1">
+                        <label for="medicationCreateName">Adı</label>
+                        <input class="form-control" type="text" id="medicationCreateName" name="medicationCreateName"
+                            [(ngModel)]="addMedicationModel.medicationName" required minlength="3">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="form-group mt-1">
+                        <label for="medicationCreateQuantity">Miktar</label>
+                        <input class="form-control" type="text" id="medicationCreateQuantity" name="medicationCreateQuantity"
+                            [(ngModel)]="addMedicationModel.quantity" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                      <!-- DateOfBirth -->
+                      <div class="form-group mt-1">
+                        <label for="medicationCreateExpiryDate">Son Kullanma Tarihi</label>
+                        <input class="form-control" type="date" id="medicationCreateExpiryDate" name="medicationCreateExpiryDate"
+                            [(ngModel)]="addMedicationModel.expiryDate">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                    <div class="invalid-feedback"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Update Medication Modal -->
+<div class="modal fade" id="updateMedicationModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">İlaç Güncelle</h1>
+                <button type="button" class="btn" (click)="clearUpdateMedicationModel()" #updateMedicationModalCloseBtn
+                    data-dismiss="modal" aria-label="Close">
+                    <i class="fa-solid fa-x"></i>
+                </button>
+            </div>
+            <form formValidate #updateMedicationForm="ngForm" (ngSubmit)="updateMedication(updateMedicationForm)" autocomplete="off">
+                <div class="modal-body">
+                    <!-- Medication Name -->
+                    <div class="form-group mt-1">
+                        <label for="medicationUpdateName">Adı</label>
+                        <input class="form-control" type="text" id="medicationUpdateName" name="medicationUpdateName"
+                            [(ngModel)]="updateMedicationModel.medicationName" required minlength="3">
+                        <div class="invalid-feedback"></div>
+                    </div>
+
+                    <!-- Quantity -->
+                    <div class="form-group mt-1">
+                        <label for="medicationUpdateQuantity">Miktar</label>
+                        <input class="form-control" type="text" id="medicationUpdateQuantity" name="medicationUpdateQuantity"
+                            [(ngModel)]="updateMedicationModel.quantity" required>
+                        <div class="invalid-feedback"></div>
+                    </div>
+                      <!-- DateOfBirth -->
+                      <div class="form-group mt-1">
+                        <label for="medicationUpdateExpiryDate">Son Kullanma Tarihi</label>
+                        <input class="form-control" type="date" id="medicationUpdateExpiryDate" name="medicationUpdateExpiryDate"
+                            [(ngModel)]="updateMedicationModel.expiryDate">
+                        <div class="invalid-feedback"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Güncelle</button>
+                    <div class="invalid-feedback"></div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

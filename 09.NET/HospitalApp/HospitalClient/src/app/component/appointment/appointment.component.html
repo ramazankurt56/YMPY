@@ -1,1 +1,71 @@
-<p>appointment works!</p>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Hasta Tablosu</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+                        <li class="breadcrumb-item active">HastaListesi</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="container">
+                            <h1>Doktor Randevu Sistemi</h1>
+                            <div class="row">
+                              <div class="col-md-12">
+                               <h3>{{
+                                startDate.toLocaleDateString("tr-Tr", { year: "numeric", month: "numeric", day: "numeric" }) 
+                                + " - " +
+                                date[4]}}</h3>
+                              
+
+                                <button class="btn btn-primary" (click)="geri()">Geri</button>
+                                <button class="btn btn-primary" (click)="ileri()">İleri</button>
+                                <table class="table table-bordered">
+                                  <thead>
+                                    <tr>
+                                      <tr>
+                                       
+                                        <th>Pazartesi</th>
+                                        <th>Salı</th>
+                                        <th>Çarşamba</th>
+                                        <th>Perşembe</th>
+                                        <th>Cuma</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    @for(clock of clocks; track clock){
+                                    <tr >
+                                      <!-- <td>{{clock}}</td> -->
+                                      @for (item of date; track item) {
+                                        <td><a (click)="randevuAl(clock,item)">{{item+ " "+clock}}</a></td>
+                                      }
+                                    </tr>
+                                  }
+                                  </tbody>
+                                </table>
+                                <button class="btn btn-primary" (click)="createAppointment()">Kaydet</button>
+                              </div>
+                            </div>
+                          </div>
+                          
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+

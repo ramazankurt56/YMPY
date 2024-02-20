@@ -9,7 +9,7 @@ import { PaginationResponseModel } from '../../../models/pagination-response.mod
 import { CommonModule } from '@angular/common';
 import { PatientModel } from '../../../models/patient.model';
 import { DoctorModel } from '../../../models/doctor.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-doctor-details',
@@ -23,7 +23,7 @@ export class DoctorDetailsComponent implements OnInit {
   request: PaginationRequestModel = new PaginationRequestModel();
   updateDoctorModel: DoctorModel = new DoctorModel();
   doctorId:string="";               
-constructor(public visiblePage:VisiblePageService,private http: HttpService, private swal: SwalService,private route: ActivatedRoute )
+constructor(private router:Router,public visiblePage:VisiblePageService,private http: HttpService, private swal: SwalService,private route: ActivatedRoute )
 {
   this.getAllPatients()
 }
@@ -41,6 +41,9 @@ getAllPatients() {
     this.response = res;
     this.visiblePage.generatePageNumbers(this.response.totalPages,this.request.pageNumber);
   });
+}
+getPatientById(patientId:string) {
+  this.router.navigate(['/patient-detail', patientId]);
 }
 getDoctorById() {
   this.http.get(`Doctors/GetDoctorById/${this.doctorId}`, (res) => {

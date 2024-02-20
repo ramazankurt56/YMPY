@@ -1,14 +1,14 @@
 ﻿using HospitalServer.Business.Services.Abstract;
-using HospitalServer.Entities.Dtos;
 using HospitalServer.Entities.Dtos.Create;
 using HospitalServer.Entities.Dtos.Update;
+using HospitalServer.Entities.Dtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalServer.WebAPI.Controllers;
 [Route("api/[controller]/[action]")]
 [ApiController]
-public class AppointmentController(IAppointmentService appointmentService) : ControllerBase
+public class AppointmentsController(IAppointmentService appointmentService) : ControllerBase
 {
     [HttpPost]
     public IActionResult Create(CreateAppointmentDto request)

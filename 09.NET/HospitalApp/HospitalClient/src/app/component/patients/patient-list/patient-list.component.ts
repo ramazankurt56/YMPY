@@ -49,6 +49,7 @@ export class PatientListComponent {
   createPatient(form: NgForm) {
     if (form.valid) {
       console.log(form)
+     console.log( this.addPatientModel.dateOfBirth)
       this.http.post("Patients/Create", this.addPatientModel, (res) => {
         this.addPatientModalCloseBtn?.nativeElement.click();
         this.swal.callToast(res.message);
