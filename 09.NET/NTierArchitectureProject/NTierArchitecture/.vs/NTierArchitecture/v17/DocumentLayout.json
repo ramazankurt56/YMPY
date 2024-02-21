@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{50888A1C-3B4A-46C4-9425-996160B72CB6}|NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\ntierarchitectureproject\\ntierarchitecture\\ntierarchitecture.dataaccess\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{50888A1C-3B4A-46C4-9425-996160B72CB6}|NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj|solutionrelative:ntierarchitecture.dataaccess\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9941B69D-0680-4C94-AA1B-4F07BAFFAFD4}|NTierArchitecture.WebAPI\\NTierArchitecture.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\ntierarchitectureproject\\ntierarchitecture\\ntierarchitecture.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9941B69D-0680-4C94-AA1B-4F07BAFFAFD4}|NTierArchitecture.WebAPI\\NTierArchitecture.WebAPI.csproj|solutionrelative:ntierarchitecture.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -47,19 +51,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.DataAccess\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.DataAccess\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.DataAccess\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "NTierArchitecture.DataAccess\\Context\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABYAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T13:20:34.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.WebAPI\\Program.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.WebAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.WebAPI\\Program.cs*",
-              "RelativeToolTip": "NTierArchitecture.WebAPI\\Program.cs*",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.WebAPI\\Program.cs",
+              "RelativeToolTip": "NTierArchitecture.WebAPI\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-02-19T10:23:13.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IClassRoomService.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.Business\\Services\\IClassRoomService.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\IClassRoomService.cs",
@@ -67,12 +84,11 @@
               "RelativeToolTip": "NTierArchitecture.Business\\Services\\IClassRoomService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T10:10:46.219Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T10:10:46.219Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "IStudentService.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.Business\\Services\\IStudentService.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\IStudentService.cs",
@@ -80,12 +96,11 @@
               "RelativeToolTip": "NTierArchitecture.Business\\Services\\IStudentService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T09:59:54.616Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T09:59:54.616Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "StudentManager.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.Business\\Services\\StudentManager.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\StudentManager.cs",
@@ -93,12 +108,11 @@
               "RelativeToolTip": "NTierArchitecture.Business\\Services\\StudentManager.cs",
               "ViewState": "AQIAADUAAAAAAAAAAAAgwD0AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T09:55:41.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T09:55:41.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PaginationRequestDto.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.Entities\\DTOs\\PaginationRequestDto.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.Entities\\DTOs\\PaginationRequestDto.cs",
@@ -106,12 +120,11 @@
               "RelativeToolTip": "NTierArchitecture.Entities\\DTOs\\PaginationRequestDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T09:54:37.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T09:54:37.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "StudentsController.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.WebAPI\\Controllers\\StudentsController.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.WebAPI\\Controllers\\StudentsController.cs",
@@ -119,12 +132,11 @@
               "RelativeToolTip": "NTierArchitecture.WebAPI\\Controllers\\StudentsController.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAQwC0AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-19T09:41:45.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-19T09:41:45.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ClassRoom.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.Entities\\Models\\ClassRoom.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.Entities\\Models\\ClassRoom.cs",
@@ -136,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitectureProject\\NTierArchitecture\\NTierArchitecture.Entities\\Models\\Student.cs",
               "RelativeDocumentMoniker": "NTierArchitecture.Entities\\Models\\Student.cs",

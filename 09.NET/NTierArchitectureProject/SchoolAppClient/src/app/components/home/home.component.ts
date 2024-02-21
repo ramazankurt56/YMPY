@@ -24,11 +24,12 @@ declare const $:any;
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements AfterContentInit {
+export class HomeComponent  {
   classRooms: ClassRoomModel[] = [];
   response: PaginationResponseModel<StudentModel[]> = new PaginationResponseModel<StudentModel[]>();
-  isLoading: number = 1;
+
   request: PaginationRequestModel = new PaginationRequestModel();
+
   p:number = 1;
 
   @ViewChild("addStudentModalCloseBtn") addStudentModalCloseBtn: ElementRef<HTMLButtonElement> | undefined;
@@ -46,6 +47,9 @@ export class HomeComponent implements AfterContentInit {
   result: string = "";
   
   search: string = "";
+
+  isLoading: boolean = false;
+
   //hostUrl: string = "";
 
   // @ViewChild(DxReportViewerComponent, { static: false }) viewer: DxReportViewerComponent | any;
@@ -68,22 +72,12 @@ export class HomeComponent implements AfterContentInit {
   //   }  
 
   constructor(
-    private http: HttpService,
+    public http: HttpService,
     private swal: SwalService
   ) {
     this.getAllClassRooms();
   }
-  ngAfterContentInit(): void {
-    
-  }
-
-  ngAfterViewChecked() {
-    // Bu metod, görünüm güncellendiğinde her seferinde çağrılır
-    this.viewRenderedTime = performance.now();
-    const loadingDuration = this.viewRenderedTime - this.loadingStartTime;
-    this.result = `Verilerin yüklenmesi ve görünüme yansıtılması ${loadingDuration} milisaniye sürdü.`;
-  }
-
+ 
   changePage(pageNumber: number){
     if(pageNumber < 1){
       this.request.pageNumber = 1;
@@ -97,47 +91,43 @@ export class HomeComponent implements AfterContentInit {
 
   getAllClassRooms() {
     this.http.get("ClassRooms/GetAll", (res) => {
-     
-      
-      setTimeout(() => {
-        this.classRooms = res;
-        if (this.classRooms.length > 0) {
-          this.isLoading=2
-          this.getAllStudentsByClassRoomId(this.classRooms[0].id);
-        }
-      }, 1000);
-     
-    });
-    setTimeout(() => {
-      if(this.classRooms.length<1)
-      {
-       this.isLoading=3
+      this.classRooms = res;
+
+      if (this.classRooms.length > 0) {
+        this.getAllStudentsByClassRoomId(this.classRooms[0].id);
       }
-    }, 3000);
-   
+    });
   }
- 
+
   getAllStudentsByClassRoomId(roomId: string | null) {
     this.request.id = roomId;
 
     this.response.datas = [];    
 
     this.loadingStartTime = performance.now();
+    this.isLoading = true;
     this.http.post("Students/GetAllByClassRoomId", this.request, res => {
       this.response = res;
 
-      this.calculatePageNumbers();
+      if(this.response.datas != null){
 
-      this.response.datas = this.response.datas!.map((val, index)=> {
-        const indetityNumberPart1 = val.identityNumber.substring(0,2);
-        const indetityNumberPart2 = val.identityNumber.substring(val.identityNumber.length -6,3);
+        this.calculatePageNumbers();
 
-        const newHashedIdentityNumber = indetityNumberPart1 + "******" +indetityNumberPart2;
+        this.response.datas = this.response.datas!.map((val, index)=> {
+          const indetityNumberPart1 = val.identityNumber.substring(0,2);
+          const indetityNumberPart2 = val.identityNumber.substring(val.identityNumber.length -6,3);
+  
+          const newHashedIdentityNumber = indetityNumberPart1 + "******" +indetityNumberPart2;
+  
+          val.identityNumber = newHashedIdentityNumber;
+          val.index = index + 1;
+          return val;
+        });
+      }
 
-        val.identityNumber = newHashedIdentityNumber;
-        val.index = index + 1;
-        return val;
-      });
+      this.isLoading = false;
+    },()=> {
+      this.isLoading = false;
     });
   }
 
