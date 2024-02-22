@@ -1,92 +1,91 @@
 ﻿using EntityFrameworkCore.Relational.WebApi.Context;
 using EntityFrameworkCore.Relational.WebApi.DTOs;
 using EntityFrameworkCore.Relational.WebApi.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.ObjectModel;
 
-namespace EntityFrameworkCore.Relational.WebApi.Controllers
+namespace EntityFrameworkCore.Relational.WebApi.Controllers;
+[Route("api/[controller]")]
+[ApiController]
+public sealed class ValuesController : ControllerBase
 {
-    [Route("api/[controller]/[action]")]
-    [ApiController]
-    public class ValuesController : ControllerBase
-    {
-        ApplicationDbContext _context;
+    private readonly ApplicationDbContext _context;
 
-        public ValuesController(ApplicationDbContext context)
+    public ValuesController(ApplicationDbContext context)
+    {
+        _context = context;
+    }
+
+    [HttpPost("Add")]
+    public IActionResult Add(CreateProductDto request)
+    {
+        Product? product = _context.Products.FirstOrDefault(p => p.Name == request.ProductName);
+
+        if(product is not null)
         {
-            _context = context;
+            return BadRequest(new { Message = "Bu ürün adı daha önce kullanılmış!" });
         }
 
-        [HttpPost]
-        public IActionResult Add(CreateProductDto createProductDto)
+        product = new()
         {
+            Id = Guid.NewGuid(),
+            Name = request.ProductName,            
+        };
 
-            Product? product = _context.Products.FirstOrDefault(p => p.Name == createProductDto.ProductName);
-            if (product is not null)
-            {
-                return BadRequest(new { message = "Bu ürün adı daha önce kullanılmıştır." });
-            }
-            product = new()
+        AdditionalProduct additionalProduct = new()
+        {
+           
+            Description = request.ProductDescription,
+            Price = request.ProductPrice
+        };
+
+        product.AdditionalProduct = additionalProduct;
+
+
+        Category? category = _context.Categories.FirstOrDefault(p => p.Name == request.CategoryName);
+
+        if (category is null)
+        {
+            category = new()
             {
                 Id = Guid.NewGuid(),
-                Name = createProductDto.ProductName
+                Name = request.CategoryName,
             };
-            AdditionalProduct additionalProduct = new()
-            {
-                Description = createProductDto.ProductDescription,
-                Price = createProductDto.ProductPrice
-            };
-            product.AdditionalProduct = additionalProduct;
-            Category? category = _context.Categories.FirstOrDefault(p => p.Name == createProductDto.CategoryName);
-            if (category is null)
-            {
-                category = new()
-                {
-                    Id = Guid.NewGuid(),
-                    Name = createProductDto.CategoryName
-                };
-                product.Category = category;
-            }
-            else
-            {
-                product.CategoryId = category.Id;
-            }
 
-            _context.Add(product);
-            _context.SaveChanges();
-            return Ok(new { Id = product.Id });
+            product.Category = category;
         }
-        [HttpGet]
-        public IActionResult GetAll()
+        else
         {
-            //List<Product> products = _context.Products.Include(p=>p.AdditionalProduct).ToList();
-            //List<Product> products = (from p in _context.Products
-            //                          join ad in _context.AdditionalProducts on p.Id equals ad.ProductId
-            //                          join c in _context.Categories on p.CategoryId equals c.Id
-            //                          select new Product()
-            //                          {
-            //                              Id = p.Id,
-            //                              Name = p.Name,
-            //                              AdditionalProduct = ad,
-            //                              Category = c,
-            //                              CategoryId = p.CategoryId
-            //                          }).ToList();
-
-
-            var products = (from p in _context.Products
-                            join ad in _context.AdditionalProducts on p.Id equals ad.ProductId
-                            join c in _context.Categories on p.CategoryId equals c.Id
-                            select new
-                            {
-                                Id = p.Id,
-                                Name = p.Name,
-                                Price = ad.Price,
-                                Category = c,
-
-                                CategoryId = p.CategoryId
-                            }).ToList();
-            return Ok(products);
+            product.CategoryId = category.Id;
         }
+
+        _context.Add(product);
+        _context.SaveChanges();
+
+        return Ok(new {Id =  product.Id});
+    }
+
+    [HttpGet("GetAll")]
+    public IActionResult GetAll()
+    {
+        List<Product> products =
+            _context.Products
+            .Include(p => p.Category)
+            .ToList();       
+
+        //List<Product> products = (from p in _context.Products
+        //                          join ad in _context.AdditionalProducts on p.Id equals ad.ProductId
+        //                          join c in _context.Categories on p.CategoryId equals c.Id
+        //                          select new Product()
+        //                          {
+        //                              Id = p.Id,
+        //                              AdditionalProduct = ad,
+        //                              CategoryId = p.CategoryId,
+        //                              Category = c,
+        //                              Name = p.Name
+        //                          }).ToList();
+
+        return Ok(products);
     }
 }

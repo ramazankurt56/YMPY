@@ -3,31 +3,40 @@ using EntityFrameworkCore.First.WebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EntityFrameworkCore.First.WebApi.Controllers
+namespace EntityFrameworkCore.First.WebApi.Controllers;
+[Route("api/[controller]/[action]")]
+[ApiController]
+public class ValuesController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class ValuesController : ControllerBase
+    [HttpDelete] //HttpGet
+    public IActionResult Delete(string work, DateTime date)
     {
-        [HttpDelete]
-        public IActionResult Delete(string work,DateTime dateTime)
+        Todo todo = new()
         {
+            Work = work,
+            DateToBeCompleted = date,
+            CreationDate = DateTime.Now
+        };
 
-            Todo todo = new Todo
-            {
-                Work = work,
-                DateToBeCompleted = dateTime,
-                CreatedDate = DateTime.Now
-            };
-            ApplicationDbContext dbContext = new ApplicationDbContext();
-            dbContext.Add(todo);
-            dbContext.SaveChanges();
-            return Ok(new { message="İşlem başarılı" });
-        }
-        [HttpPut]
-        public IActionResult Put(int Id)
-        {
-            return Ok(new { message = "Güncelleme İşlemi başarılı" });
-        }
+        ApplicationDbContext context = new();
+        context.Add(todo);
+        context.SaveChanges();
+        return Ok(new { Message = "Silme işlemi başarıyla tamamlandı" });
+    }
+
+    [HttpPut] //HttpPost
+    public IActionResult Update(AddTodoDto addTodoDto)
+    {
+        //Todo todo = new()
+        //{
+        //    Work = work,
+        //    DateToBeCompleted = date,
+        //    CreationDate = DateTime.Now
+        //};
+
+        //ApplicationDbContext context = new();
+        //context.Add(todo);
+        //context.SaveChanges();
+        return Ok(new { Message = "Güncelleme işlemi başarıyla tamamlandı" });
     }
 }

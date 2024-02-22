@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.First.WebApi\\EntityFrameworkCore.First.WebApi.csproj": {}
+    "C:\\YMYP1\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.First.WebApi\\EntityFrameworkCore.First.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.First.WebApi\\EntityFrameworkCore.First.WebApi.csproj": {
+    "C:\\YMYP1\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.First.WebApi\\EntityFrameworkCore.First.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.First.WebApi\\EntityFrameworkCore.First.WebApi.csproj",
+        "projectUniqueName": "C:\\YMYP1\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.First.WebApi\\EntityFrameworkCore.First.WebApi.csproj",
         "projectName": "EntityFrameworkCore.First.WebApi",
-        "projectPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.First.WebApi\\EntityFrameworkCore.First.WebApi.csproj",
-        "packagesPath": "C:\\Users\\ramaz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.First.WebApi\\obj\\",
+        "projectPath": "C:\\YMYP1\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.First.WebApi\\EntityFrameworkCore.First.WebApi.csproj",
+        "packagesPath": "C:\\Users\\taner\\.nuget\\packages\\",
+        "outputPath": "C:\\YMYP1\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.First.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ramaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\taner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -48,9 +52,27 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -72,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

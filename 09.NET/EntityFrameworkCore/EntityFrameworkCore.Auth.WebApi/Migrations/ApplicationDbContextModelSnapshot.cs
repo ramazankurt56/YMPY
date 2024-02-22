@@ -17,34 +17,48 @@ namespace EntityFrameworkCore.Auth.WebApi.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.1")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("EntityFrameworkCore.Auth.WebApi.Models.AppUser", b =>
                 {
-                    b.Property<Guid>("Guid")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
-                        .HasColumnOrder(1);
+                        .HasColumnOrder(0);
 
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("varchar(300)")
-                        .HasColumnOrder(4);
+                        .HasColumnOrder(3);
 
                     b.Property<string>("FirstName")
                         .IsRequired()
                         .HasColumnType("varchar(50)")
-                        .HasColumnOrder(2);
+                        .HasColumnOrder(1);
 
                     b.Property<string>("LastName")
                         .IsRequired()
                         .HasColumnType("varchar(50)")
-                        .HasColumnOrder(3);
+                        .HasColumnOrder(2);
 
-                    b.HasKey("Guid");
+                    b.Property<byte[]>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)")
+                        .HasColumnOrder(6);
+
+                    b.Property<byte[]>("PasswordSalt")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)")
+                        .HasColumnOrder(5);
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("varchar(20)")
+                        .HasColumnOrder(4);
+
+                    b.HasKey("Id");
 
                     b.HasIndex("Email")
                         .IsUnique();
@@ -102,7 +116,7 @@ namespace EntityFrameworkCore.Auth.WebApi.Migrations
                     b.HasOne("EntityFrameworkCore.Auth.WebApi.Models.Role", "Role")
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.NoAction)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("AppUser");

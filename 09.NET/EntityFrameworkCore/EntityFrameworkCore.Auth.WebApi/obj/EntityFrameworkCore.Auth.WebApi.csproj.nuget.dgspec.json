@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\EntityFrameworkCore.Auth.WebApi.csproj": {}
+    "C:\\YMYP1\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\EntityFrameworkCore.Auth.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\EntityFrameworkCore.Auth.WebApi.csproj": {
+    "C:\\YMYP1\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\EntityFrameworkCore.Auth.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\EntityFrameworkCore.Auth.WebApi.csproj",
+        "projectUniqueName": "C:\\YMYP1\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\EntityFrameworkCore.Auth.WebApi.csproj",
         "projectName": "EntityFrameworkCore.Auth.WebApi",
-        "projectPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\EntityFrameworkCore.Auth.WebApi.csproj",
-        "packagesPath": "C:\\Users\\ramaz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\obj\\",
+        "projectPath": "C:\\YMYP1\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\EntityFrameworkCore.Auth.WebApi.csproj",
+        "packagesPath": "C:\\Users\\taner\\.nuget\\packages\\",
+        "outputPath": "C:\\YMYP1\\09.NET\\EntityFrameworkCore\\EntityFrameworkCore.Auth.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ramaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\taner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,25 +40,19 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[8.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[8.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -80,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

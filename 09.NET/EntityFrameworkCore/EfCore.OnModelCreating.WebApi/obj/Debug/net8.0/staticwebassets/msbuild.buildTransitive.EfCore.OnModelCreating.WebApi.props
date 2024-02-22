@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\EfCore.OnModelCreating.WebApi.props" />
-</Project>
