@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\AngularDataGrid\\AngularDataGridServer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A7FC46D9-3AE4-4F7B-85C2-FDFDED477638}|AngularDataGridServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\angulardatagrid\\angulardatagridserver\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7FC46D9-3AE4-4F7B-85C2-FDFDED477638}|AngularDataGridServer.csproj|solutionrelative:controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7FC46D9-3AE4-4F7B-85C2-FDFDED477638}|AngularDataGridServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\angulardatagrid\\angulardatagridserver\\angulardatagridserver.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{A7FC46D9-3AE4-4F7B-85C2-FDFDED477638}|AngularDataGridServer.csproj|solutionrelative:angulardatagridserver.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7FC46D9-3AE4-4F7B-85C2-FDFDED477638}|AngularDataGridServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\angulardatagrid\\angulardatagridserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7FC46D9-3AE4-4F7B-85C2-FDFDED477638}|AngularDataGridServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\AngularDataGrid\\AngularDataGridServer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\AngularDataGrid\\AngularDataGridServer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T15:09:09.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ValuesController.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\AngularDataGrid\\AngularDataGridServer\\Controllers\\ValuesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ValuesController.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\AngularDataGrid\\AngularDataGridServer\\Controllers\\ValuesController.cs",
+              "RelativeToolTip": "Controllers\\ValuesController.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAwwBAAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-23T15:09:09.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AngularDataGridServer.http",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\AngularDataGrid\\AngularDataGridServer\\AngularDataGridServer.http",
+              "RelativeDocumentMoniker": "AngularDataGridServer.http",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\AngularDataGrid\\AngularDataGridServer\\AngularDataGridServer.http",
+              "RelativeToolTip": "AngularDataGridServer.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-02-23T15:09:09.344Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
