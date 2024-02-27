@@ -116,3 +116,15 @@ C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\o
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\obj\Debug\net8.0\ref\eHospitalServer.WebAPI.dll
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\Scrutor.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\TS.Result.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\eHospitalServer.Business.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\eHospitalServer.Business.pdb

@@ -3,7 +3,6 @@ using eHospitalServer.Entities.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
 namespace eHospitalServer.DataAccess.Context;
 internal sealed class ApplicationDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>
 {

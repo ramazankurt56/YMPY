@@ -20,10 +20,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\eHospitalServer.DataAccess\eHospitalServer.DataAccess.csproj" />
   </ItemGroup>
 

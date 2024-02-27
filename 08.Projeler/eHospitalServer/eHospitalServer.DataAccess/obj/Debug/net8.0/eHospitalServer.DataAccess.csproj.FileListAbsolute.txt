@@ -16,3 +16,5 @@ C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.DataAcce
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.DataAccess\obj\Debug\net8.0\eHospitalServer.DataAccess.pdb
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.DataAccess\obj\Debug\net8.0\eHospitalServer.DataAccess.genruntimeconfig.cache
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.DataAccess\obj\Debug\net8.0\ref\eHospitalServer.DataAccess.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.DataAccess\bin\Debug\net8.0\eHospitalServer.Business.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.DataAccess\bin\Debug\net8.0\eHospitalServer.Business.pdb
