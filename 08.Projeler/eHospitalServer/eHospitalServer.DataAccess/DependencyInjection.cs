@@ -40,7 +40,7 @@ public static class DependencyInjection
             })
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
-
+        services.AddScoped<JwtService>();
         services.Scan(action =>
         {
             action
@@ -50,7 +50,7 @@ public static class DependencyInjection
             .AsMatchingInterface()
             .WithScopedLifetime();
         });
-        services.AddScoped<JwtService>();
+       
         services.AddAuthentication().AddJwtBearer(options =>
         {
             options.TokenValidationParameters = new()
