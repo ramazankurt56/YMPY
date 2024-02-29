@@ -1,5 +1,6 @@
 using eHospitalServer.DataAccess;
 using eHospitalServer.WebAPI.Middlewares;
+using System.Security.Claims;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDataAccess(builder.Configuration);
 builder.Services.AddControllers();
@@ -15,9 +16,11 @@ if (app.Environment.IsDevelopment())
 }
 ExtensionsMiddleware.CreateFirstUser(app);
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
+app.MapControllers()
+    .RequireAuthorization(policy =>
+    {
+        policy.RequireClaim(ClaimTypes.NameIdentifier);
+        policy.AddAuthenticationSchemes("Bearer");
+    });
 
 app.Run();

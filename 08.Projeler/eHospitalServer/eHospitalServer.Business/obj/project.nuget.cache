@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "J20keogwtT/vpJdhlzbforNoYaaMGEIR2S9NOvuKF1NTqwa6SoQlnBdDyDXR795jl9oyC9EKpFnU8OaaqFaiqA==",
+  "dgSpecHash": "zTW6E9iVfOAVZvSdiQLr419dqshfPHa2uAH6+GnYRDzYlX7zLA6GZtwCzm1jRYS3aR02R+oxyw6menapw2b+tA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.Business\\eHospitalServer.Business.csproj",
   "expectedPackageFiles": [
@@ -19,7 +19,7 @@
     "C:\\Users\\ramaz\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
     "C:\\Users\\ramaz\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
-    "C:\\Users\\ramaz\\.nuget\\packages\\ts.result\\8.0.2\\ts.result.8.0.2.nupkg.sha512"
+    "C:\\Users\\ramaz\\.nuget\\packages\\ts.result\\8.0.4\\ts.result.8.0.4.nupkg.sha512"
   ],
   "logs": []
 }

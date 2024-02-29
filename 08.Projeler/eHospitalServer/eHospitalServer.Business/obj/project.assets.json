@@ -264,7 +264,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "TS.Result/8.0.2": {
+      "TS.Result/8.0.4": {
         "type": "package",
         "compile": {
           "lib/net8.0/TS.Result.dll": {}
@@ -715,10 +715,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "TS.Result/8.0.2": {
-      "sha512": "yTHfPIiT397kQmF/rHYwyZzC2NyPDQE9nJHXSndQnzNG1QdMkUVl8x546wWvGXmdnlwldIil/51JSotxrg/UYw==",
+    "TS.Result/8.0.4": {
+      "sha512": "bnADPdo2pEBSMrhuH/JnJIt1uIiu12+yLUk9jMxnssSe2zCsGS6POmI8xYKjJCQrVrQJR5oOkdoe3WMsA8fIlA==",
       "type": "package",
-      "path": "ts.result/8.0.2",
+      "path": "ts.result/8.0.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -726,7 +726,7 @@
         "README.md",
         "icon.jpg",
         "lib/net8.0/TS.Result.dll",
-        "ts.result.8.0.2.nupkg.sha512",
+        "ts.result.8.0.4.nupkg.sha512",
         "ts.result.nuspec"
       ]
     },
@@ -738,7 +738,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "TS.Result >= 8.0.2",
+      "TS.Result >= 8.0.4",
       "eHospitalServer.Entities >= 1.0.0"
     ]
   },
@@ -792,7 +792,7 @@
         "dependencies": {
           "TS.Result": {
             "target": "Package",
-            "version": "[8.0.2, )"
+            "version": "[8.0.4, )"
           }
         },
         "imports": [

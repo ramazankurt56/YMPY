@@ -128,3 +128,8 @@ C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\b
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\TS.Result.dll
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\eHospitalServer.Business.dll
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\eHospitalServer.Business.pdb
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\GenericEmailService.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\MailKit.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\eHospitalServer\eHospitalServer.WebAPI\bin\Debug\net8.0\MimeKit.dll

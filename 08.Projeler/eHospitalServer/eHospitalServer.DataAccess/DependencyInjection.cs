@@ -9,6 +9,7 @@ using Scrutor;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using eHospitalServer.DataAccess.Services;
+using eHospitalServer.DataAccess.Options;
 
 namespace eHospitalServer.DataAccess;
 
@@ -18,6 +19,8 @@ public static class DependencyInjection
         this IServiceCollection services,
         IConfiguration configuration)
     {
+        services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
         services.AddDbContext<ApplicationDbContext>(options =>
         {
             options
@@ -40,7 +43,22 @@ public static class DependencyInjection
             })
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
-        services.AddScoped<JwtService>();
+
+        //services.ConfigureOptions<JwtOptionsSetup>();
+        services.Configure<JwtOptions>(configuration.GetSection("Jwt"));
+        services.Configure<EmailOptions>(configuration.GetSection("EmailSettings"));
+        //var jwt = services.BuildServiceProvider().GetRequiredService<IOptions<JwtOptions>>();
+        services.ConfigureOptions<JwtTokenOptionsSetup>();
+
+        services.AddAuthentication()
+            .AddJwtBearer();
+        services.AddAuthorizationBuilder();
+
+        //services.AddAuthorization();
+
+        services.AddScoped<JwtProvider>();
+        services.AddScoped<MailService>();
+
         services.Scan(action =>
         {
             action
@@ -48,22 +66,10 @@ public static class DependencyInjection
             .AddClasses(publicOnly: false)
             .UsingRegistrationStrategy(RegistrationStrategy.Skip)
             .AsMatchingInterface()
+            .AsImplementedInterfaces()
             .WithScopedLifetime();
         });
-       
-        services.AddAuthentication().AddJwtBearer(options =>
-        {
-            options.TokenValidationParameters = new()
-            {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateIssuerSigningKey = true,
-                ValidateLifetime = true,
-                ValidIssuer = "Ramazan Kurt",
-                ValidAudience = "eHospital App",
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("my secret key my secret key my secret key 1234 ... my secret key my secret key my secret key 1234 ...")),
-            };
-        });
+
         return services;
     }
 }

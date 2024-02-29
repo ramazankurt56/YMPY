@@ -100,6 +100,14 @@ namespace eHospitalServer.DataAccess.Migrations
                         .HasColumnType("text")
                         .HasColumnName("email");
 
+                    b.Property<int>("EmailConfirmCode")
+                        .HasColumnType("integer")
+                        .HasColumnName("email_confirm_code");
+
+                    b.Property<DateTime>("EmailConfirmCodeSendDate")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("email_confirm_code_send_date");
+
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("boolean")
                         .HasColumnName("email_confirmed");
@@ -159,6 +167,14 @@ namespace eHospitalServer.DataAccess.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("boolean")
                         .HasColumnName("phone_number_confirmed");
+
+                    b.Property<string>("RefreshToken")
+                        .HasColumnType("text")
+                        .HasColumnName("refresh_token");
+
+                    b.Property<DateTime?>("RefreshTokenExpires")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("refresh_token_expires");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("text")
