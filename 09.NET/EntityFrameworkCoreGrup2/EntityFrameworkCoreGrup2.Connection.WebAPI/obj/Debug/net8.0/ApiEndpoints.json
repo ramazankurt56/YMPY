@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "EntityFrameworkCoreGrup2.Connection.WebAPI.Controllers.PersonelsController",
+    "Method": "Create",
+    "RelativePath": "api/Personels",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EntityFrameworkCoreGrup2.Connection.WebAPI.Controllers.PersonelsController",
+    "Method": "GetAll",
+    "RelativePath": "api/Personels",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

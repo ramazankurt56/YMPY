@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{35175378-D08C-401C-A3F6-A7F3A3E956FB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospitalserver\\ehospitalserver.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35175378-D08C-401C-A3F6-A7F3A3E956FB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|solutionrelative:ehospitalserver.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FA8574-A0C0-4235-9A04-4B220AD6B8E2}|eHospitalServer.Business\\eHospitalServer.Business.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospitalserver\\ehospitalserver.business\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{61FA8574-A0C0-4235-9A04-4B220AD6B8E2}|eHospitalServer.Business\\eHospitalServer.Business.csproj|solutionrelative:ehospitalserver.business\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B6579F-C393-4172-8531-720368FCEECA}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospitalserver\\ehospitalserver.dataaccess\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B6579F-C393-4172-8531-720368FCEECA}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C9B6579F-C393-4172-8531-720368FCEECA}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospitalserver\\ehospitalserver.dataaccess\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C9B6579F-C393-4172-8531-720368FCEECA}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35175378-D08C-401C-A3F6-A7F3A3E956FB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospitalserver\\ehospitalserver.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35175378-D08C-401C-A3F6-A7F3A3E956FB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|solutionrelative:ehospitalserver.webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE6E910D-FFF6-4590-9E13-9A83B2F95CB8}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospitalserver\\ehospitalserver.entities\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE6E910D-FFF6-4590-9E13-9A83B2F95CB8}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|solutionrelative:ehospitalserver.entities\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B6579F-C393-4172-8531-720368FCEECA}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospitalserver\\ehospitalserver.dataaccess\\migrations\\20240302110326_mg6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B6579F-C393-4172-8531-720368FCEECA}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\migrations\\20240302110326_mg6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +43,89 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.WebAPI\\Program.cs*",
+              "RelativeToolTip": "eHospitalServer.WebAPI\\Program.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T14:53:35.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.DataAccess\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.DataAccess\\Services\\AuthService.cs",
+              "RelativeToolTip": "eHospitalServer.DataAccess\\Services\\AuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T08:51:22.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20240302110326_mg6.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\20240302110326_mg6.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Migrations\\20240302110326_mg6.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\20240302110326_mg6.cs",
+              "RelativeToolTip": "eHospitalServer.DataAccess\\Migrations\\20240302110326_mg6.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T11:03:27.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.Entities\\Models\\User.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.Entities\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.Entities\\Models\\User.cs",
+              "RelativeToolTip": "eHospitalServer.Entities\\Models\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T11:02:51.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.Business\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.Business\\Services\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.Business\\Services\\IAuthService.cs",
+              "RelativeToolTip": "eHospitalServer.Business\\Services\\IAuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T10:51:07.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.WebAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.WebAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.WebAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "eHospitalServer.WebAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAAADgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-02T10:49:50.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.DataAccess\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospitalServer\\eHospitalServer.DataAccess\\Services\\UserService.cs",
               "RelativeToolTip": "eHospitalServer.DataAccess\\Services\\UserService.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAgwF8AAAAzAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwA8AAABxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-29T12:13:31.21Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-29T12:13:31.21Z"
             }
           ]
         }

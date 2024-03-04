@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\keycloak.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\keycloak.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\keycloak.webapi\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|solutionrelative:controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\keycloak.webapi\\models\\registerusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|solutionrelative:models\\registerusermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\keycloak.webapi\\keycloak.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|solutionrelative:keycloak.webapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\keycloak.webapi\\keycloak.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9E7FD354-E449-46AC-8597-959CD8407823}|Keycloak.WebAPI.csproj|solutionrelative:keycloak.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-01T20:15:08.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-01T19:42:41.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Keycloak.WebAPI.http",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\Keycloak.WebAPI.http",
+              "RelativeDocumentMoniker": "Keycloak.WebAPI.http",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\Keycloak.WebAPI.http",
+              "RelativeToolTip": "Keycloak.WebAPI.http",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-03-01T19:42:41.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegisterUserModel.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\Models\\RegisterUserModel.cs",
+              "RelativeDocumentMoniker": "Models\\RegisterUserModel.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\Models\\RegisterUserModel.cs",
+              "RelativeToolTip": "Models\\RegisterUserModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T20:31:49.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Keycloak.WebAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\Keycloak.WebAPI.csproj",
+              "RelativeDocumentMoniker": "Keycloak.WebAPI.csproj",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\Keycloak.WebAPI.csproj",
+              "RelativeToolTip": "Keycloak.WebAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-29T20:31:38.792Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ValuesController.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\Controllers\\ValuesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ValuesController.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\Keycloak.WebAPI\\Controllers\\ValuesController.cs",
+              "RelativeToolTip": "Controllers\\ValuesController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAawAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T20:31:01.141Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

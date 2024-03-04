@@ -18,7 +18,9 @@ public sealed class User : IdentityUser<Guid>
 
     public int EmailConfirmCode { get; set; }
     public DateTime EmailConfirmCodeSendDate { get; set; }
-
+    public int PasswordResetCode { get; set; }
+    public DateTime PasswordResetCodeSendDate { get; set; }= DateTime.UtcNow;
+    public bool PasswordResetCodeUsed { get; set; } = false;
     public string? RefreshToken { get; set; }
     public DateTime? RefreshTokenExpires { get; set; }
 

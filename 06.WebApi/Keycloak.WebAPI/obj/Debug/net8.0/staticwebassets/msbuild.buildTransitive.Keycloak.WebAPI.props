@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Keycloak.WebAPI.props" />
+</Project>

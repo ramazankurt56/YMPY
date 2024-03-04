@@ -24,4 +24,35 @@ public class AuthController(
 
         return StatusCode(response.StatusCode, response);
     }
+
+    [HttpGet]
+    [AllowAnonymous]
+    public async Task<IActionResult> SendConfirmMail(string email, CancellationToken cancellationToken)
+    {
+        var response = await authService.SendConfirmEmailAsync(email, cancellationToken);
+        return StatusCode(response.StatusCode, response);
+    }
+
+    [HttpGet]
+    [AllowAnonymous]
+    public async Task<IActionResult> ConfirmEmail(int emailConfirmCode, CancellationToken cancellationToken)
+    {
+        var response = await authService.ConfirmVerificationEmail(emailConfirmCode, cancellationToken);
+        return StatusCode(response.StatusCode, response);
+    }
+    [HttpGet]
+    [AllowAnonymous]
+    public async Task<IActionResult> SendPasswordReset(string email, CancellationToken cancellationToken)
+    {
+        var response = await authService.SendPasswordResetEmailAsync(email, cancellationToken);
+        return StatusCode(response.StatusCode, response);
+    }
+
+    [HttpGet]
+    [AllowAnonymous]
+    public async Task<IActionResult> ChangePassword(int passwordResetCode, string passwordRepeat, string newPassword, CancellationToken cancellationToken)
+    {
+        var response = await authService.ChangePassword(passwordResetCode, passwordRepeat, newPassword, cancellationToken);
+        return StatusCode(response.StatusCode, response);
+    }
 }

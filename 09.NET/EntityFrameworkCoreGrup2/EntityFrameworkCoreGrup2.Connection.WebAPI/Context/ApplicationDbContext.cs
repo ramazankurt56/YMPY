@@ -39,11 +39,11 @@ public static class Constants
 {    
     public static void Create()
     {
-        IHttpContextAccessor httpContextAccessor = ServiceTool.ServiceProvider.GetService<IHttpContextAccessor>();
+        //IHttpContextAccessor httpContextAccessor = ServiceTool.ServiceProvider.GetService<IHttpContextAccessor>();
 
 
 
-        var scoped = httpContextAccessor.HttpContext.RequestServices.CreateScope();
+        //var scoped = httpContextAccessor.HttpContext.RequestServices.CreateScope();
 
       
 
