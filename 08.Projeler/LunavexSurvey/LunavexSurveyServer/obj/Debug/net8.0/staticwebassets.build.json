@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bdDp0SyGsSreUXSWOn4OIo3xLLkTRfVUXRbmgb1lb10=",
+  "Source": "LunavexSurveyServer",
+  "BasePath": "_content/LunavexSurveyServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

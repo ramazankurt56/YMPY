@@ -1,0 +1,6 @@
+@LunavexSurveyServer_HostAddress = http://localhost:5092
+
+GET {{LunavexSurveyServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
