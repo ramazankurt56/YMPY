@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LunavexSurveyServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f93ae0c4310789ce9eacd4f49ee09d790657db5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+043e13f50fc5664df2f1ad5c469d956a8bafa886")]
 [assembly: System.Reflection.AssemblyProductAttribute("LunavexSurveyServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LunavexSurveyServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

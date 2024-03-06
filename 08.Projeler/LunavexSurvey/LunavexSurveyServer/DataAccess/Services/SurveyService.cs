@@ -7,27 +7,30 @@ using TS.Result;
 
 namespace LunavexSurveyServer.DataAccess.Services;
 
-public class SurveyService(AppDbContext context) : ISurveyService
+public class SurveyService(AppDbContext context,IQuestionService questionService) : ISurveyService
 {
     public async Task<Result<string>> CreateSurvey(CreateSurveyDto request, CancellationToken cancellationToken)
     {
-        if (request.Name is not null)
+        try
         {
-            bool isNameExists = await context.Surveys.AnyAsync(p => p.Name == request.Name);
-            if (isNameExists)
-            {
-                return Result<string>.Failure(StatusCodes.Status409Conflict, "Survey Name already has taken");
-            }
-        }
-        Survey survey = new()
+            await context.Database.BeginTransactionAsync();
+            Survey survey = new()
         {
             Name = request.Name,
             Description = request.Description
            
         };
-        context.Add(survey);
-        context.SaveChanges();
-        return Result<string>.Succeed("Survey create is successful");
+            context.Add(survey);
+            await context.SaveChangesAsync();
+            await questionService.CreateQuestion(request.CreateQuestionDto,survey.Id,cancellationToken);
+            await context.Database.CommitTransactionAsync();
+            return Result<string>.Succeed("Survey create is successful");
+        }
+        catch (Exception)
+        {
+            await context.Database.RollbackTransactionAsync();
+            return (500, "Could not create record");
+        }
     }
 
     public async Task<Result<string>> DeleteSurvey(Guid request, CancellationToken cancellationToken)
@@ -44,7 +47,7 @@ public class SurveyService(AppDbContext context) : ISurveyService
 
     public async Task<Result<List<Survey>>> GetAll(CancellationToken cancellationToken)
     {
-        List<Survey> surveyList = await context.Surveys.AsNoTracking().ToListAsync();
+        List<Survey> surveyList = await context.Surveys.Include(p=>p.Questions).AsNoTracking().ToListAsync();
         return surveyList;
     }
 

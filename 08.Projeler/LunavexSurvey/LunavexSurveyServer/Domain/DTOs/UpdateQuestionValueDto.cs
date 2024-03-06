@@ -1,5 +1,3 @@
 ﻿namespace LunavexSurveyServer.Domain.DTOs;
 
-public class UpdateQuestionValueDto
-{
-}
+public sealed record UpdateQuestionValueDto(Guid Id,Guid QuestionId, Guid SurveySubmissionId, string Value);

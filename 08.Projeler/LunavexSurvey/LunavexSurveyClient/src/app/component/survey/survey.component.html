@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="survey-body ">
+        <div class="survey-container survey-border-top survey-border-left">
+            <div class="survey-container-body">
+                <input type="text" class=" survey-header-input" placeholder="Form Adı">
+                <div class="survey-border-div"></div>
+                <input type="text" class="" placeholder="Form Açıklaması">
+                <div class="survey-border-div"></div>
+                <button type="button" style="width: 100%; margin-top: 20px;"
+                    class="btn btn-outline-success">Kaydet</button>
+            </div>
+        </div>
+    </div>
+    <div  class="survey-body">
+        <div class="survey-container survey-border-left">
+            <div class="survey-container-body">
+                <div class="row">
+                    <div class="col-7">
+                        <input type="text" class=" survey-header-input" placeholder="Soru">
+                        <div class="survey-border-div"></div>
+                    </div>
+                    <div class="col-5">
+                        <div class="survey-header">
+                            <select id="question-type" name="question_type" [(ngModel)]="selectedType">
+                                <option value="text">Metin</option>
+                                <option value="number">Sayı</option>
+                                <option value="date">Tarih</option>
+                                <option value="time">Saat</option>
+                                <option value="datetime">Tarih ve Saat</option>
+                                <option value="singlechoice">Tek Seçimli</option>
+                                <option value="multiplechoice">Çoklu Seçimli</option>
+                                <option value="yesno">Evet/Hayır</option>
+                                <option value="rating">Derecelendirme</option>
+                                <option value="email">E-posta</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                @if(selectedType==='text') {
+                <input type="text" class=" survey-header-input" placeholder="Metin">
+                <div class="survey-border-div"></div>
+                }
+                @if(selectedType==='number') {
+                <input type="number" class=" survey-header-input" placeholder=0>
+                <div class="survey-border-div"></div>
+                }
+                @if(selectedType==='date') {
+                <input type="date" class=" survey-header-input">
+                <div class="survey-border-div"></div>
+                }
+                @if(selectedType==='time') {
+                <input type="time" class=" survey-header-input">
+                <div class="survey-border-div"></div>
+                }
+                @if(selectedType==='datetime') {
+                <input type="datetime-local" class="survey-header-input">
+                <div class="survey-border-div"></div>
+                }
+                @if(selectedType==='singlechoice') {
+                <div class="row">
+                    <div class="col-12">
+                        <div #surveyRadio id="survey-radio-1" class="survey-header-radio">
+                            <div  class="survey-radio">
+                                <div style="width: 24px; height: 24px;">
+                                    <div class="circle"></div>
+                                </div>
+                                <input type="text"  class="survey-header-input" placeholder="Metin">
+                            </div> 
+                        </div>
+                        <input type="text" readonly  class=" survey-header-input" (click)="addRadio()" placeholder="Seçenek Ekle">
+                        <button type="button" style="width: 100%; margin-top: 20px;"class="btn btn-outline-success" (click)="addChoice()">Kaydet</button>
+                    </div>              
+                </div>
+
+                }
+                @if(selectedType==='multiplechoice') {
+                <input type="multiplechoice" class=" survey-header-input">
+                <div class="survey-border-div"></div>
+                }
+                @if(selectedType==='yesno') {
+                <input type="yesno" class=" survey-header-input">
+                <div class="survey-border-div"></div>
+                }
+                @if(selectedType==='rating') {
+                <input type="rating" class=" survey-header-input" placeholder="1-5 arası puan">
+                <div class="survey-border-div"></div>
+                }
+                @if(selectedType==='email') {
+                <input type="email" class=" survey-header-input" placeholder="Email">
+                <div class="survey-border-div"></div>
+                }
+
+                <input type="text" class=" survey-header-input" placeholder="Açıklama">
+                <div class="survey-border-div"></div>
+                <div class="row">
+                    <div class="col-9">
+                    </div>
+                    <div class="col-3">
+                        <div class="survey-header-checkbox">
+                            <input type="checkbox" id="required-checkbox" name="required" checked>
+                            <label for="required-checkbox">Gerekli</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 

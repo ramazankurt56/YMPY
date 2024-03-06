@@ -12,9 +12,10 @@ public class QuestionsController(IQuestionService questionService) : ControllerB
     [HttpPost]
     public async Task<IActionResult> CreateQuestion(CreateQuestionDto request, CancellationToken cancellationToken)
     {
-        var response = await questionService.CreateQuestion(request, cancellationToken);
+        //var response = await questionService.CreateQuestion(request, cancellationToken);
 
-        return StatusCode(response.StatusCode, response);
+        //return StatusCode(response.StatusCode, response);
+        return NoContent();
     }
     [HttpGet]
     public async Task<IActionResult> GetAllQuestion(CancellationToken cancellationToken)

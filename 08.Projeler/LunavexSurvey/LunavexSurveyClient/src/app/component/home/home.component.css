@@ -1,0 +1,14 @@
+img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+.img-center{
+    display: flex;
+    justify-content: center;
+}
+.card-background{
+    background-color: aliceblue;
+    width: 100%;
+    padding: 20px;
+}

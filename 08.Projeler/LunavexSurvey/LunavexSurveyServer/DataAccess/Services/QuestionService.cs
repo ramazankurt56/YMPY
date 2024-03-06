@@ -3,6 +3,7 @@ using LunavexSurveyServer.Business.Services;
 using LunavexSurveyServer.DataAccess.Context;
 using LunavexSurveyServer.Domain.DTOs;
 using LunavexSurveyServer.Domain.Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using TS.Result;
 
@@ -10,51 +11,33 @@ namespace LunavexSurveyServer.DataAccess.Services;
 
 public class QuestionService(AppDbContext context) : IQuestionService
 {
-    public async Task<Result<string>> CreateQuestion(CreateQuestionDto request, CancellationToken cancellationToken)
+    public async Task<Result<string>> CreateQuestion(List<CreateQuestionDto> request, Guid surveyId, CancellationToken cancellationToken)
     {
-        try
+        foreach (var item in request)
         {
-            await context.Database.BeginTransactionAsync();
-            if (request.Name is not null)
-            {
-                bool isNameExists = await context.Question.AnyAsync(p => p.Name == request.Name);
-                if (isNameExists)
-                {
-                    return Result<string>.Failure(StatusCodes.Status409Conflict, "Question Name already has taken");
-                }
-            }
             Question question = new()
             {
-                Name = request.Name,
-                Description = request.Description,
-                Type = request.Type,
-                IsRequired = request.IsRequired,
-                SurveyId = request.SurveyId
+                Name = item.Name,
+                Description = item.Description,
+                Type = item.Type,
+                IsRequired = item.IsRequired,
+                SurveyId = surveyId
             };
             context.Add(question);
             await context.SaveChangesAsync();
-            foreach (var choiceValue in request.Choices)
+            foreach (var choiceValue in item.Choices)
             {
                 var choice = new Choice
                 {
                     Value = choiceValue,
-                    QuestionId = question.Id // Soruya ait olduğunu belirtmek için soru kimliğini ayarlayın
+                    QuestionId = question.Id
                 };
 
                 context.Choices.Add(choice);
             }
             await context.SaveChangesAsync();
-
-            await context.Database.CommitTransactionAsync();
-            return Result<string>.Succeed("Survey create is successful");
         }
-        catch (Exception)
-        {
-            await context.Database.RollbackTransactionAsync();
-            return (500, "Could not create record");
-        }
-
-
+        return  Result<string>.Succeed("Create success");
     }
 
     public async Task<Result<string>> DeleteQuestion(Guid request, CancellationToken cancellationToken)
@@ -97,7 +80,7 @@ public class QuestionService(AppDbContext context) : IQuestionService
     }
     public async Task<Result<Choice>> GetByIdChoice(Guid id, CancellationToken cancellationToken)
     {
-        Choice? choice = await context.Choices.FirstOrDefaultAsync(p=>p.Id==id);
+        Choice? choice = await context.Choices.FirstOrDefaultAsync(p => p.Id == id);
         if (choice is not null)
         {
             return choice;
@@ -111,7 +94,7 @@ public class QuestionService(AppDbContext context) : IQuestionService
         {
             await context.Database.BeginTransactionAsync();
             var question = await GetByIdQuestion(request.Id, cancellationToken);
-            if (question is not null)
+            if (question.Data is not null)
             {
 
                 question.Data.Name = request.Name;
@@ -120,15 +103,15 @@ public class QuestionService(AppDbContext context) : IQuestionService
                 question.Data.Type = request.Type;
                 question.Data.SurveyId = request.SurveyId;
 
-                foreach (var item in request.Choice)
+                foreach (var item in request.UpdateChoiceDtos)
                 {
                     var choice = await GetByIdChoice(item.Id, cancellationToken);
-                    if(choice.Data is null)
+                    if (choice.Data is null)
                     {
-                        Choice choiceAdd = new() 
-                        { 
-                            QuestionId=request.Id,
-                            Value=item.Value,
+                        Choice choiceAdd = new()
+                        {
+                            QuestionId = request.Id,
+                            Value = item.Value,
                         };
                         context.Add(choiceAdd);
                         await context.SaveChangesAsync();
@@ -138,7 +121,7 @@ public class QuestionService(AppDbContext context) : IQuestionService
                         choice.Data.Value = item.Value;
                         await context.SaveChangesAsync();
                     }
-                    
+
                 }
                 await context.SaveChangesAsync();
             }

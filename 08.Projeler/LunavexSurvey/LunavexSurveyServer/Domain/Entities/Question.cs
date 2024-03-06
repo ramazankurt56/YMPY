@@ -10,7 +10,7 @@ public class Question : Entity
     public QuestionTypes Type { get; set; }
     public bool IsRequired { get; set; } = false;
     public Guid SurveyId { get; set; }
-    public Survey? Survey { get; set; }
+  //  public Survey? Survey { get; set; }
     public List<Choice>? Choices { get; set; }
 
 }

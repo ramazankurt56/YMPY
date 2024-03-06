@@ -7,7 +7,7 @@ public class QuestionValue : Entity
     public Guid QuestionId { get; set; }
     public Question? Question { get; set; }
     public Guid SurveySubmissionId { get; set; }
-    public SurveySubmission? SurveySubmission { get; set; }
+   // public SurveySubmission? SurveySubmission { get; set; }
     public string Value { get; set; } = string.Empty;
 }
 

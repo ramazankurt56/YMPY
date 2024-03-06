@@ -1,0 +1,164 @@
+.survey-container {
+    width: 60%;
+    margin: 20px;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
+    transition: all 0.3s ease; /* Dönüşüm animasyonu */
+}
+.survey-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Güncellenmiş renkler */
+.survey-border-left {
+    border-left: 10px solid rgb(255, 153, 0); /* Canlı turuncu renk */
+}
+
+.survey-border-top {
+    border-top: 10px solid rgb(51, 204, 153); /* Canlı yeşil renk */
+}
+.survey-border-div {
+    background-color: rgb(126, 5, 5);
+    width: 100%;
+    height: 1px;
+    transition: all 0.3s ease; /* Renk değişimi animasyonu */
+}
+
+.survey-header-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    font-size: 20px;
+    outline: none;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 0px solid black; /* Başlangıçta alt border yok */
+    box-sizing: border-box;
+    font-size: 20px;
+    outline: none;
+}
+
+.survey-container-body {
+    padding: 10px;
+}
+
+.survey-container:hover {
+    transform: translateY(-5px); /* Yukarı doğru kaydırma */
+    box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.2); /* Gölgelendirme artışı */
+}
+
+
+/* Select */
+/* Genel container */
+.survey-header {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  /* Label */
+  .survey-header label {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  /* Select element */
+  #question-type {
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml;utf8,<svg width='12' height='12' viewBox='0 0 12 12' fill='none' stroke='%23ccc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='2 8 6 12 10 4'></polyline></svg>"); /* Ok ikonu */
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%, center right;
+    background-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+  
+    /* Hover efekti */
+    &:hover {
+      border-color: #999;
+    }
+  
+    /* Focus efekti */
+    &:focus {
+      border-color: #666;
+    }
+  }
+
+  /* Checkbox */
+  .survey-header-checkbox {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  #required-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+  
+    /* Checked efekti */
+    &:checked {
+      background-color: #666;
+      border-color: #666;
+    }
+  }
+  
+  #required-checkbox:focus {
+    outline: none;
+    border-color: #999;
+  }
+  
+  .survey-header-checkbox label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+
+
+  /* Radio */
+  .circle {
+    width: 24px;
+    height: 24px;
+    background-color: #e3e6e9; /* Renk değiştirebilirsiniz */
+    border-radius: 100%;
+    
+
+  }
+  .survey-radio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
