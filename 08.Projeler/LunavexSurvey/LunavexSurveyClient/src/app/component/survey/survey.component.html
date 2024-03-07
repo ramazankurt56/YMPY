@@ -6,22 +6,26 @@
                 <div class="survey-border-div"></div>
                 <input type="text" class="" placeholder="Form Açıklaması">
                 <div class="survey-border-div"></div>
-                <button type="button" style="width: 100%; margin-top: 20px;"
+                <button type="button" (click)="onSave()" style="width: 100%; margin-top: 20px;"
                     class="btn btn-outline-success">Kaydet</button>
+                <button type="button" (click)="addNewQuestion()" style="width: 100%; margin-top: 20px;">
+                    Soru Ekle
+                </button>
             </div>
         </div>
     </div>
-    <div  class="survey-body">
+    @for (item of createdQuestions; track $index) {
+    <div class="survey-body">
         <div class="survey-container survey-border-left">
             <div class="survey-container-body">
                 <div class="row">
                     <div class="col-7">
-                        <input type="text" class=" survey-header-input" placeholder="Soru">
+                        <input type="text" [(ngModel)]="item.name" class=" survey-header-input" placeholder="Soru">
                         <div class="survey-border-div"></div>
                     </div>
                     <div class="col-5">
                         <div class="survey-header">
-                            <select id="question-type" name="question_type" [(ngModel)]="selectedType">
+                            <select id="question-type" name="question_type" [(ngModel)]="item.questionType">
                                 <option value="text">Metin</option>
                                 <option value="number">Sayı</option>
                                 <option value="date">Tarih</option>
@@ -36,27 +40,27 @@
                         </div>
                     </div>
                 </div>
-                @if(selectedType==='text') {
+                @if(item.questionType==='text') {
                 <input type="text" class=" survey-header-input" placeholder="Metin">
                 <div class="survey-border-div"></div>
                 }
-                @if(selectedType==='number') {
+                @if(item.questionType==='number') {
                 <input type="number" class=" survey-header-input" placeholder=0>
                 <div class="survey-border-div"></div>
                 }
-                @if(selectedType==='date') {
+                @if(item.questionType==='date') {
                 <input type="date" class=" survey-header-input">
                 <div class="survey-border-div"></div>
                 }
-                @if(selectedType==='time') {
+                @if(item.questionType==='time') {
                 <input type="time" class=" survey-header-input">
                 <div class="survey-border-div"></div>
                 }
-                @if(selectedType==='datetime') {
+                @if(item.questionType==='datetime') {
                 <input type="datetime-local" class="survey-header-input">
                 <div class="survey-border-div"></div>
                 }
-                @if(selectedType==='singlechoice') {
+                @if(item.questionType==='singlechoice') {
                 <div class="row">
                     <div class="col-12">
                         <div #surveyRadio id="survey-radio-1" class="survey-header-radio">
@@ -73,31 +77,31 @@
                 </div>
 
                 }
-                @if(selectedType==='multiplechoice') {
+                @if(item.questionType==='multiplechoice') {
                 <input type="multiplechoice" class=" survey-header-input">
                 <div class="survey-border-div"></div>
                 }
-                @if(selectedType==='yesno') {
+                @if(item.questionType==='yesno') {
                 <input type="yesno" class=" survey-header-input">
                 <div class="survey-border-div"></div>
                 }
-                @if(selectedType==='rating') {
+                @if(item.questionType==='rating') {
                 <input type="rating" class=" survey-header-input" placeholder="1-5 arası puan">
                 <div class="survey-border-div"></div>
                 }
-                @if(selectedType==='email') {
+                @if(item.questionType==='email') {
                 <input type="email" class=" survey-header-input" placeholder="Email">
                 <div class="survey-border-div"></div>
                 }
 
-                <input type="text" class=" survey-header-input" placeholder="Açıklama">
+                <input type="text" [(ngModel)]="item.description" class=" survey-header-input" placeholder="Açıklama">
                 <div class="survey-border-div"></div>
                 <div class="row">
                     <div class="col-9">
                     </div>
                     <div class="col-3">
                         <div class="survey-header-checkbox">
-                            <input type="checkbox" id="required-checkbox" name="required" checked>
+                            <input [(ngModel)]="item.required" type="checkbox" id="required-checkbox" name="required" checked>
                             <label for="required-checkbox">Gerekli</label>
                         </div>
                     </div>
@@ -105,4 +109,4 @@
             </div>
         </div>
     </div>
- 
+}
