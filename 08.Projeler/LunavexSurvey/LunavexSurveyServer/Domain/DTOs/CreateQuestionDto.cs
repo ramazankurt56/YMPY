@@ -3,5 +3,5 @@ using LunavexSurveyServer.Domain.Enum;
 
 namespace LunavexSurveyServer.Domain.DTOs;
 
-public sealed record CreateQuestionDto(Guid SurveyId,string Name,string Description,QuestionTypes Type,bool IsRequired,
-    List<string> Choices);
+public sealed record CreateQuestionDto(string Name,string Description, QuestionTypes Type,bool IsRequired,
+    List<CreateChoiceDto>? Choices);

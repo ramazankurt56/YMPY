@@ -153,12 +153,30 @@ input {
     height: 24px;
     background-color: #e3e6e9; /* Renk değiştirebilirsiniz */
     border-radius: 100%;
-    
-
+  }
+  .square {
+    width: 24px;
+    height: 24px;
+    background-color: #e3e6e9; /* Renk değiştirebilirsiniz */
+    border-radius: 5%;
   }
   .survey-radio{
     display: flex;
     justify-content: center;
     align-items: center;
   }
- 
+  .radio-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .radio-buttons input {
+    margin-right: 10px;
+  }
+  
+  .radio-buttons label {
+    margin: 0;
+    padding: 0 5px;
+    font-size: 16px;
+  }

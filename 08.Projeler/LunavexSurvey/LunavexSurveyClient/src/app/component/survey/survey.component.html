@@ -1,112 +1,134 @@
 <div class="container">
+    <form  formValidate #loginForm="ngForm" onsubmit="saveSurvey(loginForm)">
     <div class="survey-body ">
         <div class="survey-container survey-border-top survey-border-left">
             <div class="survey-container-body">
-                <input type="text" class=" survey-header-input" placeholder="Form Adı">
+                <input type="text" [(ngModel)]="createSurvey.name" class="form-control" required minlength="3" name="createSurvey-name" class=" survey-header-input" placeholder="Form Adı">
                 <div class="survey-border-div"></div>
-                <input type="text" class="" placeholder="Form Açıklaması">
+                <input type="text"  [(ngModel)]="createSurvey.description" required minlength="3" class="form-control"  name="createSurvey-description" class="" placeholder="Form Açıklaması">
                 <div class="survey-border-div"></div>
-                <button type="button" (click)="onSave()" style="width: 100%; margin-top: 20px;"
-                    class="btn btn-outline-success">Kaydet</button>
-                <button type="button" (click)="addNewQuestion()" style="width: 100%; margin-top: 20px;">
-                    Soru Ekle
-                </button>
+                
+                    <button type="button" (click)="addNewQuestion()" style="width: 100%; margin-top: 20px;"
+                    class="btn btn-outline-success">Soru Ekle</button>
+                
             </div>
         </div>
     </div>
-    @for (item of createdQuestions; track $index) {
+    @for (question of createdQuestions; track $index) {
     <div class="survey-body">
         <div class="survey-container survey-border-left">
             <div class="survey-container-body">
                 <div class="row">
                     <div class="col-7">
-                        <input type="text" [(ngModel)]="item.name" class=" survey-header-input" placeholder="Soru">
+                        <input type="text" [(ngModel)]="question.name" required minlength="3" class="form-control" name="question-name" class=" survey-header-input" placeholder="Soru">
                         <div class="survey-border-div"></div>
                     </div>
                     <div class="col-5">
                         <div class="survey-header">
-                            <select id="question-type" name="question_type" [(ngModel)]="item.questionType">
-                                <option value="text">Metin</option>
-                                <option value="number">Sayı</option>
-                                <option value="date">Tarih</option>
-                                <option value="time">Saat</option>
-                                <option value="datetime">Tarih ve Saat</option>
-                                <option value="singlechoice">Tek Seçimli</option>
-                                <option value="multiplechoice">Çoklu Seçimli</option>
-                                <option value="yesno">Evet/Hayır</option>
-                                <option value="rating">Derecelendirme</option>
-                                <option value="email">E-posta</option>
+                            <select id="question-type" name="question_type" required minlength="3"  name="question-type" class="form-control" [(ngModel)]="question.type">
+                                <option value=0>Metin</option>
+                                <option value=1>Sayı</option>
+                                <option value=2>Tarih</option>
+                                <option value=3>Saat</option>
+                                <option value=4>Tarih ve Saat</option>
+                                <option value=5>Tek Seçimli</option>
+                                <option value=6>Çoklu Seçimli</option>
+                                <option value=7>Evet/Hayır</option>
+                                <option value=8>Derecelendirme</option>
+                                <option value=9>E-posta</option>
                             </select>
                         </div>
                     </div>
                 </div>
-                @if(item.questionType==='text') {
-                <input type="text" class=" survey-header-input" placeholder="Metin">
+                @if(question.type==0) {
+                <input readonly type="text" class=" survey-header-input" placeholder="Metin">
                 <div class="survey-border-div"></div>
                 }
-                @if(item.questionType==='number') {
-                <input type="number" class=" survey-header-input" placeholder=0>
+                @if(question.type==1) {
+                <input readonly type="number" class=" survey-header-input" placeholder=0>
                 <div class="survey-border-div"></div>
                 }
-                @if(item.questionType==='date') {
-                <input type="date" class=" survey-header-input">
+                @if(question.type==2) {
+                <input readonly type="date" class=" survey-header-input">
                 <div class="survey-border-div"></div>
                 }
-                @if(item.questionType==='time') {
-                <input type="time" class=" survey-header-input">
+                @if(question.type==3) {
+                <input readonly type="time" class=" survey-header-input">
                 <div class="survey-border-div"></div>
                 }
-                @if(item.questionType==='datetime') {
-                <input type="datetime-local" class="survey-header-input">
+                @if(question.type==4) {
+                <input readonly type="datetime-local" class="survey-header-input">
                 <div class="survey-border-div"></div>
                 }
-                @if(item.questionType==='singlechoice') {
+                @if(question.type==5) {
+                <button type="button" style="width: 100%; margin-top: 20px;" class="btn btn-outline-success"
+                    (click)="addNewOptionToQuestion($index)">Tekli Seçmeli</button>
+                @for (option of question.choices ; track $index) {
                 <div class="row">
                     <div class="col-12">
-                        <div #surveyRadio id="survey-radio-1" class="survey-header-radio">
-                            <div  class="survey-radio">
+                        <div id="survey-radio-1" class="survey-header-radio">
+                            <div class="survey-radio">
                                 <div style="width: 24px; height: 24px;">
                                     <div class="circle"></div>
                                 </div>
-                                <input type="text"  class="survey-header-input" placeholder="Metin">
-                            </div> 
+                                <input type="text" class="form-control" required minlength="3" [(ngModel)]="option.value" name="option-value" class="survey-header-input"
+                                    placeholder="Metin">
+                            </div>
                         </div>
-                        <input type="text" readonly  class=" survey-header-input" (click)="addRadio()" placeholder="Seçenek Ekle">
-                        <button type="button" style="width: 100%; margin-top: 20px;"class="btn btn-outline-success" (click)="addChoice()">Kaydet</button>
-                    </div>              
+                    </div>
                 </div>
+                }
+                }
+                @if(question.type==6) {
+                <button type="button" style="width: 100%; margin-top: 20px;" class="btn btn-outline-success"
+                    (click)="addNewOptionToQuestion($index)">Çoktan Seçmeli</button>
+                @for (option of question.choices ; track $index) {
+                <div class="row">
+                    <div class="col-12">
+                        <div id="survey-radio-1" class="survey-header-radio">
+                            <div class="survey-radio">
+                                <div style="width: 24px; height: 24px;">
+                                    <div class="square"></div>
+                                </div>
+                                <input type="multiplechoice" class="form-control" required minlength="3" [(ngModel)]="option.value" name="option-multi" class=" survey-header-input" placeholder="Metin">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+                }
+                @if(question.type==7) {
+                <input type="yesno"  class=" survey-header-input">
+                <div class="survey-border-div"></div>
+                }
+                @if(question.type==8) {
+                <input type="rating" class=" survey-header-input" readonly placeholder="1-5 arası puan">
+                <div class="survey-border-div"></div>
+                }
+                @if(question.type==9) {
+                <input type="email" class=" survey-header-input" readonly placeholder="Email">
+                <div class="survey-border-div"></div>
+                }
 
-                }
-                @if(item.questionType==='multiplechoice') {
-                <input type="multiplechoice" class=" survey-header-input">
-                <div class="survey-border-div"></div>
-                }
-                @if(item.questionType==='yesno') {
-                <input type="yesno" class=" survey-header-input">
-                <div class="survey-border-div"></div>
-                }
-                @if(item.questionType==='rating') {
-                <input type="rating" class=" survey-header-input" placeholder="1-5 arası puan">
-                <div class="survey-border-div"></div>
-                }
-                @if(item.questionType==='email') {
-                <input type="email" class=" survey-header-input" placeholder="Email">
-                <div class="survey-border-div"></div>
-                }
-
-                <input type="text" [(ngModel)]="item.description" class=" survey-header-input" placeholder="Açıklama">
+                <input type="text" required minlength="3" [(ngModel)]="question.description" class="form-control" name="question-description" class=" survey-header-input"
+                    placeholder="Açıklama">
                 <div class="survey-border-div"></div>
                 <div class="row">
                     <div class="col-9">
                     </div>
                     <div class="col-3">
                         <div class="survey-header-checkbox">
-                            <input [(ngModel)]="item.required" type="checkbox" id="required-checkbox" name="required" checked>
+                            <input required minlength="3" [(ngModel)]="question.isRequired" class="form-control" name="question-isRequired" type="checkbox" id="required-checkbox"
+                                name="required" checked>
                             <label for="required-checkbox">Gerekli</label>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
-}
+    }
+    <button type="submit" style="width: 100%; margin-top: 20px;"
+    class="btn btn-outline-success">KAYDET</button>
+</form>

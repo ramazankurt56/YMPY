@@ -18,7 +18,7 @@ public class SurveySubmissionService(AppDbContext context) : ISurveySubmissionSe
             {
                 SurveyId = request.SurveyId
             };
-            context.Add(surveySubmission);
+            await context.AddAsync(surveySubmission);
             await context.SaveChangesAsync();
             foreach (var questionValueItem in request.CreateQuestionValueDtos)
             {
@@ -115,7 +115,7 @@ public class SurveySubmissionService(AppDbContext context) : ISurveySubmissionSe
                             SurveySubmissionId = request.Id,
                             Value = item.Value
                         };
-                        context.Add(questionValueAdd);
+                        await context.AddAsync(questionValueAdd);
                         await context.SaveChangesAsync();
                     }
                     if (questionValue.Data is not null)

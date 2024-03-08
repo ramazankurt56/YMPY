@@ -13,7 +13,7 @@ export class HttpService {
   ) { }
 
   get(api: string, callBack: (res:any)=> void) {
-    this.http.get(`https://localhost:7001/api/${api}`, 
+    this.http.get(`https://localhost:7155/api/${api}`, 
     // {
     //   headers: {
     //     "Authorization": "Bearer " + this.auth.token
@@ -31,7 +31,7 @@ export class HttpService {
   }
 
   post(api: string, body:any,callBack: (res:any)=> void) {
-    this.http.post(`https://localhost:7001/api/${api}`,body
+    this.http.post(`https://localhost:7155/api/${api}`,body
     // {
     //   headers: {
     //     "Authorization": "Bearer " + this.auth.token

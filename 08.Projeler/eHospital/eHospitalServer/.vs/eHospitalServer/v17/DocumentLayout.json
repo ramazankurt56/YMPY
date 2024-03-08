@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospital\\eHospitalServer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BE6E910D-FFF6-4590-9E13-9A83B2F95CB8}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospital\\ehospitalserver\\ehospitalserver.entities\\enum\\specialty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE6E910D-FFF6-4590-9E13-9A83B2F95CB8}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|solutionrelative:ehospitalserver.entities\\enum\\specialty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BE6E910D-FFF6-4590-9E13-9A83B2F95CB8}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospital\\ehospitalserver\\ehospitalserver.entities\\configurations\\doctordetailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE6E910D-FFF6-4590-9E13-9A83B2F95CB8}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|solutionrelative:ehospitalserver.entities\\configurations\\doctordetailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BE6E910D-FFF6-4590-9E13-9A83B2F95CB8}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospital\\ehospitalserver\\ehospitalserver.entities\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BE6E910D-FFF6-4590-9E13-9A83B2F95CB8}|eHospitalServer.Entities\\eHospitalServer.Entities.csproj|solutionrelative:ehospitalserver.entities\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\20240307124615_mg7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:eHospitalServer.DataAccess\\Migrations\\20240307124615_mg7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C9B6579F-C393-4172-8531-720368FCEECA}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,6 +49,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{35175378-D08C-401C-A3F6-A7F3A3E956FB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospital\\ehospitalserver\\ehospitalserver.webapi\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35175378-D08C-401C-A3F6-A7F3A3E956FB}|eHospitalServer.WebAPI\\eHospitalServer.WebAPI.csproj|solutionrelative:ehospitalserver.webapi\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9B6579F-C393-4172-8531-720368FCEECA}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\ehospital\\ehospitalserver\\ehospitalserver.dataaccess\\migrations\\20240307124615_mg7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9B6579F-C393-4172-8531-720368FCEECA}|eHospitalServer.DataAccess\\eHospitalServer.DataAccess.csproj|solutionrelative:ehospitalserver.dataaccess\\migrations\\20240307124615_mg7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,11 +62,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Specialty.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospital\\eHospitalServer\\eHospitalServer.Entities\\Enum\\Specialty.cs",
+              "RelativeDocumentMoniker": "eHospitalServer.Entities\\Enum\\Specialty.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospital\\eHospitalServer\\eHospitalServer.Entities\\Enum\\Specialty.cs",
+              "RelativeToolTip": "eHospitalServer.Entities\\Enum\\Specialty.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T17:02:59.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "20240307124615_mg7.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospital\\eHospitalServer\\eHospitalServer.DataAccess\\Migrations\\20240307124615_mg7.cs",
               "RelativeDocumentMoniker": "eHospitalServer.DataAccess\\Migrations\\20240307124615_mg7.cs",
@@ -70,8 +87,7 @@
               "RelativeToolTip": "eHospitalServer.DataAccess\\Migrations\\20240307124615_mg7.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:46:16.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:46:16.082Z"
             },
             {
               "$type": "Document",
@@ -83,12 +99,11 @@
               "RelativeToolTip": "eHospitalServer.DataAccess\\DependencyInjection.cs",
               "ViewState": "AQIAACgAAAAAAAAAAAAQwD4AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:43:50.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:43:50.046Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospital\\eHospitalServer\\eHospitalServer.Entities\\Models\\Appointment.cs",
               "RelativeDocumentMoniker": "eHospitalServer.Entities\\Models\\Appointment.cs",
@@ -96,12 +111,11 @@
               "RelativeToolTip": "eHospitalServer.Entities\\Models\\Appointment.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:31:28.183Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:31:28.183Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DoctorDetailConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospital\\eHospitalServer\\eHospitalServer.Entities\\Configurations\\DoctorDetailConfiguration.cs",
               "RelativeDocumentMoniker": "eHospitalServer.Entities\\Configurations\\DoctorDetailConfiguration.cs",
@@ -114,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\eHospital\\eHospitalServer\\eHospitalServer.Business\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "eHospitalServer.Business\\DependencyInjection.cs",
@@ -122,8 +136,7 @@
               "RelativeToolTip": "eHospitalServer.Business\\DependencyInjection.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAmwA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:28:44.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:28:44.568Z"
             },
             {
               "$type": "Document",
@@ -135,8 +148,7 @@
               "RelativeToolTip": "eHospitalServer.WebAPI\\Program.cs",
               "ViewState": "AQIAABUAAAAAAAAAAAAAACAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:26:49.095Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:26:49.095Z"
             },
             {
               "$type": "Document",
@@ -148,8 +160,7 @@
               "RelativeToolTip": "eHospitalServer.Entities\\Configurations\\AppointmentConfiguration.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:19:15.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:19:15.283Z"
             },
             {
               "$type": "Document",
@@ -161,8 +172,7 @@
               "RelativeToolTip": "eHospitalServer.WebAPI\\TanerAuthorize.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:25:12.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:25:12.662Z"
             },
             {
               "$type": "Document",
@@ -174,8 +184,7 @@
               "RelativeToolTip": "eHospitalServer.WebAPI\\Controllers\\UsersController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:23:10.023Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:23:10.023Z"
             },
             {
               "$type": "Document",
@@ -187,8 +196,7 @@
               "RelativeToolTip": "eHospitalServer.WebAPI\\Controllers\\DoctorsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:22:42.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:22:42.869Z"
             },
             {
               "$type": "Document",
@@ -200,8 +208,7 @@
               "RelativeToolTip": "eHospitalServer.WebAPI\\Controllers\\AuthController.cs",
               "ViewState": "AQIAADcAAAAAAAAAAAAswDkAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:21:50.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:21:50.539Z"
             },
             {
               "$type": "Document",
@@ -213,8 +220,7 @@
               "RelativeToolTip": "eHospitalServer.WebAPI\\Controllers\\AppointmentsController.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAQwBsAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T12:21:16.255Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T12:21:16.255Z"
             }
           ]
         }

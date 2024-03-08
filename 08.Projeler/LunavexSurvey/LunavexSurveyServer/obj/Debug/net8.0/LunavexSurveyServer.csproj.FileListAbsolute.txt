@@ -136,3 +136,4 @@ C:\Users\ramaz\Desktop\YMPY\08.Projeler\LunavexSurvey\LunavexSurveyServer\obj\De
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\LunavexSurvey\LunavexSurveyServer\obj\Debug\net8.0\LunavexSurveyServer.genruntimeconfig.cache
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\LunavexSurvey\LunavexSurveyServer\obj\Debug\net8.0\ref\LunavexSurveyServer.dll
 C:\Users\ramaz\Desktop\YMPY\08.Projeler\LunavexSurvey\LunavexSurveyServer\bin\Debug\net8.0\TS.Result.dll
+C:\Users\ramaz\Desktop\YMPY\08.Projeler\LunavexSurvey\LunavexSurveyServer\bin\Debug\net8.0\DefaultCorsPolicyNugetPackage.dll

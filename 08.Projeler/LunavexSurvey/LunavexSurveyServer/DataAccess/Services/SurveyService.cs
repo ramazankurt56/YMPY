@@ -20,7 +20,7 @@ public class SurveyService(AppDbContext context,IQuestionService questionService
             Description = request.Description
            
         };
-            context.Add(survey);
+            await context.AddAsync(survey);
             await context.SaveChangesAsync();
             await questionService.CreateQuestion(request.CreateQuestionDto,survey.Id,cancellationToken);
             await context.Database.CommitTransactionAsync();

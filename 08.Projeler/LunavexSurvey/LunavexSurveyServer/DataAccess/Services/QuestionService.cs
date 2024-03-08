@@ -19,22 +19,22 @@ public class QuestionService(AppDbContext context) : IQuestionService
             {
                 Name = item.Name,
                 Description = item.Description,
-                Type = item.Type,
+                Type =  item.Type,
                 IsRequired = item.IsRequired,
                 SurveyId = surveyId
             };
-            context.Add(question);
+            await context.AddAsync(question);
             await context.SaveChangesAsync();
-            foreach (var choiceValue in item.Choices)
-            {
-                var choice = new Choice
-                {
-                    Value = choiceValue,
-                    QuestionId = question.Id
-                };
+            //foreach (var choiceValue in item.Choices)
+            //{
+            //    var choice = new Choice
+            //    {
+            //        Value = choiceValue,
+            //        QuestionId = question.Id
+            //    };
 
-                context.Choices.Add(choice);
-            }
+            //   await context.Choices.AddAsync(choice);
+            //}
             await context.SaveChangesAsync();
         }
         return  Result<string>.Succeed("Create success");
@@ -113,7 +113,7 @@ public class QuestionService(AppDbContext context) : IQuestionService
                             QuestionId = request.Id,
                             Value = item.Value,
                         };
-                        context.Add(choiceAdd);
+                        await context.AddAsync(choiceAdd);
                         await context.SaveChangesAsync();
                     }
                     if (choice.Data is not null)

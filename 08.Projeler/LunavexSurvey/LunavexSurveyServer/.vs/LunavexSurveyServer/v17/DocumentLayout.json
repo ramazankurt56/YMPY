@@ -3,24 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\domain\\entities\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:domain\\entities\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\controllers\\surveyscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:controllers\\surveyscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\domain\\enum\\questiontypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:domain\\enum\\questiontypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\dataaccess\\services\\surveyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:dataaccess\\services\\surveyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\domain\\dtos\\createquestiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:domain\\dtos\\createquestiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\dataaccess\\services\\questionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:dataaccess\\services\\questionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\domain\\entities\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:domain\\entities\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:controllers\\questionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\dataaccess\\services\\surveysubmissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:dataaccess\\services\\surveysubmissionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\domain\\dtos\\createsurveydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:domain\\dtos\\createsurveydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\dataaccess\\services\\surveyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:dataaccess\\services\\surveyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\domain\\dtos\\createchoicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:domain\\dtos\\createchoicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\domain\\dtos\\updatechoicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:domain\\dtos\\updatechoicedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\domain\\enum\\questiontypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:domain\\enum\\questiontypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|c:\\users\\ramaz\\desktop\\ympy\\08.projeler\\lunavexsurvey\\lunavexsurveyserver\\business\\services\\isurveyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9725C3-3358-4552-9D63-C4A467EBBD3B}|LunavexSurveyServer.csproj|solutionrelative:business\\services\\isurveyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,32 +62,97 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "QuestionTypes.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\Enum\\QuestionTypes.cs",
-              "RelativeDocumentMoniker": "Domain\\Enum\\QuestionTypes.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\Enum\\QuestionTypes.cs",
-              "RelativeToolTip": "Domain\\Enum\\QuestionTypes.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "DocumentIndex": 0,
+              "Title": "SurveysController.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Controllers\\SurveysController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SurveysController.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Controllers\\SurveysController.cs",
+              "RelativeToolTip": "Controllers\\SurveysController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T11:43:16.132Z",
+              "WhenOpened": "2024-03-08T17:15:46.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Question.cs",
               "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\Entities\\Question.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Question.cs",
               "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\Entities\\Question.cs",
               "RelativeToolTip": "Domain\\Entities\\Question.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAEAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T11:37:05.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QuestionService.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\DataAccess\\Services\\QuestionService.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Services\\QuestionService.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\DataAccess\\Services\\QuestionService.cs",
+              "RelativeToolTip": "DataAccess\\Services\\QuestionService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAASwA0AAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T11:13:54.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateSurveyDto.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\DTOs\\CreateSurveyDto.cs",
+              "RelativeDocumentMoniker": "Domain\\DTOs\\CreateSurveyDto.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\DTOs\\CreateSurveyDto.cs",
+              "RelativeToolTip": "Domain\\DTOs\\CreateSurveyDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T16:06:14.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateQuestionDto.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\DTOs\\CreateQuestionDto.cs",
+              "RelativeDocumentMoniker": "Domain\\DTOs\\CreateQuestionDto.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\DTOs\\CreateQuestionDto.cs",
+              "RelativeToolTip": "Domain\\DTOs\\CreateQuestionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T16:08:18.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SurveySubmissionService.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\DataAccess\\Services\\SurveySubmissionService.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Services\\SurveySubmissionService.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\DataAccess\\Services\\SurveySubmissionService.cs",
+              "RelativeToolTip": "DataAccess\\Services\\SurveySubmissionService.cs",
+              "ViewState": "AQIAAFkAAAAAAAAAAAAswGwAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T13:03:55.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SurveyService.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\DataAccess\\Services\\SurveyService.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Services\\SurveyService.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\DataAccess\\Services\\SurveyService.cs",
+              "RelativeToolTip": "DataAccess\\Services\\SurveyService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T11:13:53.227Z",
               "EditorCaption": ""
             },
             {
@@ -66,35 +163,74 @@
               "RelativeDocumentMoniker": "Controllers\\QuestionsController.cs",
               "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Controllers\\QuestionsController.cs",
               "RelativeToolTip": "Controllers\\QuestionsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T11:29:00.044Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "QuestionService.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\DataAccess\\Services\\QuestionService.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Services\\QuestionService.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\DataAccess\\Services\\QuestionService.cs",
-              "RelativeToolTip": "DataAccess\\Services\\QuestionService.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAA7wBAAAAABAAAA",
+              "DocumentIndex": 9,
+              "Title": "UpdateChoiceDto.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\DTOs\\UpdateChoiceDto.cs",
+              "RelativeDocumentMoniker": "Domain\\DTOs\\UpdateChoiceDto.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\DTOs\\UpdateChoiceDto.cs",
+              "RelativeToolTip": "Domain\\DTOs\\UpdateChoiceDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T11:13:54.05Z",
+              "WhenOpened": "2024-03-08T16:26:00.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SurveyService.cs",
-              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\DataAccess\\Services\\SurveyService.cs",
-              "RelativeDocumentMoniker": "DataAccess\\Services\\SurveyService.cs",
-              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\DataAccess\\Services\\SurveyService.cs",
-              "RelativeToolTip": "DataAccess\\Services\\SurveyService.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAQwCQAAAAFAAAA",
+              "DocumentIndex": 8,
+              "Title": "CreateChoiceDto.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\DTOs\\CreateChoiceDto.cs",
+              "RelativeDocumentMoniker": "Domain\\DTOs\\CreateChoiceDto.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\DTOs\\CreateChoiceDto.cs",
+              "RelativeToolTip": "Domain\\DTOs\\CreateChoiceDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-06T11:13:53.227Z",
+              "WhenOpened": "2024-03-08T16:29:42.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "QuestionTypes.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\Enum\\QuestionTypes.cs",
+              "RelativeDocumentMoniker": "Domain\\Enum\\QuestionTypes.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Domain\\Enum\\QuestionTypes.cs",
+              "RelativeToolTip": "Domain\\Enum\\QuestionTypes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAEAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T11:43:16.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAABcAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:19:39.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ISurveyService.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Business\\Services\\ISurveyService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\ISurveyService.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\08.Projeler\\LunavexSurvey\\LunavexSurveyServer\\Business\\Services\\ISurveyService.cs",
+              "RelativeToolTip": "Business\\Services\\ISurveyService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:20:26.537Z",
               "EditorCaption": ""
             }
           ]
