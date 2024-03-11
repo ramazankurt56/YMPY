@@ -19,25 +19,29 @@ public class QuestionService(AppDbContext context) : IQuestionService
             {
                 Name = item.Name,
                 Description = item.Description,
-                Type =  item.Type,
+                Type = item.Type,
                 IsRequired = item.IsRequired,
                 SurveyId = surveyId
             };
             await context.AddAsync(question);
             await context.SaveChangesAsync();
-            //foreach (var choiceValue in item.Choices)
-            //{
-            //    var choice = new Choice
-            //    {
-            //        Value = choiceValue,
-            //        QuestionId = question.Id
-            //    };
+            if (item.Choices is not null)
+            {
+                foreach (var choiceValue in item.Choices)
+                {
+                    var choice = new Choice
+                    {
+                        Value = choiceValue.Value,
+                        QuestionId = question.Id
+                    };
 
-            //   await context.Choices.AddAsync(choice);
-            //}
+                    await context.Choices.AddAsync(choice);
+                }
+            }
+
             await context.SaveChangesAsync();
         }
-        return  Result<string>.Succeed("Create success");
+        return Result<string>.Succeed("Create success");
     }
 
     public async Task<Result<string>> DeleteQuestion(Guid request, CancellationToken cancellationToken)
@@ -88,50 +92,92 @@ public class QuestionService(AppDbContext context) : IQuestionService
         return (500, "Choice not found");
     }
 
-    public async Task<Result<string>> UpdateQuestion(UpdateQuestionDto request, CancellationToken cancellationToken)
+    public async Task<Result<string>> UpdateQuestion(List<UpdateQuestionDto> request, Guid surveyId, CancellationToken cancellationToken)
     {
-        try
+
+        foreach (var item in request)
         {
-            await context.Database.BeginTransactionAsync();
-            var question = await GetByIdQuestion(request.Id, cancellationToken);
+            var question = await GetByIdQuestion(item.Id, cancellationToken);
             if (question.Data is not null)
             {
 
-                question.Data.Name = request.Name;
-                question.Data.Description = request.Description;
-                question.Data.IsRequired = request.IsRequired;
-                question.Data.Type = request.Type;
-                question.Data.SurveyId = request.SurveyId;
-
-                foreach (var item in request.UpdateChoiceDtos)
+                question.Data.Name = item.Name;
+                question.Data.Description = item.Description;
+                question.Data.IsRequired = item.IsRequired;
+                question.Data.Type = item.Type;
+                question.Data.SurveyId = surveyId;
+                question.Data.IsDeleted = item.IsDeleted;
+                
+                if (item.Choices is not null)
                 {
-                    var choice = await GetByIdChoice(item.Id, cancellationToken);
-                    if (choice.Data is null)
+                    foreach (var choices in item.Choices)
                     {
-                        Choice choiceAdd = new()
-                        {
-                            QuestionId = request.Id,
-                            Value = item.Value,
-                        };
-                        await context.AddAsync(choiceAdd);
-                        await context.SaveChangesAsync();
-                    }
-                    if (choice.Data is not null)
-                    {
-                        choice.Data.Value = item.Value;
-                        await context.SaveChangesAsync();
-                    }
+                        var choice = await GetByIdChoice(choices.Id, cancellationToken);
+  
 
+                       
+                        if (choice.Data is null)
+                        {
+                            Choice choiceAdd = new()
+                            {
+                                QuestionId = item.Id,
+                                Value = choices.Value,
+                            };
+                            await context.AddAsync(choiceAdd);
+                            await context.SaveChangesAsync();
+                        }
+                        if (choice.Data is not null)
+                        {
+                        
+                            choice.Data.Value = choices.Value;
+                            choice.Data.IsDeleted=choices.IsDeleted;
+                            await context.SaveChangesAsync();
+                            if (choice.Data.IsDeleted == true)
+                            {
+                                await DeleteChoice(choice.Data.Id, cancellationToken);
+                            }
+                        }
+
+                    }
+                }
+
+                await context.SaveChangesAsync();
+                if (question.Data.IsDeleted == true)
+                {
+                    await DeleteQuestion(question.Data.Id, cancellationToken);
+                }
+            }
+            if (question.Data is null)
+            {
+                Question newQuestion = new()
+                {
+                    Name = item.Name,
+                    Description = item.Description,
+                    Type = item.Type,
+                    IsRequired = item.IsRequired,
+                    SurveyId = surveyId
+                };
+                await context.AddAsync(newQuestion);
+                await context.SaveChangesAsync();
+                if (item.Choices is not null)
+                {
+                    foreach (var choiceValue in item.Choices)
+                    {
+                        var choice = new Choice
+                        {
+                            Value = choiceValue.Value,
+                            QuestionId = newQuestion.Id
+                        };
+
+                        await context.Choices.AddAsync(choice);
+                    }
                 }
                 await context.SaveChangesAsync();
             }
-            await context.Database.CommitTransactionAsync();
-            return Result<string>.Succeed("Question update is successful");
+            await context.SaveChangesAsync();
         }
-        catch (Exception)
-        {
-            await context.Database.RollbackTransactionAsync();
-            return (500, "Could not update record");
-        }
+
+        return Result<string>.Succeed("Create success");
+
     }
 }

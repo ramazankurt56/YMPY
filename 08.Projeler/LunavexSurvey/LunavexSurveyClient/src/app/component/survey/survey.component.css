@@ -7,6 +7,7 @@
     box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1); /* Gölgelendirme */
     transition: all 0.3s ease; /* Dönüşüm animasyonu */
 }
+
 .survey-body {
     display: flex;
     justify-content: center;
@@ -15,17 +16,18 @@
 
 /* Güncellenmiş renkler */
 .survey-border-left {
-    border-left: 10px solid rgb(255, 153, 0); /* Canlı turuncu renk */
+    border-left: 10px solid rgb(10, 95, 212); /* Canlı turuncu renk */
 }
 
 .survey-border-top {
-    border-top: 10px solid rgb(51, 204, 153); /* Canlı yeşil renk */
+    border-top: 10px solid rgb(110, 6, 6); /* Canlı yeşil renk */
 }
 .survey-border-div {
-    background-color: rgb(126, 5, 5);
+    background-color: rgb(0, 0, 0);
     width: 100%;
     height: 1px;
     transition: all 0.3s ease; /* Renk değişimi animasyonu */
+    margin-bottom: 15px;
 }
 
 .survey-header-input {

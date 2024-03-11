@@ -39,17 +39,6 @@
     font-size: 20px;
     outline: none;
 }
-.survey-input {
-  text-align: center;
-  width: 100%;
-  padding: 20px;
-  margin: 5px 0;
-  border-radius: 5px;
-  border: none;
-  box-sizing: border-box;
-  font-size: 30px;
-  outline: none;
-}
 
 input {
     width: 100%;
@@ -191,11 +180,4 @@ input {
     margin: 0;
     padding: 0 5px;
     font-size: 16px;
-  }
-  /*  */
-
-  .survey-header-radio{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
   }

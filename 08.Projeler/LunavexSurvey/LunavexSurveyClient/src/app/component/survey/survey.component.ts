@@ -1,61 +1,84 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, NgForm } from '@angular/forms';
-import { Option, Question, SurveyModel } from '../../models/survey.model';
+import { Component, OnInit } from '@angular/core';
+import { CreateSurveyQuestion, Option, SurveyModel } from '../../models/survey.model';
 import { HttpService } from '../../services/http.service';
-import { FormValidateDirective } from 'form-validate-angular';
+import { FormsModule, NgForm } from '@angular/forms';
+import { SwalService } from '../../services/swal.service';
 
 @Component({
   selector: 'app-survey',
   standalone: true,
-  imports: [FormsModule,FormValidateDirective],
+  imports: [FormsModule,],
   templateUrl: './survey.component.html',
   styleUrl: './survey.component.css'
 })
-export class SurveyComponent implements OnInit {
- 
-  createdQuestions : Question[] =  []
-  createSurvey:SurveyModel=new SurveyModel();
-  constructor(private formBuilder: FormBuilder,private http:HttpService) { 
- 
-   }
-   productForm=new FormGroup({
-
-   })
-
-    ngOnInit(): void {
-     // this.surveyForm = this.formBuilder.group({});
-    }
-
-  addNewQuestion()
-  {
-    this.createdQuestions.push({
-      name : "",
-      description: "",
-      isRequired : false,
-      type :0
-    });
+export class SurveyComponent implements OnInit{
+  
+  createdQuestions: CreateSurveyQuestion[] = []
+  createSurvey: SurveyModel = new SurveyModel();
+  constructor(private swal:SwalService,private http: HttpService) { 
+  }
+  ngOnInit(): void {
   }
   
-  addNewOptionToQuestion(questionIndex : number){
+  isValidQuestion(question: CreateSurveyQuestion): boolean {
+    return this.isNameValid(question) &&
+           this.isDescriptionValid(question) &&
+           this.isOptionValueValid(question) ;
+  }
+  
+  private isNameValid(question: CreateSurveyQuestion): boolean {
+    return question.name.trim() !== '';
+  }
+  
+  private isDescriptionValid(question: CreateSurveyQuestion): boolean {
+    return  question.description?.trim() !== '';
+  }
+  
+  private isOptionValueValid(question: CreateSurveyQuestion): boolean {
+    if (question.choices) {
+      return question.choices.every(option => option.value.trim() !== '');
+    }
+    return true;
+  }
+  
+ 
+  addNewQuestion() {
+    this.createdQuestions.push({
+      name: "",
+      description: "",
+      isRequired: false,
+      type: 0
+    });
+  }
+  addNewOptionToQuestion(questionIndex: number) {
     const question = this.createdQuestions[questionIndex];
-    const optionToAdd : Option = {value:'' }
-    question.choices = question.choices ? [ ...question.choices, optionToAdd ] : [ optionToAdd];
+    const optionToAdd: Option = { value: '' }
+    question.choices = question.choices ? [...question.choices, optionToAdd] : [optionToAdd];
   }
-  onSave()
-  {
-    console.log(this.createdQuestions);
-  }
-  saveSurvey(form: NgForm){
-    if (form.valid) {
+
+  saveSurvey(myForm:NgForm) {
+    const allQuestionsValid = this.createdQuestions.every(question => this.isValidQuestion(question));
+    if (myForm.valid){
     this.createSurvey.createQuestionDto = this.createdQuestions.map(question => {
       question.type = parseInt(question.type.toString());
       return question;
     });
-    console.log(this.createSurvey)
     this.http.post("Surveys/CreateSurvey", this.createSurvey, res => {
-      //this.response = res;
+      this.swal.callToast(res.data, "success");
     })
   }
+  else {
+    console.log('Form hatalı! Lütfen tüm soruları doldurun.');
+  }
+  
+  }
+  deleteQuestion(index: number) {
+    const deleted = this.createdQuestions.splice(index, 1);
+    this.swal.callToast("Question deleted", "success");
+  }
+  deleteChoice(index: number,questionIndex:number) {
+    const deleted = this.createdQuestions[questionIndex].choices;
+    deleted?.splice(index,1)
   }
   // addRadio() {
   //   // const container = this.surveyRadio.nativeElement;
@@ -79,9 +102,9 @@ export class SurveyComponent implements OnInit {
   //   //   for (var i = 0; i < this.myInput.length; i++) {
   //   //     this.singleChoiceList.push(this.myInput[i].value);
   //   //   }
-  
+
   //   // }
-   
+
   //   // //console.log(this.singleChoiceList)
   // }
 }

@@ -7,7 +7,7 @@ using TS.Result;
 
 namespace LunavexSurveyServer.DataAccess.Services;
 
-public class SurveyService(AppDbContext context,IQuestionService questionService) : ISurveyService
+public class SurveyService(AppDbContext context, IQuestionService questionService) : ISurveyService
 {
     public async Task<Result<string>> CreateSurvey(CreateSurveyDto request, CancellationToken cancellationToken)
     {
@@ -15,14 +15,14 @@ public class SurveyService(AppDbContext context,IQuestionService questionService
         {
             await context.Database.BeginTransactionAsync();
             Survey survey = new()
-        {
-            Name = request.Name,
-            Description = request.Description
-           
-        };
+            {
+                Name = request.Name,
+                Description = request.Description
+
+            };
             await context.AddAsync(survey);
             await context.SaveChangesAsync();
-            await questionService.CreateQuestion(request.CreateQuestionDto,survey.Id,cancellationToken);
+            await questionService.CreateQuestion(request.CreateQuestionDto, survey.Id, cancellationToken);
             await context.Database.CommitTransactionAsync();
             return Result<string>.Succeed("Survey create is successful");
         }
@@ -35,11 +35,11 @@ public class SurveyService(AppDbContext context,IQuestionService questionService
 
     public async Task<Result<string>> DeleteSurvey(Guid request, CancellationToken cancellationToken)
     {
-        var survey =await GetById(request,cancellationToken);
+        var survey = await GetById(request, cancellationToken);
         if (survey.Data is not null)
         {
             context.Remove(survey.Data);
-            context.SaveChanges();    
+            context.SaveChanges();
         }
         return Result<string>.Succeed("Survey delete is successful");
 
@@ -47,14 +47,14 @@ public class SurveyService(AppDbContext context,IQuestionService questionService
 
     public async Task<Result<List<Survey>>> GetAll(CancellationToken cancellationToken)
     {
-        List<Survey> surveyList = await context.Surveys.Include(p=>p.Questions).AsNoTracking().ToListAsync();
+        List<Survey> surveyList = await context.Surveys.Include(p => p.Questions).AsNoTracking().ToListAsync();
         return surveyList;
     }
 
     public async Task<Result<Survey>> GetById(Guid id, CancellationToken cancellationToken)
     {
-        Survey? survey = await context.Surveys.FindAsync(id);
-        if(survey is not null)
+        Survey? survey = await context.Surveys.Include(p => p.Questions).ThenInclude(q => q.Choices).FirstOrDefaultAsync(p => p.Id == id);
+        if (survey is not null)
         {
             return survey;
         }
@@ -63,15 +63,27 @@ public class SurveyService(AppDbContext context,IQuestionService questionService
 
     public async Task<Result<string>> UpdateSurvey(UpdateSurveyDto request, CancellationToken cancellationToken)
     {
-        var survey = await GetById(request.Id, cancellationToken);
-        if (survey is not null)
+        try
         {
-            survey.Data.Name = request.Name;
-            survey.Data.Description = request.Description;
-            survey.Data.ModifiedDate= DateTime.Now;
-            await context.SaveChangesAsync();
+            await context.Database.BeginTransactionAsync();
+            var survey = await GetById(request.Id, cancellationToken);
+            if (survey.Data is not null)
+            {
+                survey.Data.Name = request.Name;
+                survey.Data.Description = request.Description;
+                survey.Data.ModifiedDate = DateTime.Now;
+                await context.SaveChangesAsync();
+                await questionService.UpdateQuestion(request.UpdateQuestionDto, request.Id, cancellationToken);
+                await context.Database.CommitTransactionAsync();
+                //return Result<string>.Succeed("Survey update is successful");
+            }
+
             return Result<string>.Succeed("Survey update is successful");
         }
-        return (500, "Could not update record");
+        catch (Exception)
+        {
+            await context.Database.RollbackTransactionAsync();
+            return (500, "Could not create record");
+        }
     }
 }

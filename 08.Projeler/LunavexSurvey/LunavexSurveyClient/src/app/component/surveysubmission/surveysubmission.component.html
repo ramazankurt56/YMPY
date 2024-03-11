@@ -1,1 +1,124 @@
-<p>surveysubmission works!</p>
+<div class="container">
+    <div class="survey-body ">
+        <div class="survey-container survey-border-top ">
+
+            <div class="survey-container-body">
+                <div class="form-group">
+                    <h1 class="survey-input" >{{getAllSurvey.name}}</h1>
+                </div>
+                <div class="form-group">
+                    <h3 class="survey-input" style="text-align: center;">{{getAllSurvey.description}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form #myForm="ngForm" (ngSubmit)="saveSurveySubmission(myForm)">
+        @for (question of getAllSurvey.questions; track question; let questionId =$index) {
+        <div class="survey-body">
+            <div class="survey-container survey-border-left">
+                <div class="survey-container-body">
+                    <h5>Soru: <span style="font-style: italic;">{{question.name}}</span></h5>
+                    <h6>Açıklama: {{question.description}}</h6>
+                    @if(question.type===0) {
+                    <input type="text" autocomplete="off" #questionInput="ngModel"
+                        [required]="question.isRequired===true" [(ngModel)]="question.value"
+                        name="question-value{{questionId}}" class="survey-header-input" placeholder="Metin">
+                    @if (!questionInput.valid && (questionInput.touched || myForm.submitted)) {
+                    <div class="text-danger">zorunlu alan</div>
+                    }
+                    <div class="survey-border-div"></div>
+                    }
+                    @if(question.type===1) {
+                    <input type="number" autocomplete="off" #questionInput="ngModel"
+                        [required]="question.isRequired===true" name="question-number{{questionId}}" [(ngModel)]="question.value"
+                        class=" survey-header-input" placeholder=0>
+                        @if (!questionInput.valid && (questionInput.touched || myForm.submitted)) {
+                            <div class="text-danger">zorunlu alan</div>
+                            }
+                    <div class="survey-border-div"></div>
+                    }
+                    @if(question.type===7) {
+                    <input type="text" [(ngModel)]="question.value" name="question-date{{questionId}}" #questionInput="ngModel"
+                        [required]="question.isRequired===true" class=" survey-header-input">
+                        @if (!questionInput.valid && (questionInput.touched || myForm.submitted)) {
+                            <div class="text-danger">zorunlu alan</div>
+                            }
+                    <div class="survey-border-div"></div>
+                    }
+                    @if(question.type===3) {
+                    <input type="time" [(ngModel)]="question.value" name="question-time{{questionId}}" #questionInput="ngModel"
+                        [required]="question.isRequired===true" class=" survey-header-input">
+                        @if (!questionInput.valid && (questionInput.touched || myForm.submitted)) {
+                            <div class="text-danger">zorunlu alan</div>
+                            }
+                    <div class="survey-border-div"></div>
+                    }
+                    @if(question.type===4) {
+                    <input type="datetime-local" [(ngModel)]="question.value" name="question-datetime{{questionId}}" #questionInput="ngModel"
+                        [required]="question.isRequired===true" class="survey-header-input">
+                        @if (!questionInput.valid && (questionInput.touched || myForm.submitted)) {
+                            <div class="text-danger">zorunlu alan</div>
+                            }
+                    <div class="survey-border-div"></div>
+                    }
+                    @if(question.type===5) {
+                    @for (option of question.choices ; track $index) {
+                    <div id="survey-radio-1" class="survey-header-radio ">
+                        <input type="radio" style="width: auto; margin-left: 10px;" name="question-radio{{questionId}}" #questionInput="ngModel"
+                        [required]="question.isRequired===true" [(ngModel)]="question.value"
+                            [value]="option.value" name="question-single{{$index}}">
+                        <label style="margin-left: 10px;">{{ option.value }}</label>
+                    </div>
+                    @if (!questionInput.valid && (questionInput.touched || myForm.submitted)) {
+                        <div class="text-danger">zorunlu alan</div>
+                        }
+                    }
+                    }
+                   
+                    @if(question.type===6) {
+                    @for (option of question.choices ; track $index) {
+                    <div id="survey-radio-1" class="survey-header-radio ">
+                        <input type="radio" name="question-checked{{questionId}}" style="width: auto; margin-left: 10px;" [(ngModel)]="question.value"
+                            [value]="option.value" name="question-multi{{$index}}">
+                        <label style="margin-left: 10px;">{{ option.value }}</label>
+                    </div>
+                    }
+                    }
+                    @if(question.type===7) {
+                    <input type="text" autocomplete="off" #questionInput="ngModel"
+                        [required]="question.isRequired===true" name="question-yesno{{questionId}}" [(ngModel)]="question.value"
+                        class=" survey-header-input">
+                        @if (!questionInput.valid && (questionInput.touched || myForm.submitted)) {
+                            <div class="text-danger">zorunlu alan</div>
+                            }
+                    <div class="survey-border-div"></div>
+                    }
+                    @if(question.type===8) {
+                    <input type="text" class=" survey-header-input" #questionInput="ngModel"
+                        [required]="question.isRequired===true" name="question-raiting{{questionId}}" [(ngModel)]="question.value" autocomplete="off"
+                        placeholder="1-5 arası puan">
+                        @if (!questionInput.valid && (questionInput.touched || myForm.submitted)) {
+                            <div class="text-danger">zorunlu alan</div>
+                            }
+                    <div class="survey-border-div"></div>
+                    }
+                    @if(question.type===9) {
+                    <input type="email" class=" survey-header-input" name="question-email{{questionId}}" #questionInput="ngModel"
+                        [required]="question.isRequired===true" [(ngModel)]="question.value" autocomplete="off"
+                        placeholder="Email">
+                        @if (!questionInput.valid && (questionInput.touched || myForm.submitted)) {
+                            <div class="text-danger">zorunlu alan</div>
+                            }
+                    <div class="survey-border-div"></div>
+                    }
+
+                </div>
+
+            </div>
+        </div>
+
+        }
+        <div class="survey-container-body" style=" display: flex; justify-content: center;">
+            <button type="submit" style="width: 80%; margin: 20px;" class="btn btn-success">KAYDET</button>
+        </div>
+    </form>

@@ -6,7 +6,8 @@ import Swal from 'sweetalert2'
 export class SwalService {
   constructor() { }
 
-  callToast(message: string, icon: SweetAlertIcon = "success") {
+  callToast(data: string, icon: SweetAlertIcon = "success") {
+    console.log(data)
     const Toast = Swal.mixin({
       toast: true,
       position: 'bottom-end',
@@ -14,7 +15,7 @@ export class SwalService {
       timerProgressBar: true,
       showConfirmButton: false,            
     })
-    Toast.fire(message, '', icon)
+    Toast.fire(data, '', icon)
   }
 }
 export type SweetAlertIcon = 'success' | 'error' | 'warning' | 'info' | 'question'

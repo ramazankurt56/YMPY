@@ -8,15 +8,36 @@
             </div>
             
             <div class="card-body">
-              <h5 class="card-title">Survey</h5>
-              <p class="card-text">Create a new survey to gather valuable insights and feedback.</p>
-              <a href="#" class="btn btn-primary">Survey Add</a>
+              <h5 class="card-title">Anket</h5>
+              <p class="card-text">Değerli bilgiler ve geri bildirimler toplamak için yeni bir anket oluşturun.</p>
+              <a routerLink="survey" class="btn btn-success">Anket Ekle</a>
             </div>
           </div>
     </div>
     <div>
-        <a class="nav-link">Son Formlar</a>
-    </div>
-   
+      <br>
+      <a href="#" class="nav-link" style="text-decoration: none; color: #007bff; font-weight: bold;">Formlar</a>
+  </div>
+  
+    <div class="row" style="margin-top: 20px; align-items: center; display: flex;">
+            @for (survey of surveyList; track $index) {
+                <div class="card" style="width: 38rem; margin: 20px;">               
+                    <div class="card-body">
+                      <h4 class="card-title">{{survey.name}}</h4>
+                      <p class="card-text">{{survey.description}}</p>
+                      @if (survey && survey.questions && survey.questions.length > 0) {
+                        <p class="card-text">Toplam soru sayısı: {{ survey.questions.length }}</p>
+                        <h5 class="card-title">İlk Sorusu: {{ survey.questions[0].name }}</h5>
+                        <p class="card-text">Açıklama: {{ survey.questions[0].description }}</p>
+                      }
 
+                      <a [routerLink]="['survey-submission', survey.id]" style="margin-right: 10px;" class="btn btn-primary">Anketi Başlat</a>
+                      <a style="margin-right: 10px;" (click)="deleteSurvey(survey.id)" class="btn btn-danger">Anketi Sil</a>
+                      <a [routerLink]="['survey-detail', survey.id]" class="btn btn-secondary">Anketi Düzenle</a>
+          
+
+                    </div>
+                  </div>
+            }
+    </div>
 </div>

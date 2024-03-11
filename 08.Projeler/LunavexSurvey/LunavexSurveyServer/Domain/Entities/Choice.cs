@@ -5,6 +5,7 @@ namespace LunavexSurveyServer.Domain.Entities;
 public class Choice : Entity
 {
     public string Value { get; set; } = string.Empty;
+    public bool IsDeleted { get; set; }=false;
     public Guid QuestionId { get; set; }
     //public Question? Question { get; set; }
 }

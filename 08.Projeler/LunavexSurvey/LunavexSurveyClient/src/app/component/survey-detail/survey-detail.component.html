@@ -4,13 +4,13 @@
 
             <div class="survey-container-body">
                 <div class="form-group">
-                    <input type="text" [(ngModel)]="createSurvey.name" autocomplete="off" name="createSurvey-name"
+                    <input type="text" [(ngModel)]="getAllSurvey.name" name="createSurvey-name"
                         class="survey-header-input" placeholder="Form Adı">
                     <div class="invalid-feedback"></div>
                     <div class="survey-border-div"></div>
                 </div>
                 <div class="form-group">
-                    <input type="text" [(ngModel)]="createSurvey.description" autocomplete="off" class="form-control "
+                    <input type="text" [(ngModel)]="getAllSurvey.description" class="form-control "
                         class="survey-header-input" name="createSurvey-description" placeholder="Form Açıklaması">
                     <div class="invalid-feedback"></div>
                     <div class="survey-border-div"></div>
@@ -21,22 +21,21 @@
             </div>
         </div>
     </div>
-    <form #myForm="ngForm"  (ngSubmit)="saveSurvey(myForm)">
-        @for (question of createdQuestions; track question; let questionId =$index) {
-
+    <form #myForm="ngForm"   (ngSubmit)="updateSurveys(myForm)">
+        @for (question of getAllQuestion; track question; let questionId=$index) {
+        @if (question.isDeleted===false) {
         <div class="survey-body">
             <div class="survey-container survey-border-left">
                 <div class="survey-container-body">
-
                     <div class="row">
                         <div class="col-7">
-                            
-                            <input type="text" [(ngModel)]="question.name" #questionInputSurvey="ngModel"  required autocomplete="off"  name="question-name{{questionId}}"
-                                class=" survey-header-input" placeholder="Soru">
+                            <input type="text" [(ngModel)]="question.name" #questionInputSurvey="ngModel" autocomplete="off"
+                                name="question-name{{questionId}}" required class=" survey-header-input" placeholder="Soru">
                                 @if (!questionInputSurvey.valid && (questionInputSurvey.touched || myForm.submitted)) {
                                     <div class="text-danger">zorunlu alan</div>
                                     }
                             <div class="survey-border-div"></div>
+                            
                         </div>
                         <div class="col-5">
                             <div class="survey-header">
@@ -58,7 +57,7 @@
                         </div>
                     </div>
                     @if(question.type==0) {
-                    <input readonly type="text"  class=" survey-header-input" placeholder="Metin">
+                    <input readonly type="text" class=" survey-header-input" placeholder="Metin">
                     <div class="survey-border-div"></div>
                     }
                     @if(question.type==1) {
@@ -81,47 +80,51 @@
                     <button type="button" style="width: 100%; margin-top: 20px;" class="btn btn-outline-success"
                         (click)="addNewOptionToQuestion(questionId)">Tekli Seçmeli</button>
                     @for (option of question.choices ; track $index) {
-                        <div id="survey-radio-1" class="survey-header-radio">
-                            <div class="row">
-                                <div class="col-9 survey-radio">
-                                    <div style="width: 24px; height: 24px;">
-                                        <div class="circle"></div>
-                                    </div>
-                                    <input type="text"  #questionInputSingleChoice="ngModel" required [(ngModel)]="option.value" autocomplete="off"
-                                        name="option-value{{$index}}" class="survey-header-input" placeholder="Metin">
+                    @if (option.isDeleted===false) {
+                    <div id="survey-radio-1" class="survey-header-radio">
+                        <div class="row">
+                            <div class="col-9 survey-radio">
+                                <div style="width: 24px; height: 24px;">
+                                    <div class="circle"></div>
                                 </div>
-                                <div class="col-3 survey-radio">
-                                    @if (!questionInputSingleChoice.valid && (questionInputSingleChoice.touched || myForm.submitted)) {
-                                        <div class="text-danger">zorunlu alan</div>
-                                        }
-                                    <a style="margin-left: 10px;" (click)="deleteChoice($index,questionId)"
-                                        class="btn btn-danger">Sil</a>
-                                </div>
-                            </div>
-                        </div>
-                    }
-                    }
-                    @if(question.type==6) {
-                    <button type="button" style="width: 100%; margin-top: 20px;" class="btn btn-outline-success"
-                        (click)="addNewOptionToQuestion(questionId)">Çoktan Seçmeli</button>
-                    @for (option of question.choices ; track $index) {
-                        <div id="survey-radio-1" class="survey-header-radio">
-                            <div class="row">
-                                <div class="col-9 survey-radio">
-                                    <div class="square"></div>
-                                </div>
-                                <input type="multiplechoice" required #questionInputMuitiChoice="ngModel" required [(ngModel)]="option.value" autocomplete="off"
-                                    style="width: 85%;" name="multi-option-value{{$index}}" class=" survey-header-input"
-                                    placeholder="Metin">
+                                <input type="text" #questionInputSingleChoice="ngModel" required [(ngModel)]="option.value" autocomplete="off"
+                                    name="option-value{{$index}}" class="survey-header-input" placeholder="Metin">
                             </div>
                             <div class="col-3 survey-radio">
-                                @if (!questionInputMuitiChoice.valid && (questionInputMuitiChoice.touched || myForm.submitted)) {
+                                @if (!questionInputSingleChoice.valid && (questionInputSingleChoice.touched || myForm.submitted)) {
                                     <div class="text-danger">zorunlu alan</div>
                                     }
                                 <a style="margin-left: 10px;" (click)="deleteChoice($index,questionId)"
                                     class="btn btn-danger">Sil</a>
                             </div>
                         </div>
+                    </div>
+                    }
+                    }
+                    }
+                    @if(question.type==6) {
+                    <button type="button" style="width: 100%; margin-top: 20px;" class="btn btn-outline-success"
+                        (click)="addNewOptionToQuestion(questionId)">Çoktan Seçmeli</button>
+                    @for (option of question.choices ; track $index) {
+                    @if (option.isDeleted===false) {
+                    <div id="survey-radio-1" class="survey-header-radio">
+                        <div class="row">
+                            <div class="col-9 survey-radio">
+                                <div class="square"></div>
+                            </div>
+                            <input type="multiplechoice" required #questionInputMuitiChoice="ngModel" [(ngModel)]="option.value" autocomplete="off"
+                                style="width: 85%;" name="multi-option-value{{$index}}" class=" survey-header-input"
+                                placeholder="Metin">
+                        </div>
+                        <div class="col-3 survey-radio">
+                            @if (!questionInputMuitiChoice.valid && (questionInputMuitiChoice.touched || myForm.submitted)) {
+                                <div class="text-danger">zorunlu alan</div>
+                                }
+                            <a style="margin-left: 10px;" (click)="deleteChoice($index,questionId)"
+                                class="btn btn-danger">Sil</a>
+                        </div>
+                    </div>
+                    }
                     }
                     }
                     @if(question.type==7) {
@@ -136,9 +139,8 @@
                     <input type="email" class=" survey-header-input" readonly placeholder="Email">
                     <div class="survey-border-div"></div>
                     }
-                    <input type="text" [(ngModel)]="question.description"  #questionInputDescription="ngModel" required autocomplete="off" 
-                    name="question-description{{questionId}}" 
-                        class=" survey-header-input" placeholder="Açıklama">
+                    <input type="text" #questionInputDescription="ngModel" required [(ngModel)]="question.description" autocomplete="off"
+                        name="question-description{{questionId}}" class=" survey-header-input" placeholder="Açıklama">
                         @if (!questionInputDescription.valid && (questionInputDescription.touched || myForm.submitted)) {
                             <div class="text-danger">zorunlu alan</div>
                             }
@@ -148,30 +150,29 @@
                         </div>
                         <div class="col-3">
                             <div class="survey-header-checkbox">
-                                <input [(ngModel)]="question.isRequired"autocomplete="off" name="question-isRequired" type="checkbox"
+                                <input  [(ngModel)]="question.isRequired" name="question-isRequired" type="checkbox"
                                     id="required-checkbox" checked>
                                 <label for="required-checkbox">Gerekli</label>
                             </div>
                         </div>
                     </div>
                     <button type="button" style="width: 100%; margin-top: 20px;" class="btn btn-outline-danger"
-                    (click)="deleteQuestion(questionId)">Sil</button>
+                        (click)="deleteQuestion(questionId)">Sil</button>
                 </div>
-               
+
             </div>
         </div>
+        }
 
-    }
-    @if (createdQuestions.length>0) {
+        }
+        @if (getAllQuestion.length>0) {
         <div class="survey-body ">
             <div class="survey-container ">
-                <div class="survey-container-body" style=" display: flex; justify-content: center;">
-                    <button type="submit"  style="width: 80%; margin: 20px;"
-                        class="btn btn-success">KAYDET</button>
+                <div class="survey-container-body">
+                    <button type="submit" style="width: 100%; margin-top: 20px;"
+                        class="btn btn-outline-success">Güncelle</button>
                 </div>
             </div>
         </div>
         }
-</form>
-  
-  
+    </form>

@@ -14,14 +14,10 @@ export class HttpService {
 
   get(api: string, callBack: (res:any)=> void) {
     this.http.get(`https://localhost:7155/api/${api}`, 
-    // {
-    //   headers: {
-    //     "Authorization": "Bearer " + this.auth.token
-    //   }
-    // }
     ).subscribe({
       next: (res: any) => {
         callBack(res);
+       
       },
       error: (err: HttpErrorResponse) => {
         this.swal.callToast(err.message, "error");
@@ -32,18 +28,12 @@ export class HttpService {
 
   post(api: string, body:any,callBack: (res:any)=> void) {
     this.http.post(`https://localhost:7155/api/${api}`,body
-    // {
-    //   headers: {
-    //     "Authorization": "Bearer " + this.auth.token
-    //   }
-    // }
     ).subscribe({
       next: (res: any) => {
         callBack(res);
       },
       error: (err: HttpErrorResponse) => {
         this.swal.callToast(err.error.message, "error");
-        console.log(err);
       }
     })
   }

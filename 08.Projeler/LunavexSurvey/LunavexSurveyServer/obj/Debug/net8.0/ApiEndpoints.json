@@ -1,79 +1,5 @@
 [
   {
-    "ContainingType": "LunavexSurveyServer.Controllers.QuestionsController",
-    "Method": "CreateQuestion",
-    "RelativePath": "api/Questions/CreateQuestion",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "LunavexSurveyServer.Domain.DTOs.CreateQuestionDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LunavexSurveyServer.Controllers.QuestionsController",
-    "Method": "DeleteChoice",
-    "RelativePath": "api/Questions/DeleteChoice",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LunavexSurveyServer.Controllers.QuestionsController",
-    "Method": "DeleteQuestion",
-    "RelativePath": "api/Questions/DeleteQuestion",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LunavexSurveyServer.Controllers.QuestionsController",
-    "Method": "GetAllQuestion",
-    "RelativePath": "api/Questions/GetAllQuestion",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "LunavexSurveyServer.Controllers.QuestionsController",
-    "Method": "UpdateQuestion",
-    "RelativePath": "api/Questions/UpdateQuestion",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "LunavexSurveyServer.Domain.DTOs.UpdateQuestionDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "LunavexSurveyServer.Controllers.SurveysController",
     "Method": "CreateSurvey",
     "RelativePath": "api/Surveys/CreateSurvey",
@@ -91,16 +17,32 @@
   },
   {
     "ContainingType": "LunavexSurveyServer.Controllers.SurveysController",
-    "Method": "DeleteSurvey",
-    "RelativePath": "api/Surveys/DeleteSurvey",
+    "Method": "DeleteQuestion",
+    "RelativePath": "api/Surveys/DeleteQuestion/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "request",
+        "Name": "id",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LunavexSurveyServer.Controllers.SurveysController",
+    "Method": "DeleteSurvey",
+    "RelativePath": "api/Surveys/DeleteSurvey/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -113,6 +55,22 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LunavexSurveyServer.Controllers.SurveysController",
+    "Method": "GetBySurveyId",
+    "RelativePath": "api/Surveys/GetBySurveyId/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

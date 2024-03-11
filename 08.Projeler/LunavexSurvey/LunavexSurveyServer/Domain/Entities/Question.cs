@@ -9,6 +9,7 @@ public class Question : Entity
     public string Description { get; set; } = string.Empty;
     public QuestionTypes Type { get; set; }
     public bool IsRequired { get; set; } = false;
+    public bool IsDeleted { get; set; }=false;
     public Guid SurveyId { get; set; }
   //  public Survey? Survey { get; set; }
     public List<Choice>? Choices { get; set; }

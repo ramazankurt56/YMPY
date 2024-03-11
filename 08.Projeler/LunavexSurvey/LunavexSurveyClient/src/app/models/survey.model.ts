@@ -1,11 +1,10 @@
 export class SurveyModel{
 name:string=""
 description:string="";
-createQuestionDto:Question[]=[]
+createQuestionDto:CreateSurveyQuestion[]=[]
+
 }   
-
-
-export interface Question{
+export interface CreateSurveyQuestion{
     name: string,
     description : string | null,
     type: number,
@@ -14,5 +13,4 @@ export interface Question{
 }
 export interface Option{
     value : string,
-   // isTrueOption : boolean
 }
