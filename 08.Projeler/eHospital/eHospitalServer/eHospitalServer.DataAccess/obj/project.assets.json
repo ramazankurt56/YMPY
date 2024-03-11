@@ -1394,6 +1394,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "EntityFrameworkCore.GenericRepository.Nuget": "8.0.1",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.2",
           "Microsoft.EntityFrameworkCore": "8.0.2",
           "Microsoft.Extensions.Identity.Stores": "8.0.2"
         },

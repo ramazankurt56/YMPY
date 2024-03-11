@@ -1,26 +1,80 @@
 [
   {
-    "ContainingType": "eHospitalServer.WebAPI.Controllers.AuthController",
-    "Method": "ChangePassword",
-    "RelativePath": "api/Auth/ChangePassword",
+    "ContainingType": "eHospitalServer.WebAPI.Controllers.AppointmentsController",
+    "Method": "Complete",
+    "RelativePath": "api/Appointments/Complete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "eHospitalServer.Entities.DTOs.CompleteAppointmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "eHospitalServer.WebAPI.Controllers.AppointmentsController",
+    "Method": "Create",
+    "RelativePath": "api/Appointments/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "eHospitalServer.Entities.DTOs.CreateAppointmentDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "eHospitalServer.WebAPI.Controllers.AppointmentsController",
+    "Method": "CreatePatient",
+    "RelativePath": "api/Appointments/CreatePatient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "eHospitalServer.Entities.DTOs.CreatePatientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "eHospitalServer.WebAPI.Controllers.AppointmentsController",
+    "Method": "GetAllByDoctorId",
+    "RelativePath": "api/Appointments/GetAllByDoctorId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "passwordResetCode",
-        "Type": "System.Int32",
+        "Name": "doctorId",
+        "Type": "System.Guid",
         "IsRequired": false
-      },
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "eHospitalServer.WebAPI.Controllers.AuthController",
+    "Method": "ChangePasswordWithForgotPasswordCode",
+    "RelativePath": "api/Auth/ChangePasswordWithForgotPasswordCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Name": "passwordRepeat",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "newPassword",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "eHospitalServer.Entities.DTOs.ChangePasswordWithForgotPasswordCodeDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -91,18 +145,28 @@
   },
   {
     "ContainingType": "eHospitalServer.WebAPI.Controllers.AuthController",
-    "Method": "SendPasswordReset",
-    "RelativePath": "api/Auth/SendPasswordReset",
+    "Method": "SendForgotPasswordEmail",
+    "RelativePath": "api/Auth/SendForgotPasswordEmail",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email",
+        "Name": "emailOrUserName",
         "Type": "System.String",
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "eHospitalServer.WebAPI.Controllers.DoctorsController",
+    "Method": "GetAllDoctors",
+    "RelativePath": "api/Doctors/GetAllDoctors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

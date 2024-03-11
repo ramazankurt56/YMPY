@@ -77,7 +77,7 @@ namespace eHospitalServer.DataAccess.Migrations
                         .HasColumnName("patient_id");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("numeric")
+                        .HasColumnType("money")
                         .HasColumnName("price");
 
                     b.Property<DateTime>("StartDate")
@@ -103,7 +103,7 @@ namespace eHospitalServer.DataAccess.Migrations
                         .HasColumnName("user_id");
 
                     b.Property<decimal>("AppointmentPrice")
-                        .HasColumnType("numeric")
+                        .HasColumnType("money")
                         .HasColumnName("appointment_price");
 
                     b.Property<int>("Specialty")

@@ -7,7 +7,7 @@ internal sealed class AppointmentConfiguration : IEntityTypeConfiguration<Appoin
 {
     public void Configure(EntityTypeBuilder<Appointment> builder)
     {
-        //builder.Property(p => p.Price).HasColumnType("money");
+        builder.Property(p => p.Price).HasColumnType("money");
         builder.HasQueryFilter(filter => (!filter.Doctor!.IsDeleted || !filter.Patient!.IsDeleted) && !filter.IsItFinished);
     }
 }
