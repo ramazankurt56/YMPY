@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using eHospitalServer.Business.Services;
+using eHospitalServer.DataAccess.Extensions;
 using eHospitalServer.Entities.DTOs;
 using eHospitalServer.Entities.Enum;
 using eHospitalServer.Entities.Models;
@@ -43,6 +44,11 @@ internal sealed class AppointmentService(
 
     public async Task<Result<string>> CreateAsync(CreateAppointmentDto request, CancellationToken cancellationToken)
     {
+        User? patient = await userManager.FindByIdentityNumber(request.IdentityNumber);
+        if (patient is null)
+        {
+            return Result<string>.Failure("Patient not found");
+        }
         User? doctor = await userManager.Users.Include(p => p.DoctorDetail).FirstOrDefaultAsync(p => p.Id == request.DoctorId);
         if (doctor is null || doctor.UserType is not UserType.Doctor)
         {

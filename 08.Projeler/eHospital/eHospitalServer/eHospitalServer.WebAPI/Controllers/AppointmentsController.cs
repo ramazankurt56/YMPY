@@ -25,7 +25,7 @@ public sealed class AppointmentsController(
         var response = await appointmentService.CreateAsync(request, cancellationToken);
 
         return StatusCode(response.StatusCode, response);
-    } 
+    }
 
     [HttpPost]
     [AllowAnonymous]
@@ -36,7 +36,7 @@ public sealed class AppointmentsController(
         return StatusCode(response.StatusCode, response);
     }
 
-    [HttpGet]
+    [HttpGet("{doctorId}")]
     [AllowAnonymous]
     public async Task<IActionResult> GetAllByDoctorId(Guid doctorId, CancellationToken cancellationToken)
     {

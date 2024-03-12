@@ -1,8 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewChildren, viewChild } from '@angular/core';
 import { UserModel } from '../../models/user.model';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DxSchedulerModule } from 'devextreme-angular';
+import { HttpService } from '../../services/http.service';
+import { AppointmentModel } from '../../models/create-appointment.model';
+import { createApplication } from '@angular/platform-browser';
+import { SwalService } from '../../services/swal.service';
 
 @Component({
   selector: 'app-home',
@@ -21,32 +25,51 @@ export class HomeComponent implements OnInit {
 
   doctors: UserModel[] = [];
 
-  constructor(private http: HttpClient) { }
-
+  constructor(private http: HttpService,private swal:SwalService) { }
+  appointmentCreate:AppointmentModel=new AppointmentModel()
   ngOnInit(): void {
     this.getAllDoctors();
   }
+  @ViewChild("addStudentModalCloseBtn") addStudentModalCloseBtn: ElementRef<HTMLButtonElement> | undefined; 
+  onAppointmentDblClick(e:any){
+    console.log("test")
+    e.cancel = true;
+  this.addStudentModalCloseBtn?.nativeElement.click();  
+}
+onClick(e:any){
+    console.log(e.appointmentData)
+    this.appointmentCreate.doctorId=this.selectedDoctorId
+    this.appointmentCreate.identityNumber=e.appointmentData.identityNumber
+    this.appointmentCreate.startDate=e.appointmentData.startDate
+    this.appointmentCreate.endDate=e.appointmentData.endDate
+    this.http.post("Appointments/Create", this.appointmentCreate, res => {
+      this.swal.callToast(res.data, "success");
+      this.getDoctorAppointments() 
+    })
+    
+ 
+}
 
   getAllDoctors() {
-    this.http.get("https://localhost:7045/api/Doctors/GetAllDoctors").subscribe((res: any) => {
+    this.http.get("Doctors/GetAllDoctors", res => {
       this.doctors = res.data;
-    })
+    });
   }
-
+  
+ 
   getDoctorAppointments() {
     if (this.selectedDoctorId === "") return;
 
-    this.http.get(`https://localhost:7045/api/Appointments/GetAllByDoctorId?doctorId=${this.selectedDoctorId}`).subscribe((res:any) => {
-
-    console.log(res.data);
+    this.http.get("Appointments/GetAllByDoctorId/"+this.selectedDoctorId, res=>{
+      console.log(res.data);
     
-    const data = res.data.map((val: any, i: number) => {
-      return {
-        text: val.patient.fullName,
-        startDate: new Date(val.startDate),
-        endDate: new Date(val.endDate)
-      };
-    });
+      const data = res.data.map((val: any, i: number) => {
+        return {
+          text: val.patient.fullName,
+          startDate: new Date(val.startDate),
+          endDate: new Date(val.endDate)
+        };
+    })
 
       this.appointmentsData = data;
     })

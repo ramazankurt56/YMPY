@@ -50,7 +50,7 @@
   {
     "ContainingType": "eHospitalServer.WebAPI.Controllers.AppointmentsController",
     "Method": "GetAllByDoctorId",
-    "RelativePath": "api/Appointments/GetAllByDoctorId",
+    "RelativePath": "api/Appointments/GetAllByDoctorId/{doctorId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -58,7 +58,7 @@
       {
         "Name": "doctorId",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

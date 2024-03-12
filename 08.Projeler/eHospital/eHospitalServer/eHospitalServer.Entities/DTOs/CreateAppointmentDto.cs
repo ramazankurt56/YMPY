@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace eHospitalServer.Entities.DTOs;
 public sealed record CreateAppointmentDto(
     Guid DoctorId,
-    Guid PatientId,
+    string IdentityNumber,
     DateTime StartDate,
     DateTime EndDate,
     decimal Price
