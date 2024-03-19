@@ -1,0 +1,157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\personelapp\\personelapp.webapi\\controllers\\personelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|solutionrelative:personelapp.webapi\\controllers\\personelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\personelapp\\personelapp.webapi\\dtos\\personeldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|solutionrelative:personelapp.webapi\\dtos\\personeldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\personelapp\\personelapp.webapi\\models\\personel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|solutionrelative:personelapp.webapi\\models\\personel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\personelapp\\personelapp.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|solutionrelative:personelapp.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\personelapp\\personelapp.webapi\\validators\\personeldtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|solutionrelative:personelapp.webapi\\validators\\personeldtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\personelapp\\personelapp.webapi\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|solutionrelative:personelapp.webapi\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\taner\\AppData\\Local\\SourceServer\\92a670daf642153811a5f73419a26fc3de799ee4e5cefaa6099262867041d7ad\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Controllers\\PersonelsController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\06.webapi\\personelapp\\personelapp.webapi\\personelapp.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C93440B5-4F21-451E-B863-7EDC2D4EBFF6}|PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj|solutionrelative:personelapp.webapi\\personelapp.webapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PersonelsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Controllers\\PersonelsController.cs",
+              "RelativeDocumentMoniker": "PersonelApp.WebAPI\\Controllers\\PersonelsController.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Controllers\\PersonelsController.cs*",
+              "RelativeToolTip": "PersonelApp.WebAPI\\Controllers\\PersonelsController.cs*",
+              "ViewState": "AQIAABgAAAAAAAAAAAAwwC0AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:23:18.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "PersonelApp.WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Program.cs",
+              "RelativeToolTip": "PersonelApp.WebAPI\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:23:18.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Mapping\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "PersonelApp.WebAPI\\Mapping\\MappingProfile.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Mapping\\MappingProfile.cs",
+              "RelativeToolTip": "PersonelApp.WebAPI\\Mapping\\MappingProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:23:18.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PersonelDtoValidator.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Validators\\PersonelDtoValidator.cs",
+              "RelativeDocumentMoniker": "PersonelApp.WebAPI\\Validators\\PersonelDtoValidator.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Validators\\PersonelDtoValidator.cs",
+              "RelativeToolTip": "PersonelApp.WebAPI\\Validators\\PersonelDtoValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:23:18.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonelDto.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\DTOs\\PersonelDto.cs",
+              "RelativeDocumentMoniker": "PersonelApp.WebAPI\\DTOs\\PersonelDto.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\DTOs\\PersonelDto.cs",
+              "RelativeToolTip": "PersonelApp.WebAPI\\DTOs\\PersonelDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:23:18.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PersonelApp.WebAPI.csproj",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj",
+              "RelativeDocumentMoniker": "PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj",
+              "RelativeToolTip": "PersonelApp.WebAPI\\PersonelApp.WebAPI.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-19T13:23:18.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Personel.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Models\\Personel.cs",
+              "RelativeDocumentMoniker": "PersonelApp.WebAPI\\Models\\Personel.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Models\\Personel.cs",
+              "RelativeToolTip": "PersonelApp.WebAPI\\Models\\Personel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T13:23:18.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PersonelsController.cs",
+              "DocumentMoniker": "C:\\Users\\taner\\AppData\\Local\\SourceServer\\92a670daf642153811a5f73419a26fc3de799ee4e5cefaa6099262867041d7ad\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Controllers\\PersonelsController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\taner\\AppData\\Local\\SourceServer\\92a670daf642153811a5f73419a26fc3de799ee4e5cefaa6099262867041d7ad\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Controllers\\PersonelsController.cs",
+              "ToolTip": "C:\\Users\\taner\\AppData\\Local\\SourceServer\\92a670daf642153811a5f73419a26fc3de799ee4e5cefaa6099262867041d7ad\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Controllers\\PersonelsController.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\taner\\AppData\\Local\\SourceServer\\92a670daf642153811a5f73419a26fc3de799ee4e5cefaa6099262867041d7ad\\06.WebApi\\PersonelApp\\PersonelApp.WebAPI\\Controllers\\PersonelsController.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAtwDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-01-30T18:51:14.074Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

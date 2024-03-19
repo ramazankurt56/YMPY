@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PersonelApp.WebAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d7ca5cf0af8a3dd5e13bc6ded77c5c3b3f244d8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee04dd380676afc65385a38d03e7d7403bc831a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("PersonelApp.WebAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PersonelApp.WebAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
