@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
-using EntityFrameworkCorePagination.Nuget.Pagination;
 using FluentValidation;
 using FluentValidation.Results;
+using Lunavex.EFCore.Pagination;
 using NTierArchitecture.Business.Constants;
 using NTierArchitecture.Business.Validator;
 using NTierArchitecture.DataAccess.Repositories;
@@ -60,10 +60,11 @@ public sealed class StudentManager(
 
         return students;
     }
-
-    public async Task<PaginationResult<Student>> GetAllByClassRoomIdAsync(PaginationRequestDto request)
+ 
+    public async Task<PageResult<Student>> GetAllByClassRoomIdAsync(PaginationRequestDto request)
     {
-        PaginationResult<Student> students = await studentRepository
+
+        PageResult<Student> students = await studentRepository
                                                 .GetAll()
                                                 .Where(p=> p.ClassRoomId == request.Id)
                                                 .Where(search => 
@@ -116,4 +117,7 @@ public sealed class StudentManager(
 
         return MessageConstants.UpdateIsSuccessfully;
     }
+
+   
+
 }

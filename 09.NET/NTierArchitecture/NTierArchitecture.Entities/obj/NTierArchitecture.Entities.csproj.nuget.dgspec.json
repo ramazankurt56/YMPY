@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {}
+    "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {}
   },
   "projects": {
-    "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {
+    "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj",
         "projectName": "NTierArchitecture.Entities",
-        "projectPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj",
-        "packagesPath": "C:\\Users\\taner\\.nuget\\packages\\",
-        "outputPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\obj\\",
+        "projectPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj",
+        "packagesPath": "C:\\Users\\ramaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\taner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

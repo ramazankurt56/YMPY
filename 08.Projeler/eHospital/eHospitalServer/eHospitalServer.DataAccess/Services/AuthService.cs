@@ -1,58 +1,20 @@
 ﻿using eHospitalServer.Business.Services;
 using eHospitalServer.Entities.DTOs;
 using eHospitalServer.Entities.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TS.Result;
 
 namespace eHospitalServer.DataAccess.Services;
-internal class AuthService(
+public class AuthService(
     UserManager<User> userManager,
     SignInManager<User> signInManager,
-    JwtProvider jwtProvider,
-    MailService mailService
-    ) : IAuthService
+    JwtProvider jwtProvider
+    ): IAuthService
 {
-
-    public async Task<Result<string>> ChangePasswordWithForgotPasswordCodeAsync(ChangePasswordWithForgotPasswordCodeDto request, CancellationToken cancellationToken)
-    {
-        User? user = await userManager.Users.FirstOrDefaultAsync(p => p.ForgotPasswordCode == request.ForgotPasswordCode, cancellationToken);
-
-        if (user is null)
-        {
-            return Result<string>.Failure(500, "Your recovery password code is invalid");
-        }
-
-        if (user.ForgotPasswordCodeSendDate < DateTime.UtcNow)
-        {
-            return Result<string>.Failure(500, "Your recovery password code is invalid");
-        }
-
-        var token = await userManager.GeneratePasswordResetTokenAsync(user);
-
-        IdentityResult result = await userManager.ResetPasswordAsync(user, token, request.NewPassword);
-
-        if (!result.Succeeded)
-        {
-            return Result<string>.Failure(500, result.Errors.Select(s => s.Description).ToList());
-        }
-
-        user.ForgotPasswordCode = null;
-        user.ForgotPasswordCodeSendDate = null;
-
-        result = await userManager.UpdateAsync(user);
-
-        if (!result.Succeeded)
-        {
-            return Result<string>.Failure(500, result.Errors.Select(s => s.Description).ToList());
-        }
-
-        return Result<string>.Succeed("Your password is changed. You can sign in using new password");
-    }
     public async Task<Result<string>> ConfirmVerificationEmailAsync(int emailConfirmCode, CancellationToken cancellationToken)
     {
-        User? user = await userManager.Users.Where(p => p.EmailConfirmCode == emailConfirmCode).FirstOrDefaultAsync(cancellationToken);
+        User? user = await userManager.Users.Where(p=> p.EmailConfirmCode == emailConfirmCode).FirstOrDefaultAsync(cancellationToken);
         if (user is null)
         {
             return Result<string>.Failure(500, "Email confirm code is not available");
@@ -68,7 +30,6 @@ internal class AuthService(
 
         return Result<string>.Succeed("Email verification is succeed");
     }
-
 
     public async Task<Result<LoginResponseDto>> GetTokenByRefreshTokenAsync(string refreshToken, CancellationToken cancellationToken)
     {
@@ -89,12 +50,12 @@ internal class AuthService(
     {
         string emailOrUserName = request.EmailOrUserName.ToUpper();
         User? user = await userManager.Users
-            .FirstOrDefaultAsync(p =>
-            p.NormalizedUserName == emailOrUserName ||
-            p.NormalizedEmail == emailOrUserName,
+            .FirstOrDefaultAsync(p => 
+            p.NormalizedUserName == emailOrUserName || 
+            p.NormalizedEmail == emailOrUserName, 
             cancellationToken);
 
-        if (user is null)
+        if(user is null)
         {
             return (500, "User not found");
         }
@@ -120,13 +81,11 @@ internal class AuthService(
             return (500, "Your password is wrong");
         }
 
-        var loginResponse = await jwtProvider.CreateToken(user, request.RememberMe);
+        var loginResponse = await jwtProvider.CreateToken(user, request.RememberMe);        
 
 
         return loginResponse;
     }
-
-   
 
     public async Task<Result<string>> SendConfirmEmailAsync(string email, CancellationToken cancellationToken)
     {
@@ -157,17 +116,53 @@ internal class AuthService(
         string subject = "Verification Mail";
         string body = CreateConfirmEmailBody(user.EmailConfirmCode.ToString());
 
-        var stringEmailResponse = await mailService.SendEmailAsync(user.Email ?? "", subject, body);
+        var stringEmailResponse = await EmailHelper.SendEmailAsync(user.Email ?? "", subject, body);
         #endregion
 
         return Result<string>.Succeed("Verification mail is sent successfully");
     }
 
-    public async Task<Result<string>> SendForgotPasswordEmailAsync(string emailOrUserName, CancellationToken cancellationToken)
+    public async Task<Result<string>> ChangePasswordWithForgotPasswordCodeAsync(ChangePasswordWithForgotPasswordCodeDto request, CancellationToken cancellationToken)
     {
-        User? user = await userManager.Users.FirstOrDefaultAsync(p => p.Email == emailOrUserName || p.UserName == emailOrUserName, cancellationToken);
+        User? user = await userManager.Users.FirstOrDefaultAsync(p => p.ForgotPasswordCode == request.ForgotPasswordCode, cancellationToken);
 
         if (user is null)
+        {
+            return Result<string>.Failure(500, "Your recovery password code is invalid");
+        }
+        
+        if(user.ForgotPasswordCodeSendDate < DateTime.UtcNow)
+        {
+            return Result<string>.Failure(500, "Your recovery password code is invalid");
+        }
+
+        var token = await userManager.GeneratePasswordResetTokenAsync(user);
+
+        IdentityResult result = await userManager.ResetPasswordAsync(user, token, request.NewPassword);
+
+        if (!result.Succeeded)
+        {
+            return Result<string>.Failure(500, result.Errors.Select(s => s.Description).ToList());
+        }
+
+        user.ForgotPasswordCode = null;
+        user.ForgotPasswordCodeSendDate = null;
+
+        result = await userManager.UpdateAsync(user);
+
+        if (!result.Succeeded)
+        {
+            return Result<string>.Failure(500, result.Errors.Select(s => s.Description).ToList());
+        }
+
+        return Result<string>.Succeed("Your password is changed. You can sign in using new password");
+    }
+
+    public async Task<Result<string>> SendForgotPasswordEmailAsync(string emailOrUserName, CancellationToken cancellationToken)
+    {
+        User? user = await userManager.Users.FirstOrDefaultAsync(p=> p.Email == emailOrUserName || p.UserName ==  emailOrUserName, cancellationToken);
+
+        if(user is null)
         {
             return Result<string>.Failure(500, "User not found");
         }
@@ -187,11 +182,12 @@ internal class AuthService(
         await userManager.UpdateAsync(user);
 
         #region Send Mail Verification
-        string subject = "Password Reset Mail";
+        string subject = "Reset Your Password";
         string body = CreateSendForgotPasswordCodeEmailBody(forgotPasswordCode.ToString());
 
-        var stringEmailResponse = await mailService.SendEmailAsync(user.Email ?? "", subject, body);
+        var stringEmailResponse = await EmailHelper.SendEmailAsync(user.Email ?? "", subject, body);
         #endregion
+
         string email = MaskEmail(user.Email ?? "");
 
         return Result<string>.Succeed($"Password recovery code is sent to your {email} email address");
@@ -338,6 +334,7 @@ internal class AuthService(
 
         return body;
     }
+
     private string MaskEmail(string email)
     {
         var atIndex = email.IndexOf('@');
@@ -365,3 +362,9 @@ internal class AuthService(
         return maskedUsername + "@" + domain; // E-posta adresinde nokta yoksa veya tanımlanamazsa
     }
 }
+
+
+//Şifremi unuttum işleminde şifremi unuttum maili gidecek
+//Şifremi unuttum için 6 haneli unique bir kod üretecek
+//Kod 5 dakika geçerli olacak
+//2 defa kullanılamaycak

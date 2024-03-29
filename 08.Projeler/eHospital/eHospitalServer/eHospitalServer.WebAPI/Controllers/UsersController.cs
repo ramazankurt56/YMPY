@@ -2,10 +2,10 @@
 using eHospitalServer.Entities.DTOs;
 using eHospitalServer.WebAPI.Abstractions;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eHospitalServer.WebAPI.Controllers;
-[ApiController]
 public sealed class UsersController(
     IUserService userService) : ApiController
 {

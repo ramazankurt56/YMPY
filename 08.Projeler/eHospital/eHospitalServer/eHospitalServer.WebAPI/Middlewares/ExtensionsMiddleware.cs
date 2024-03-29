@@ -1,10 +1,10 @@
-﻿using eHospitalServer.Entities.Enum;
+﻿using eHospitalServer.Entities.Enums;
 using eHospitalServer.Entities.Models;
 using Microsoft.AspNetCore.Identity;
 
 namespace eHospitalServer.WebAPI.Middlewares;
 
-public class ExtensionsMiddleware
+public static class ExtensionsMiddleware
 {
     public static void CreateFirstUser(WebApplication app)
     {
@@ -18,15 +18,15 @@ public class ExtensionsMiddleware
                 {
                     UserName = "admin",
                     Email = "admin@admin.com",
-                    FirstName = "Ramazan",
-                    LastName = "Kurt",
+                    FirstName = "Taner",
+                    LastName = "Saydam",
                     IdentityNumber = "11111111111",
-                    FullAddress = "İstanbul",
-                    DateOfBirth = DateOnly.Parse("15.08.1998"),
+                    FullAddress = "Kayseri",
+                    DateOfBirth = DateOnly.Parse("03.09.1989"),
                     EmailConfirmed = true,
                     IsActive = true,
                     IsDeleted = false,
-                    BloodType = "A rh-",
+                    BloodType = "0 rh+",
                     UserType = UserType.Admin
                 };
 

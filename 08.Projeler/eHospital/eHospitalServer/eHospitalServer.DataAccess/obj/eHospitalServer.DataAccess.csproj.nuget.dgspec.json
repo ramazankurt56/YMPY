@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[11.3.0, )"
             },
+            "GenericEmailService": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "TS.Result": {
               "target": "Package",
               "version": "[8.0.5, )"
@@ -116,6 +120,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -220,6 +225,7 @@
           }
         },
         "warningProperties": {
+          "allWarningsAsErrors": true,
           "warnAsError": [
             "NU1605"
           ]
@@ -239,14 +245,6 @@
               "version": "[8.0.1, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
               "version": "[8.0.2, )"
             }

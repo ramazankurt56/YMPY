@@ -1,6 +1,50 @@
-@eHospitalServer.WebAPI_HostAddress = http://localhost:5117
+@eHospitalServer.WebAPI_HostAddress = http://localhost:5019
 
-GET {{eHospitalServer.WebAPI_HostAddress}}/weatherforecast/
+GET https://localhost:7169/api/Auth/Get
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjMzOTY4MDFjLTI5ODgtNDY0Zi1hZmUyLWY5ZTg4ZDRiZTIwMCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJUYW5lciBTYXlkYW0iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhZG1pbkBhZG1pbi5jb20iLCJVc2VyTmFtZSI6ImFkbWluIiwibmJmIjoxNzA5MDYzNTMzLCJleHAiOjE3MDkwNjcxMzMsImlzcyI6IlRhbmVyIFNheWRhbSIsImF1ZCI6IsOWxJ9yZW5jaWxlcmltIn0.DC_Enrrtvf3bpWuAzAwy17tCLqbZ6GpUNdxm5u5mQ3RUB071FIzenSwJB9sngbvdJ4LriMDY-kpwd58_LqAgtg
+
+###
+
+POST https://localhost:7169/api/Auth/Login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "emailOrUserName": "admin",
+  "password": "1"
+}
+
+###
+
+GET https://localhost:7169/api/Auth/GetTokenByRefreshToken?refreshToken=57f56b7e-b659-484e-8c51-2122e292931c
 Accept: application/json
 
+
+###
+22:25 görüþelim
+POST https://localhost:7169/api/Users/Create
+Content-Type: application/json
+
+{
+  "firstName": "Taner",
+  "lastName": "Saydam",
+  "identityNumber": "11144466612",
+  "fullAddress": "Kayseri",
+  "email": "tanersaydam@gmail.com",
+  "userName": "tsaydam",
+  "password": "Password12*",
+  "phoneNumber": "5546548006",
+  "dateOfBirth": "1989-09-03",
+  "bloodType": "0rh+",
+  "userType": 1,
+  "specialty": 7,
+  "workingDays": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday"
+  ]
+}
 ###

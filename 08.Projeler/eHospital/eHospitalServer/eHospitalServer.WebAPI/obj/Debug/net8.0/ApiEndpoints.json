@@ -49,8 +49,40 @@
   },
   {
     "ContainingType": "eHospitalServer.WebAPI.Controllers.AppointmentsController",
+    "Method": "DeleteById",
+    "RelativePath": "api/Appointments/DeleteById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "eHospitalServer.WebAPI.Controllers.AppointmentsController",
+    "Method": "FindPatientByIdentityNumber",
+    "RelativePath": "api/Appointments/FindPatientByIdentityNumber",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "eHospitalServer.Entities.DTOs.FindPatientDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "eHospitalServer.WebAPI.Controllers.AppointmentsController",
     "Method": "GetAllByDoctorId",
-    "RelativePath": "api/Appointments/GetAllByDoctorId/{doctorId}",
+    "RelativePath": "api/Appointments/GetAllByDoctorId",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -58,9 +90,19 @@
       {
         "Name": "doctorId",
         "Type": "System.Guid",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "eHospitalServer.WebAPI.Controllers.AppointmentsController",
+    "Method": "GetAllDoctors",
+    "RelativePath": "api/Appointments/GetAllDoctors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -157,16 +199,6 @@
         "IsRequired": false
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "eHospitalServer.WebAPI.Controllers.DoctorsController",
-    "Method": "GetAllDoctors",
-    "RelativePath": "api/Doctors/GetAllDoctors",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {

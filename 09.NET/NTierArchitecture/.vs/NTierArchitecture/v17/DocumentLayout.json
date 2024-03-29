@@ -1,7 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B39BA36-02F7-49BA-A8E4-C793DD32FB11}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\ntierarchitecture\\ntierarchitecture.business\\services\\studentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B39BA36-02F7-49BA-A8E4-C793DD32FB11}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\services\\studentmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9941B69D-0680-4C94-AA1B-4F07BAFFAFD4}|NTierArchitecture.WebAPI\\NTierArchitecture.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\ntierarchitecture\\ntierarchitecture.webapi\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9941B69D-0680-4C94-AA1B-4F07BAFFAFD4}|NTierArchitecture.WebAPI\\NTierArchitecture.WebAPI.csproj|solutionrelative:ntierarchitecture.webapi\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B39BA36-02F7-49BA-A8E4-C793DD32FB11}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\ntierarchitecture\\ntierarchitecture.business\\services\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B39BA36-02F7-49BA-A8E4-C793DD32FB11}|NTierArchitecture.Business\\NTierArchitecture.Business.csproj|solutionrelative:ntierarchitecture.business\\services\\istudentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9941B69D-0680-4C94-AA1B-4F07BAFFAFD4}|NTierArchitecture.WebAPI\\NTierArchitecture.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\ntierarchitecture\\ntierarchitecture.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9941B69D-0680-4C94-AA1B-4F07BAFFAFD4}|NTierArchitecture.WebAPI\\NTierArchitecture.WebAPI.csproj|solutionrelative:ntierarchitecture.webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9941B69D-0680-4C94-AA1B-4F07BAFFAFD4}|NTierArchitecture.WebAPI\\NTierArchitecture.WebAPI.csproj|c:\\users\\ramaz\\desktop\\ympy\\09.net\\ntierarchitecture\\ntierarchitecture.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9941B69D-0680-4C94-AA1B-4F07BAFFAFD4}|NTierArchitecture.WebAPI\\NTierArchitecture.WebAPI.csproj|solutionrelative:ntierarchitecture.webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,25 +30,76 @@
       "DocumentGroups": [
         {
           "DockedWidth": 203,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 1511,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.WebAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "NTierArchitecture.WebAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.WebAPI\\appsettings.json",
+              "RelativeToolTip": "NTierArchitecture.WebAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-28T13:47:41.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IStudentService.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Business\\Services\\IStudentService.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\IStudentService.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Business\\Services\\IStudentService.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Services\\IStudentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T13:16:16.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentManager.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Business\\Services\\StudentManager.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.Business\\Services\\StudentManager.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Business\\Services\\StudentManager.cs",
+              "RelativeToolTip": "NTierArchitecture.Business\\Services\\StudentManager.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAnwEAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T13:16:09.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.WebAPI\\Program.cs",
+              "RelativeToolTip": "NTierArchitecture.WebAPI\\Program.cs",
+              "ViewState": "AQIAAGoAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T13:56:56.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentsController.cs",
+              "DocumentMoniker": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.WebAPI\\Controllers\\StudentsController.cs",
+              "RelativeDocumentMoniker": "NTierArchitecture.WebAPI\\Controllers\\StudentsController.cs",
+              "ToolTip": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.WebAPI\\Controllers\\StudentsController.cs",
+              "RelativeToolTip": "NTierArchitecture.WebAPI\\Controllers\\StudentsController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwCsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T14:03:30.354Z",
+              "EditorCaption": ""
             }
           ]
         }

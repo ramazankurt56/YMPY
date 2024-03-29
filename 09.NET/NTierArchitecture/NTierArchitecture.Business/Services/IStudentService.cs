@@ -1,4 +1,5 @@
 ﻿using EntityFrameworkCorePagination.Nuget.Pagination;
+using Lunavex.EFCore.Pagination;
 using NTierArchitecture.Entities.DTOs;
 using NTierArchitecture.Entities.Models;
 
@@ -10,5 +11,5 @@ public interface IStudentService
     string Update(UpdateStudentDto request);
     string DeleteById(Guid id);
     List<Student> GetAll();
-    Task<PaginationResult<Student>> GetAllByClassRoomIdAsync(PaginationRequestDto request);
+    Task<PageResult<Student>> GetAllByClassRoomIdAsync(PaginationRequestDto request);
 }

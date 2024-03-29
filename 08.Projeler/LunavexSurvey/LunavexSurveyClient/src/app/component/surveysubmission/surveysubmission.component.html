@@ -65,7 +65,7 @@
                     @for (option of question.choices ; track $index) {
                     <div id="survey-radio-1" class="survey-header-radio ">
                         <input type="radio" style="width: auto; margin-left: 10px;" name="question-radio{{questionId}}" #questionInput="ngModel"
-                        [required]="question.isRequired===true" [(ngModel)]="question.value"
+                        [(ngModel)]="question.value"
                             [value]="option.value" name="question-single{{$index}}">
                         <label style="margin-left: 10px;">{{ option.value }}</label>
                     </div>

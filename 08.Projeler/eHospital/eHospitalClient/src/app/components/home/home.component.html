@@ -1,93 +1,105 @@
 
 
-<div class="form-group mt-2">
-    <select (change)="getDoctorAppointments()" class="form-control" [(ngModel)]="selectedDoctorId">
-        <option value="">Select Doctor...</option>
-        @for(doctor of doctors; track doctor){
-            <option [value]="doctor.id">
-                {{doctor.fullName}}
-            </option>
-        }
-    </select>
-    @if(){
-      
-    }
-    <button  type="button" class="btn btn-primary" data-bs-toggle="modal" #addStudentModalCloseBtn    data-bs-target="#exampleModal" >Randevu Ekle</button>
-</div>
-
-<div class="form-group mt-2">
-    <dx-scheduler
-    timeZone="Europe/Istanbul"
-    [dataSource]="appointmentsData"
-    [views]="['day', 'week', 'workWeek', 'month']"
-    currentView="week"
-    [currentDate]="currentDate"
-    [startDayHour]="9"
-    [height]="730"
-    text
-    (onAppointmentFormOpening)="onAppointmentDblClick($event)"
-   
-  >
-  </dx-scheduler>
-  <!-- <button (click)="onAppointmentFormOpening()">test</button> -->
-</div>
-<!-- <button class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#addClassRoomModal">Add Class
-    Room</button>
-<div class="modal fade" id="addClassRoomModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
-  aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5">Add Class Room</h1>
-        <button type="button" class="btn" (click)="clearAddCassRoomModel()" #addClassRoomModalCloseBtn
-          data-dismiss="modal" aria-label="Close">
-          <i class="fa-solid fa-x"></i>
-        </button>
-      </div>
-      <form formValidate #addClassRoomForm="ngForm" (ngSubmit)="createClassRoom(addClassRoomForm)" autocomplete="off">
-        <div class="modal-body">
-       
-          <div class="form-group mt-1">
-            <label for="name">Name</label>
-            <input class="form-control" type="text" id="name" name="name" [(ngModel)]="addClassRoomModel.name" required
-              minlength="3">
-            <div class="invalid-feedback"></div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Save</button>
-        </div>
-      </form>
+@if(!loginUserIsDoctor){
+    <div class="form-group mt-2">
+        <select (change)="getDoctorAppointments()" class="form-control" [(ngModel)]="selectedDoctorId">
+            <option value="">Select Doctor...</option>
+            @for(doctor of doctors; track doctor){
+                <option [value]="doctor.id">
+                    {{doctor.fullName}} - {{doctor.doctorDetail?.specialtyName}}
+                </option>
+            }
+        </select>
     </div>
-  </div>
-</div>
- -->
+}
 
+@if(selectedDoctorId){
+    <div class="form-group mt-2">
+        <dx-scheduler
+        timeZone="Europe/Istanbul"
+        [dataSource]="appointmentsData"
+        [views]="['day', 'week', 'workWeek', 'month']"
+        currentView="week"
+        [currentDate]="currentDate"
+        [startDayHour]="9"
+        [height]="730"    
+        (onAppointmentFormOpening)="onAppointmentFormOpening($event)"
+        (onAppointmentDeleting)="onAppointmentDeleting($event)"
+      >
+      </dx-scheduler>
+    </div>
+}
 
-
-<div class="modal fade" id="exampleModal" tabindex="-1"  aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Recipient:</label>
-            <input type="text" class="form-control" id="recipient-name">
-          </div>
-          <div class="mb-3">
-            <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text"></textarea>
-          </div>
+<div class="modal fade" id="addAppointmentModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">Add Appointment</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>     
+        <form #addForm="ngForm" formValidate autocomplete="off" (ngSubmit)="add(addForm)">
+            <div class="modal-body">
+                <div class="form-group">
+                    <table class="table">
+                        <tr>
+                            <th>Doctor Name:</th>
+                            <td>{{appointmentData.doctorName}}</td>
+                        </tr>
+                        <tr>
+                            <th>Start Date:</th>
+                            <td>{{appointmentData.startDate | date:'dd.MM.yyyy HH:mm'}}</td>
+                        </tr>
+                        <tr>
+                            <th>End Date:</th>
+                            <td>{{appointmentData.endDate | date:'dd.MM.yyyy HH:mm'}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="form-group mt-1">
+                    <label>Identity Number</label>
+                    <input
+                      type="text"
+                      maxlength="11"
+                      minlength="11"
+                      required
+                      class="form-control"
+                      [(ngModel)]="addModel.patient.identityNumber"
+                      name="identityNumber"
+                      (input)="findPatientByIdentityNumber()">
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group mt-1">
+                    <label>First Name</label>
+                    <input type="text" required minlength="3" class="form-control" [(ngModel)]="addModel.patient.firstName" name="firstName">
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group mt-1">
+                    <label>Last Name</label>
+                    <input type="text" required minlength="3" class="form-control" [(ngModel)]="addModel.patient.lastName" name="lastName">
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group mt-1">
+                    <label>Full Address</label>
+                    <input type="text" required minlength="3" class="form-control" [(ngModel)]="addModel.patient.fullAddress" name="fullAddress">
+                    <div class="invalid-feedback"></div>
+                </div>
+                <div class="form-group mt-1">
+                    <label>Email</label>
+                    <input type="email" class="form-control" [(ngModel)]="addModel.patient.email" name="email">
+                </div>
+                <div class="form-group mt-1">
+                    <label>Date of Birth</label>
+                    <input type="date" class="form-control" [(ngModel)]="addModel.patient.dateOfBirth" name="dateOfBirth">
+                </div>
+                <div class="form-group mt-1">
+                    <label>Blood Type</label>
+                    <input type="text" [(ngModel)]="addModel.patient.bloodType" class="form-control" name="bloodType">
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Save</button>
+            </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
     </div>
   </div>
-</div>

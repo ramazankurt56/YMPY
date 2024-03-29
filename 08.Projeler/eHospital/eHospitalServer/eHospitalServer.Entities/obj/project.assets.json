@@ -834,9 +834,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "EntityFrameworkCore.GenericRepository.Nuget >= 8.0.1",
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.2",
-      "Microsoft.EntityFrameworkCore >= 8.0.2",
-      "Microsoft.Extensions.Identity.Stores >= 8.0.2"
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.2"
     ]
   },
   "packageFolders": {
@@ -869,6 +867,7 @@
         }
       },
       "warningProperties": {
+        "allWarningsAsErrors": true,
         "warnAsError": [
           "NU1605"
         ]
@@ -888,14 +887,6 @@
             "version": "[8.0.1, )"
           },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[8.0.2, )"
-          },
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[8.0.2, )"
-          },
-          "Microsoft.Extensions.Identity.Stores": {
             "target": "Package",
             "version": "[8.0.2, )"
           }

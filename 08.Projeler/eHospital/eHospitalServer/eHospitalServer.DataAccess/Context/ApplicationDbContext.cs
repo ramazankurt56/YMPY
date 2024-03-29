@@ -1,11 +1,11 @@
-﻿
-using eHospitalServer.Entities.Models;
+﻿using eHospitalServer.Entities.Models;
 using GenericRepository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+
 namespace eHospitalServer.DataAccess.Context;
-internal sealed class ApplicationDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>,IUnitOfWork
+internal sealed class ApplicationDbContext : IdentityDbContext<User, IdentityRole<Guid>, Guid>, IUnitOfWork
 {
     public ApplicationDbContext(DbContextOptions options) : base(options)
     {
@@ -17,10 +17,11 @@ internal sealed class ApplicationDbContext : IdentityDbContext<User, IdentityRol
     protected override void OnModelCreating(ModelBuilder builder)
     {
         builder.ApplyConfigurationsFromAssembly(typeof(User).Assembly);
-        builder.Ignore<IdentityUserRole<Guid>>();
-        builder.Ignore<IdentityRoleClaim<Guid>>();
-        builder.Ignore<IdentityUserClaim<Guid>>();
+
         builder.Ignore<IdentityUserLogin<Guid>>();
-        builder.Ignore<IdentityUserToken<Guid>>();
+        builder.Ignore<IdentityRoleClaim<Guid>>();
+        builder.Ignore<IdentityUserToken<Guid>>();        
+        builder.Ignore<IdentityUserRole<Guid>>();        
+        builder.Ignore<IdentityUserClaim<Guid>>();        
     }
 }

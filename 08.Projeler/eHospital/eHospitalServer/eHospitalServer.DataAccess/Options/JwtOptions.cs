@@ -1,5 +1,4 @@
-﻿
-namespace eHospitalServer.DataAccess.Options;
+﻿namespace eHospitalServer.DataAccess.Options;
 public sealed class JwtOptions
 {
     public string Issuer { get; set; } = string.Empty;

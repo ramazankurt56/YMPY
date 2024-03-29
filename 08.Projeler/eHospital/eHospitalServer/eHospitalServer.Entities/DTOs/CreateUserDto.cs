@@ -1,9 +1,4 @@
-﻿using eHospitalServer.Entities.Enum;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using eHospitalServer.Entities.Enums;
 
 namespace eHospitalServer.Entities.DTOs;
 public sealed record CreateUserDto(

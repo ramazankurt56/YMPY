@@ -1,32 +1,32 @@
 ﻿using eHospitalServer.DataAccess.Context;
+using eHospitalServer.DataAccess.Options;
+using eHospitalServer.DataAccess.Services;
 using eHospitalServer.Entities.Models;
+using GenericRepository;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Identity;
-using System.Reflection;
-using Scrutor;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Scrutor;
+using System.Reflection;
 using System.Text;
-using eHospitalServer.DataAccess.Services;
-using eHospitalServer.DataAccess.Options;
-using GenericRepository;
 
 namespace eHospitalServer.DataAccess;
-
 public static class DependencyInjection
 {
     public static IServiceCollection AddDataAccess(
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        services.AddAutoMapper(Assembly.GetExecutingAssembly());
+        services.AddAutoMapper(Assembly.GetExecutingAssembly());        
 
         services.AddDbContext<ApplicationDbContext>(options =>
         {
             options
                 .UseNpgsql(configuration.GetConnectionString("PostgreSQL"))
-                .UseSnakeCaseNamingConvention();
+                .UseSnakeCaseNamingConvention();            
         });
 
         services.AddScoped<IUnitOfWork>(srv => srv.GetRequiredService<ApplicationDbContext>());
@@ -49,7 +49,6 @@ public static class DependencyInjection
 
         //services.ConfigureOptions<JwtOptionsSetup>();
         services.Configure<JwtOptions>(configuration.GetSection("Jwt"));
-        services.Configure<EmailOptions>(configuration.GetSection("EmailSettings"));
         //var jwt = services.BuildServiceProvider().GetRequiredService<IOptions<JwtOptions>>();
         services.ConfigureOptions<JwtTokenOptionsSetup>();
 
@@ -60,7 +59,7 @@ public static class DependencyInjection
         //services.AddAuthorization();
 
         services.AddScoped<JwtProvider>();
-        services.AddScoped<MailService>();
+        
         services.Scan(action =>
         {
             action
@@ -70,7 +69,7 @@ public static class DependencyInjection
             .AsMatchingInterface()
             .AsImplementedInterfaces()
             .WithScopedLifetime();
-        });
+        });      
 
         return services;
     }

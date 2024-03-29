@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj": {}
+    "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj": {
+    "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj",
         "projectName": "NTierArchitecture.DataAccess",
-        "projectPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\taner\\.nuget\\packages\\",
-        "outputPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\ramaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\taner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,15 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {
-                "projectPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj"
+              "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {
+                "projectPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj"
               }
             }
           }
@@ -81,17 +80,17 @@
         }
       }
     },
-    "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {
+    "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj",
         "projectName": "NTierArchitecture.Entities",
-        "projectPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj",
-        "packagesPath": "C:\\Users\\taner\\.nuget\\packages\\",
-        "outputPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\obj\\",
+        "projectPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj",
+        "packagesPath": "C:\\Users\\ramaz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\taner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ramaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,7 +98,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

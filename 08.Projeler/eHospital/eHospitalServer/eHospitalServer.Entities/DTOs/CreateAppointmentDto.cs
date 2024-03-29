@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace eHospitalServer.Entities.DTOs;
+﻿namespace eHospitalServer.Entities.DTOs;
 public sealed record CreateAppointmentDto(
     Guid DoctorId,
+    Guid? PatientId,
+    string FirstName,
+    string LastName,
+    string FullAddress,    
+    string? Email,
+    string? PhoneNumber,
     string IdentityNumber,
+    DateOnly? DateOfBirth,
+    string? BloodType,
     DateTime StartDate,
     DateTime EndDate,
     decimal Price

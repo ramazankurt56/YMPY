@@ -87,6 +87,25 @@
           }
         }
       },
+      "Lunavex.EFCore.Pagination/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.3"
+        },
+        "compile": {
+          "lib/net8.0/Lunavex.EFCore.Pagination.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/Lunavex.EFCore.Pagination.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/net8.0/lunavex1.png": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.2": {
         "type": "package",
         "dependencies": {
@@ -222,11 +241,11 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/8.0.2": {
+      "Microsoft.EntityFrameworkCore/8.0.3": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.2",
-          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.2",
+          "Microsoft.EntityFrameworkCore.Abstractions": "8.0.3",
+          "Microsoft.EntityFrameworkCore.Analyzers": "8.0.3",
           "Microsoft.Extensions.Caching.Memory": "8.0.0",
           "Microsoft.Extensions.Logging": "8.0.0"
         },
@@ -244,7 +263,7 @@
           "buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/8.0.2": {
+      "Microsoft.EntityFrameworkCore.Abstractions/8.0.3": {
         "type": "package",
         "compile": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
@@ -257,7 +276,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/8.0.2": {
+      "Microsoft.EntityFrameworkCore.Analyzers/8.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -1198,6 +1217,23 @@
         "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
+    "Lunavex.EFCore.Pagination/8.0.0": {
+      "sha512": "bI7QUkvEm4sxS/Q14TA2oesc0Yy3+ktEZftsxMlRHUq2pCUA+41VdcYgRupaurcImlTBnK4uz/2clOcJiC89jA==",
+      "type": "package",
+      "path": "lunavex.efcore.pagination/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "content/lunavex1.png",
+        "contentFiles/any/net8.0/lunavex1.png",
+        "lib/net8.0/Lunavex.EFCore.Pagination.dll",
+        "lunavex.efcore.pagination.8.0.0.nupkg.sha512",
+        "lunavex.efcore.pagination.nuspec",
+        "lunavex1.png"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication.JwtBearer/8.0.2": {
       "sha512": "7qJkk5k5jabATZZrMIQgpUB9yjDNAAApSqw+8d0FEyK1AJ4j+wv1qOMl2byUr837xbK+MjehtPnQ32yZ5Gtzlw==",
       "type": "package",
@@ -1368,46 +1404,49 @@
         "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll"
       ]
     },
-    "Microsoft.EntityFrameworkCore/8.0.2": {
-      "sha512": "6QlvBx4rdawW3AkkCsGVV+8qRLk34aknV5JD40s1hbVR18vKmT2KDl2DW83nHcPX7f4oebQ3BD1UMNCI/gkE0g==",
+    "Microsoft.EntityFrameworkCore/8.0.3": {
+      "sha512": "QUPQbeq4yCjgIL/6PzkhfwhljXmai3CNOsErWFJ/WJ1Z41V8+At0Bi4PT8/2pX25kPgf83g0CUKIZd0QbeKT4A==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/8.0.2",
+      "path": "microsoft.entityframeworkcore/8.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "PACKAGE.md",
         "buildTransitive/net8.0/Microsoft.EntityFrameworkCore.props",
         "lib/net8.0/Microsoft.EntityFrameworkCore.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.8.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.8.0.3.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/8.0.2": {
-      "sha512": "DjDKp++BTKFZmX+xLTow7grQTY+pImKfhGW68Zf8myiL3zyJ3b8RZbnLsWGNCqKQIF6hJIz/zA/zmERobFwV0A==",
+    "Microsoft.EntityFrameworkCore.Abstractions/8.0.3": {
+      "sha512": "cW+SKdx34wZ25ZVKCpk/6+6z27wrZlQ1qXyx7UWpy34s9CyAojH0QiYlV/2owNOGSAH67rm+LxAjUOicsqlGzQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/8.0.2",
+      "path": "microsoft.entityframeworkcore.abstractions/8.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
+        "PACKAGE.md",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/net8.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.8.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.8.0.3.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/8.0.2": {
-      "sha512": "LI7awhc0fiAKvcUemsqxXUWqzAH9ywTSyM1rpC1un4p5SE1bhr5nRLvyRVbKRzKakmnNNY3to8NPDnoySEkxVw==",
+    "Microsoft.EntityFrameworkCore.Analyzers/8.0.3": {
+      "sha512": "3csRAzz5O5Gn+GQBMyLn26OICtEo2/U2iDDygQhKb3LnC78bAUvutkMqvb0Ek5A6uHrBcZQrKQJfkgfnRT5XZw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/8.0.2",
+      "path": "microsoft.entityframeworkcore.analyzers/8.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
+        "docs/PACKAGE.md",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.analyzers.8.0.2.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.8.0.3.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
@@ -2766,25 +2805,26 @@
       "AutoMapper >= 13.0.1",
       "EntityFrameworkCore.Pagination >= 8.0.0",
       "FluentValidation >= 11.9.0",
+      "Lunavex.EFCore.Pagination >= 8.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.2",
       "NTierArchitecture.DataAccess >= 1.0.0",
       "NTierArchitecture.Entities >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\taner\\.nuget\\packages\\": {}
+    "C:\\Users\\ramaz\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Business\\NTierArchitecture.Business.csproj",
+      "projectUniqueName": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Business\\NTierArchitecture.Business.csproj",
       "projectName": "NTierArchitecture.Business",
-      "projectPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Business\\NTierArchitecture.Business.csproj",
-      "packagesPath": "C:\\Users\\taner\\.nuget\\packages\\",
-      "outputPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Business\\obj\\",
+      "projectPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Business\\NTierArchitecture.Business.csproj",
+      "packagesPath": "C:\\Users\\ramaz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\taner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ramaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2792,18 +2832,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj": {
-              "projectPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj"
+            "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.DataAccess\\NTierArchitecture.DataAccess.csproj"
             },
-            "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {
-              "projectPath": "C:\\YMYP1\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj"
+            "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj": {
+              "projectPath": "C:\\Users\\ramaz\\Desktop\\YMPY\\09.NET\\NTierArchitecture\\NTierArchitecture.Entities\\NTierArchitecture.Entities.csproj"
             }
           }
         }
@@ -2834,6 +2873,10 @@
           "FluentValidation": {
             "target": "Package",
             "version": "[11.9.0, )"
+          },
+          "Lunavex.EFCore.Pagination": {
+            "target": "Package",
+            "version": "[8.0.0, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",

@@ -2,6 +2,7 @@ using DefaultCorsPolicyNugetPackage;
 using eHospitalServer.Business;
 using eHospitalServer.DataAccess;
 using eHospitalServer.WebAPI.Middlewares;
+using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,6 @@ builder.Services.AddDefaultCors();
 
 builder.Services.AddBusiness();
 builder.Services.AddDataAccess(builder.Configuration);
-
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -26,6 +26,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors();
+
 
 ExtensionsMiddleware.CreateFirstUser(app);
 

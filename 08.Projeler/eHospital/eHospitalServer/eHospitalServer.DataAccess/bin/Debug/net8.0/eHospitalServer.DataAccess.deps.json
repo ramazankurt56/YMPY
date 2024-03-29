@@ -817,6 +817,7 @@
         "dependencies": {
           "FluentValidation": "11.9.0",
           "FluentValidation.AspNetCore": "11.3.0",
+          "GenericEmailService": "8.0.0",
           "TS.Result": "8.0.5",
           "eHospitalServer.Entities": "1.0.0"
         },
@@ -827,9 +828,7 @@
       "eHospitalServer.Entities/1.0.0": {
         "dependencies": {
           "EntityFrameworkCore.GenericRepository.Nuget": "8.0.1",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.2",
-          "Microsoft.EntityFrameworkCore": "8.0.2",
-          "Microsoft.Extensions.Identity.Stores": "8.0.2"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.2"
         },
         "runtime": {
           "eHospitalServer.Entities.dll": {}

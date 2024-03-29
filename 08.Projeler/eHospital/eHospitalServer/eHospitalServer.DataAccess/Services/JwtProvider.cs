@@ -7,10 +7,11 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+
 namespace eHospitalServer.DataAccess.Services;
 public class JwtProvider(
     UserManager<User> userManager,
-    IOptions<JwtOptions> jwtOptions)
+    IOptions<JwtOptions> jwtOptions) 
 {
     public async Task<LoginResponseDto> CreateToken(User user, bool rememberMe)
     {
@@ -19,9 +20,10 @@ public class JwtProvider(
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim(ClaimTypes.Name, user.FullName),
             new Claim(ClaimTypes.Email, user.Email ?? ""),
-            new Claim("UserName", user.UserName ?? "")
+            new Claim("UserName", user.UserName ?? ""),
+            new Claim("UserType", user.UserType.ToString())
         };
-
+        
         DateTime expires = DateTime.UtcNow.AddHours(1);
 
         if (rememberMe)
